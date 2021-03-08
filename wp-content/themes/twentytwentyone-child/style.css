@@ -13,39 +13,41 @@
 /****************************************
  * GLOBAL SUPER-HEADER *
 ****************************************/
-.super-header {
-    padding: 2.8rem;
-    align-items: center;
-    text-align: right;
-    justify-content: flex-end;
-	background:#f2f2f2;
-	position:fixed;
-	left:0;
-	right:0;
-	top:0;
-	font-size:18px;
+.super-header
+{
+	align-items: center;
+	background: #f2f2f2;
+	font-size: 18px;
+	justify-content: flex-end;
+	left: 0;
+	margin-top: 75px;
+	padding: 2.8rem;
+	position: fixed;
+	right: 0;
+	text-align: right;
+	top: 0;
 }
-.page-template-default #site-header,
-.error404 #site-header,
-.search #site-header{
-	margin-top:75px;
+.header-inner.super-header
+{
+	max-width: unset;
 }
-.header-inner.super-header{
-	max-width:unset;
+.language
+{
+	margin: 0 1em;
 }
-.language {
-    margin: 0 1em;
+.language ul
+{
+	align-items: center;
+	display: flex;
+	list-style-type: none;
+	margin: 0 1em 0 auto;
 }
-.language ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0 1em 0 auto;
-	align-items:center;
+.language
+{
+	display: inline-flex;
+	width: auto;
 }
-.super-header ul.primary-menu.reset-list-style, .language {
-    width: auto;
-    display: inline-flex;
-}
-.language p {
-    padding-right: 1em;
+.language p
+{
+	padding-right: 1em;
 }
