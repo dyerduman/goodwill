@@ -30,7 +30,9 @@
 }
 .language
 {
-	margin: 0 1em;
+  display: inline-flex;
+	margin: 0 0 0 1em;
+  width: auto;
 }
 .language ul
 {
@@ -39,14 +41,9 @@
 	list-style-type: none;
 	margin: 0 1em 0 auto;
 }
-.language
+.language li
 {
-	display: inline-flex;
-	width: auto;
-}
-.language p
-{
-	padding-right: 1em;
+	margin-right: 1em;
 }
 .goog-te-banner-frame
 {
@@ -74,9 +71,8 @@ div#google_language_translator
 {
 	height: 45px;
 	margin-right: -2em;
-	min-width: 233px;
 	padding: 10px 0 10px 10px;
-	width: auto;
+	width: 200px;
 }
 .super-header li a.nturl.single-language:focus,
 #google_language_translator select.goog-te-combo:focus
