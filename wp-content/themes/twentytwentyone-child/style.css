@@ -9,3 +9,43 @@
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+/****************************************
+ * GLOBAL SUPER-HEADER *
+****************************************/
+.super-header {
+    padding: 2.8rem;
+    align-items: center;
+    text-align: right;
+    justify-content: flex-end;
+	background:#f2f2f2;
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	font-size:18px;
+}
+.page-template-default #site-header,
+.error404 #site-header,
+.search #site-header{
+	margin-top:75px;
+}
+.header-inner.super-header{
+	max-width:unset;
+}
+.language {
+    margin: 0 1em;
+}
+.language ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0 1em 0 auto;
+	align-items:center;
+}
+.super-header ul.primary-menu.reset-list-style, .language {
+    width: auto;
+    display: inline-flex;
+}
+.language p {
+    padding-right: 1em;
+}
