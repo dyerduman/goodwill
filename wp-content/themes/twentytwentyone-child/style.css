@@ -1,43 +1,28 @@
-/*
- Theme Name:   Twenty Twenty-One Child
- Theme URI:    https://dyerduman.design/
- Description:  A child theme of Twenty Twenty-One WordPress theme.
- Author:       Dyer and Duman Design
- Author URI:   https://dyerduman.design
- Template:     twentytwentyone
- Version:      1.0.0
- License:      GNU General Public License v2 or later
- License URI:  http://www.gnu.org/licenses/gpl-2.0.html
-*/
-/****************************************
- * OVERWRITES *
-****************************************/
-@media only screen and (min-width: 652px){
-:root {
-    --global--font-size-xl: 2.5em;
-    --global--font-size-xxl: 6em;
-    --global--font-size-xxxl: 9em;
-    --heading--font-size-h3: 2em;
-    --heading--font-size-h2: 3em;
-  }
+@media only screen and (min-width: 652px)
+{
+	:root
+	{
+		global--font-size-xl: 2.5em;
+		global--font-size-xxl: 6em;
+		global--font-size-xxxl: 9em;
+		heading--font-size-h2: 3em;
+		heading--font-size-h3: 2em;
+	}
 }
-/****************************************
- * GLOBAL SUPER-HEADER *
-****************************************/
 .super-header
 {
 	align-items: center;
 	background: #f2f2f2;
-  display:flex;
+	display: flex;
 	font-size: 18px;
 	justify-content: flex-end;
 	left: 0;
-  padding:1em;
+	padding: 1em;
 	position: fixed;
 	right: 0;
 	text-align: right;
 	top: 0;
-  z-index:9999;
+	z-index: 9999;
 }
 .header-inner.super-header
 {
@@ -63,65 +48,67 @@
 {
 	padding-right: 1em;
 }
-/*styling Google Translator select dropdown*/
-.goog-te-banner-frame {
-    display: none;
+.goog-te-banner-frame
+{
+	display: none;
 }
 .super-header #google_language_translator select.goog-te-combo option,
-.skiptranslate.goog-te-gadget{
-    font-size: 16px !important;
+.skiptranslate.goog-te-gadget
+{
+	font-size: 16px !important;
 }
-.original-text{
-	text-align:left !important;
+.original-text
+{
+	text-align: left !important;
 }
 .super-header li a.nturl.single-language,
-div#google_language_translator{
-    background: #fff;
-    padding: .75em 1em .5em;
-    border-radius: 100px;
-	border:2px solid transparent;
-	text-decoration:none;
-	color:#000;
-
+div#google_language_translator
+{
+	background: #fff;
+	border: 2px solid transparent;
+	border-radius: 100px;
+	color: #000;
+	padding: .75em 1em .5em;
+	text-decoration: none;
 }
 .super-header li a,
-#google_language_translator{
-    box-shadow: 0px 5px 10px -10px #000;
+#google_language_translator
+{
+	box-shadow: 0px 5px 10px -10px #000;
 }
-.super-header #google_language_translator select.goog-te-combo {
-    color: #000;
-    padding: 14px 39px 14px 14px !important;
-    border-radius: 100px !important;
-    position: relative;
-    top: -18px;
-    background: transparent;
-    left: -12px;
-    width: auto;
-    border: 2px solid transparent !important;
+.super-header #google_language_translator select.goog-te-combo
+{
+	background: transparent;
+	border: 2px solid transparent !important;
+	border-radius: 100px !important;
+	color: #000;
 	font-family: UniversLTPro-65Bold, sans-serif !important;
-    font-size: 16px !important;
-    margin-right: -14px;
+	font-size: 16px !important;
+	left: -12px;
+	margin-right: -14px;
+	padding: 14px 39px 14px 14px !important;
+	position: relative;
+	top: -18px;
+	width: auto;
 }
-div#google_language_translator {
-	min-width:233px;
-    width: auto;
-    height: 45px;
-    padding: 10px 0 10px 10px;
-    margin-right: -2em;
-    background: #fff;
-    border-radius: 100px;
+div#google_language_translator
+{
+	background: #fff;
+	border-radius: 100px;
+	height: 45px;
+	margin-right: -2em;
+	min-width: 233px;
+	padding: 10px 0 10px 10px;
+	width: auto;
 }
 .super-header li a.nturl.single-language:focus,
-#google_language_translator select.goog-te-combo:focus{
-	border:2px solid white !important;
-	color:#fff;
-	background:#000;
+#google_language_translator select.goog-te-combo:focus
+{
+	background: #000;
+	border: 2px solid white !important;
+	color: #fff;
 }
-
-/****************************************
- * GLOBAL HEADER *
-****************************************/
-/*site-header adjustments to compensate for super-header*/
-.site-header {
-    margin-top: 2em;
+.site-header
+{
+	margin-top: 2em;
 }
