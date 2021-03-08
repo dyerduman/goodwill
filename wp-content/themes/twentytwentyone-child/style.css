@@ -9,7 +9,18 @@
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 */
-
+/****************************************
+ * OVERWRITES *
+****************************************/
+@media only screen and (min-width: 652px){
+:root {
+    --global--font-size-xl: 2.5em;
+    --global--font-size-xxl: 6em;
+    --global--font-size-xxxl: 9em;
+    --heading--font-size-h3: 2em;
+    --heading--font-size-h2: 3em;
+  }
+}
 /****************************************
  * GLOBAL SUPER-HEADER *
 ****************************************/
@@ -17,15 +28,15 @@
 {
 	align-items: center;
 	background: #f2f2f2;
+  display:flex;
 	font-size: 18px;
 	justify-content: flex-end;
 	left: 0;
-	margin-top: 75px;
-	padding: 2.8rem;
 	position: fixed;
 	right: 0;
 	text-align: right;
 	top: 0;
+  z-index:9999;
 }
 .header-inner.super-header
 {
@@ -50,4 +61,8 @@
 .language p
 {
 	padding-right: 1em;
+}
+/*site-header adjustments to compensate for super-header*/
+.site-header {
+    margin-top: 2em;
 }
