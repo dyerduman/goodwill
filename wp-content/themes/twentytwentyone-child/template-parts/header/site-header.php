@@ -54,7 +54,7 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 </div>
 <!-- for adding French and English as default languages from Appearnce > Menus > Languages  -->
 				<div class="language">
-					<ul>
+					<!--<ul>
 						<?php
 
 									wp_nav_menu(
@@ -64,7 +64,7 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 											'theme_location' => 'secondary',
 										)
 									); ?>
-					</ul>
+					</ul>-->
 				<!-- Google Translator plugin shortcode -->
 				<?php echo do_shortcode('[google-translator]'); ?>
 				</div>
