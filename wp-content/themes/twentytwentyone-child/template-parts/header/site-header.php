@@ -49,8 +49,8 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 <!-- font sizer -->
 <div class="font-sizer">
     <span>Font Size:</span>
-    <button id="smallerFont" title="Decrease Font Size"><sup>&#945;</sup></button>
-    <button id="largerFont" title="Increase Font Size"><sup>&#945;</sup></button>
+    <button id="smallerFont" class="notranslate" title="Decrease Font Size"><sup>&#65;</sup></button>
+    <button id="largerFont" class="notranslate" title="Increase Font Size"><sup>&#65;</sup></button>
 </div>
 <!-- for adding French and English as default languages from Appearnce > Menus > Languages  -->
 				<div class="language">
