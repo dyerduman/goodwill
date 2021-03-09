@@ -14,11 +14,11 @@
 ****************************************/
 :root
 {
-	global--font-size-xl: 2.5em;
-	global--font-size-xxl: 4em;
-	global--font-size-xxxl: 9em;
-	heading--font-size-h2: 3em;
-	heading--font-size-h3: 2em;
+	--global--font-size-xl: 2.5em;
+	--global--font-size-xxl: 4em;
+	--global--font-size-xxxl: 9em;
+	--heading--font-size-h2: 3em;
+	--heading--font-size-h3: 2em;
 }
 a.skip-link.screen-reader-text
 {
