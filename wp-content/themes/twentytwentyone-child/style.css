@@ -28,6 +28,10 @@ body a.skip-link.screen-reader-text
 	color:#fff !important;
 	box-shadow:none;
 }
+/*still show dark mode toggler in super-header*/
+.page.primary-navigation-open .super-header #dark-mode-toggler{
+	display:block;
+}
 /****************************************
  * GLOBAL SUPER-HEADER *
 ****************************************/
