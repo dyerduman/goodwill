@@ -239,6 +239,10 @@ body #dark-mode-toggler > span::before
 /* Quick links */
 .quicklinks
 {
+	left: 0;
+	position: absolute;
+	right: 0;
+  top: 0;
 	width: 100%;
 }
 .quicklinks ul
@@ -282,8 +286,20 @@ body #dark-mode-toggler > span::before
   width: 100%;
 }
 /****************************************
+ * GLOBAL NAVIGATION *
+****************************************/
+.primary-navigation{
+	position:inherit;
+}
+/****************************************
  * QUERIES *
 ****************************************/
+/*min-widths*/
+@media only screen and (min-width: 482px)
+{
+}
+
+/*max-widthds*/
 @media (max-width:767px){
 	.super-header
 	{
@@ -310,6 +326,7 @@ body #dark-mode-toggler > span::before
 	{
 		width:auto;
 	}
+}
 @media (max-width:481px){
 	/*header styles*/
 	.super-header
@@ -323,6 +340,16 @@ body #dark-mode-toggler > span::before
 	.primary-navigation-open .menu-button-container
 	{
 		top:40px;
+	}
+	/*navigation styles*/
+	.quicklinks
+	{
+		display:none;
+	}
+	.primary-navigation-open .quicklinks
+	{
+		display:block;
+		z-index: 99999;
 	}
 }
 @media (max-width:390px){
