@@ -1,14 +1,32 @@
-@media only screen and (min-width: 652px)
+/*
+ Theme Name:   Twenty Twenty-One Child
+ Theme URI:    https://dyerduman.design/
+ Description:  A child theme of Twenty Twenty-One WordPress theme.
+ Author:       Dyer and Duman Design
+ Author URI:   https://dyerduman.design
+ Template:     twentytwentyone
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/****************************************
+ * OVERWRITES *
+****************************************/
+:root
 {
-	:root
-	{
-		global--font-size-xl: 2.5em;
-		global--font-size-xxl: 6em;
-		global--font-size-xxxl: 9em;
-		heading--font-size-h2: 3em;
-		heading--font-size-h3: 2em;
-	}
+	global--font-size-xl: 2.5em;
+	global--font-size-xxl: 4em;
+	global--font-size-xxxl: 9em;
+	heading--font-size-h2: 3em;
+	heading--font-size-h3: 2em;
 }
+a.skip-link.screen-reader-text
+{
+	margin-top: -2em;
+}
+/****************************************
+ * GLOBAL SUPER-HEADER *
+****************************************/
 .super-header
 {
 	align-items: center;
@@ -28,41 +46,47 @@
 {
 	max-width: unset;
 }
-
-.font-sizer{
-		position:relative;
-		top:-4px;
+.font-sizer
+{
+	position: relative;
+	top: -4px;
 }
-.font-sizer sup{
-	font-size:65%;
-	top:-5px;
+.font-sizer sup
+{
+	font-size: 65%;
+	top: -5px;
 }
-.font-sizer button:nth-child(3) sup{
-	font-size:100%;
+.font-sizer button:nth-child(3) sup
+{
+	font-size: 100%;
+	top: -1px;
 }
-.font-sizer button {
-    border: 2px solid transparent;
-    font-size: 2.25em;
-    padding: 0;
-    width: 1.5em;
-    background: unset;
-    position: relative;
-    top: .15em;
+.font-sizer button
+{
+	background: unset;
+	border: 2px solid transparent;
+	font-size: 2.25em;
+	padding: 0;
+	position: relative;
+	top: .15em;
+	width: 1.5em;
 }
 .font-sizer button:focus,
 .font-sizer button:hover,
 a.wp-block-button__link:focus,
-a.wp-block-button__link:hover{
-	text-decoration:none;
-    border: 2px solid #fff;
-    background:#000 !important;
-	color:#fff !important;
+a.wp-block-button__link:hover
+{
+	background: #000 !important;
+	border: 2px solid #fff;
+	color: #fff !important;
+	outline: none;
+	text-decoration: none;
 }
 .language
 {
-  display: inline-flex;
+	display: inline-flex;
 	margin: 0 0 0 1em;
-  width: auto;
+	width: auto;
 }
 .language ul
 {
@@ -75,6 +99,8 @@ a.wp-block-button__link:hover{
 {
 	margin-right: 1em;
 }
+
+/*styling Google Translator select dropdown*/
 .goog-te-banner-frame
 {
 	display: none;
@@ -90,12 +116,13 @@ a.wp-block-button__link:hover{
 }
 .super-header #google_language_translator select.goog-te-combo
 {
-  background: transparent;
-  border: 2px solid transparent !important;
-  color: #000;
-  font-size: 16px !important;
-  margin-top:-5px;
-  width: 200px;
+	background: transparent;
+	border: 2px solid transparent !important;
+	color: #000;
+	font-size: 16px !important;
+	margin-top: -5px;
+	padding-left: 1em !important;
+	width: 200px;
 }
 div#google_language_translator
 {
@@ -110,6 +137,9 @@ div#google_language_translator
 	border: 2px solid white !important;
 	color: #fff;
 }
+/****************************************
+ * GLOBAL HEADER *
+****************************************/
 .site-header
 {
 	margin-top: 2em;
