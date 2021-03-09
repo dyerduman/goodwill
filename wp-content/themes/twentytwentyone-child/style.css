@@ -35,7 +35,6 @@ a.skip-link.screen-reader-text
 	align-items: center;
 	background: #f2f2f2;
 	display: flex;
-	font-size: 18px;
 	justify-content: flex-end;
 	left: 0;
 	padding: 1em;
@@ -45,14 +44,21 @@ a.skip-link.screen-reader-text
 	top: 0;
 	z-index: 9999;
 }
+.super-header p
+{
+	font-size: 18px;
+}
 .header-inner.super-header
 {
 	max-width: unset;
 }
 .font-sizer
 {
+	align-items: center;
+	color: #000;
+  display: flex;
 	position: relative;
-	top: -4px;
+  top: -4px;
 }
 .font-sizer sup
 {
@@ -70,8 +76,6 @@ a.skip-link.screen-reader-text
 	border: 2px solid transparent;
 	font-size: 2.25em;
 	padding: 0;
-	position: relative;
-	top: .15em;
 	width: 1.5em;
 }
 .font-sizer button:focus,
@@ -163,22 +167,39 @@ body #dark-mode-toggler.fixed-bottom
     transition: bottom 0.5s;
 		z-index:9999;
 }
+#dark-mode-toggler.fixed-bottom span
+{
+	align-items:center;
+	display:flex;
+}
 body #dark-mode-toggler:hover,
 body #dark-mode-toggler:focus{
 	background:#222;
 	outline:none;
+}
+#dark-mode-toggler svg
+{
+	height:2em;
+	width:3em;
 }
 #dark-mode-toggler:hover svg path,
 #dark-mode-toggler:focus svg path
 {
     fill: #fff;
 }
-#dark-mode-toggler > span::before
+#dark-mode-toggler p
 {
-	color:#000
+	color:#000;
 }
-#dark-mode-toggler:hover > span::before,
-#dark-mode-toggler:focus > span::before
+#dark-mode-toggler:hover p,
+#dark-mode-toggler:focus p
 {
 	color:#fff;
+}
+body #dark-mode-toggler[aria-pressed="true"] > span::before,
+body #dark-mode-toggler > span::before
+{
+	font-size:0;
+	visibility: hidden;
+	width:0;
 }
