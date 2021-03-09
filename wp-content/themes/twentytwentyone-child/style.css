@@ -22,7 +22,10 @@
 }
 a.skip-link.screen-reader-text
 {
-	margin-top: -2em;
+	margin: -.25em 1em 0;
+	background:#222;
+	color:#fff;
+	box-shadow:none;
 }
 /****************************************
  * GLOBAL SUPER-HEADER *
