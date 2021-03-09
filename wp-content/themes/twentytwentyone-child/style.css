@@ -20,11 +20,12 @@
 	--heading--font-size-h2: 3em;
 	--heading--font-size-h3: 2em;
 }
-a.skip-link.screen-reader-text
+a.skip-link.screen-reader-text,
+body a.skip-link.screen-reader-text
 {
-	margin: -.25em 1em 0;
-	background:#222;
-	color:#fff;
+	margin: -1.5em 1em 0;
+	background:#222 !important;
+	color:#fff !important;
 	box-shadow:none;
 }
 /****************************************
@@ -47,18 +48,19 @@ a.skip-link.screen-reader-text
 .super-header p
 {
 	font-size: 18px;
+	color:#000;
 }
 .header-inner.super-header
 {
 	max-width: unset;
 }
+/*font-sizer styles*/
 .font-sizer
 {
 	align-items: center;
 	color: #000;
   display: flex;
 	position: relative;
-  top: -4px;
 }
 .font-sizer sup
 {
@@ -89,9 +91,13 @@ a.wp-block-button__link:hover
 	outline: none;
 	text-decoration: none;
 }
+#largerFont{
+	margin:0 20px 0 0;
+}
 .is-dark-theme .font-sizer span{
 	color:#000;
 }
+/*EN and FR language menu (default not activated)*/
 .language
 {
 	display: inline-flex;
@@ -120,6 +126,21 @@ a.wp-block-button__link:hover
 {
 	font-size: 16px !important;
 }
+.skiptranslate.goog-te-gadget div:after
+{
+		border-right: 2px solid;
+    border-bottom: 2px solid;
+    color: #000;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    right: 25px;
+    top: -3px;
+    transform: rotate(45deg);
+    width: 10px;
+    z-index: 9999;
+}
 .original-text
 {
 	text-align: left !important;
@@ -127,25 +148,26 @@ a.wp-block-button__link:hover
 .super-header #google_language_translator select.goog-te-combo
 {
 	background: transparent;
-	border: 2px solid transparent !important;
+	border: 0px solid !important;
+	border-bottom: 1px solid !important;
 	color: #000;
-	font-size: 16px !important;
-	margin-top: -5px;
-	padding-left: 1em !important;
-	width: 200px;
-}
-div#google_language_translator
-{
-	height: 45px;
-	padding: 10px 0 10px 10px;
-	width: 200px;
+	font-size: 18px !important;
+	margin-top: -10px;
+	padding: 5px 10px !important;
+	width: 210px;
 }
 .super-header li a.nturl.single-language:focus,
 #google_language_translator select.goog-te-combo:focus
 {
-	background: #000;
-	border: 2px solid white !important;
-	color: #fff;
+	background: #fff;
+	border: 2px solid #000 !important;
+}
+div#google_language_translator
+{
+	height: 45px;
+	margin-right: 10px;
+	padding: 10px 0 10px 10px;
+	width: 200px;
 }
 /****************************************
  * GLOBAL HEADER *
@@ -161,6 +183,7 @@ body #dark-mode-toggler.fixed-bottom
 		background: none;
 		border: 0;
 		bottom:unset;
+		margin:0 10px;
     position: initial;
     right: 1em;
     top: 5px;
@@ -180,7 +203,7 @@ body #dark-mode-toggler:focus{
 #dark-mode-toggler svg
 {
 	height:2em;
-	width:3em;
+	width:2.5em;
 }
 #dark-mode-toggler:hover svg path,
 #dark-mode-toggler:focus svg path
