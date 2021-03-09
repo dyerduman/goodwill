@@ -342,7 +342,8 @@ class Twenty_Twenty_One_Dark_Mode {
 		echo '>';
 		printf(
 			/* translators: %s: On/Off */
-			esc_html__( '%s', 'twentytwentyone' ),
+			//esc_html__( '%s', 'twentytwentyone' ),
+			esc_html__( 'Contrast', 'twentytwentyone' ),
 			'<span aria-hidden="true" tabindex="1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.7 28.7" role="img" aria-labelledby="high-contrast-svg-title">
 	<title id="high-contrast-svg-title">
 		Toggle High Contrast	</title>
