@@ -82,6 +82,9 @@ a.wp-block-button__link:hover
 	outline: none;
 	text-decoration: none;
 }
+.is-dark-theme .font-sizer span{
+	color:#000;
+}
 .language
 {
 	display: inline-flex;
