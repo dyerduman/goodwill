@@ -11,7 +11,7 @@
 
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
 	<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
-		<div class="quicklinks">
+		<!--<div class="quicklinks">
 			<ul>
 		<?php
 
@@ -23,7 +23,7 @@
 						)
 					); ?>
 				</ul>
-				</div>
+			</div>-->
 		<div class="menu-button-container">
 			<button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
 				<span class="dropdown-icon open"><?php esc_html_e( 'Menu', 'twentytwentyone' ); ?>
@@ -41,6 +41,15 @@
 				'menu_class'      => 'menu-wrapper',
 				'container_class' => 'primary-menu-container',
 				'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
+				'fallback_cb'     => false,
+			)
+		);
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'tertiary',
+				'menu_class'      => 'menu-wrapper',
+				'container_class' => 'quicklinks',
+				'items_wrap'      => '<ul>%3$s</ul>',
 				'fallback_cb'     => false,
 			)
 		);
