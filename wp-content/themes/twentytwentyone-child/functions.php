@@ -9,7 +9,6 @@ add_action( 'wp_enqueue_scripts', 'twentytwentyone_styles');
 
 register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'twentytwentyone-child'),
-    'secondary' => __( 'Secondary Menu', 'twentytwentyone-child' ),
     'languages' => __( 'Languages', 'twentytwentyone-child' ),
     'tertiary' => __( 'Tertiary', 'twentytwentyone-child' ),
  ) );
