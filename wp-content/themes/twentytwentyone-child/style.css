@@ -175,9 +175,10 @@ div#google_language_translator
 .site-header
 {
 	margin-top: 2em;
+	max-width:unset;
+	width:100%;
 }
 /* Dark Mode styling*/
-
 body #dark-mode-toggler.fixed-bottom
 {
 		background: none;
@@ -225,4 +226,25 @@ body #dark-mode-toggler > span::before
 	font-size:0;
 	visibility: hidden;
 	width:0;
+}
+/* Quick links */
+.quicklinks
+{
+	width: 100%;
+}
+.quicklinks ul
+{
+	display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+	padding:unset;
+}
+.quicklinks li {
+    width: 100%;
+    text-align: center;
+}
+/*Identity -- branding and nav */
+.identity{
+	max-width:var(--responsive--alignwide-width);
+	width:100%;
 }
