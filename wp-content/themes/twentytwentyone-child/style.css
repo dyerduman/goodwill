@@ -157,3 +157,18 @@ div#google_language_translator
 .is-dark-theme #dark-mode-toggler:focus svg path{
 	fill:#222;
 }
+body #dark-mode-toggler.fixed-bottom {
+		background: none;
+		border: 0;
+		bottom:unset;
+    position: initial;
+    right: 1em;
+    top: 5px;
+    transition: bottom 0.5s;
+		z-index:9999;
+}
+body #dark-mode-toggler:hover,
+body #dark-mode-toggler:focus{
+	background:#222;
+	outline:none;
+}
