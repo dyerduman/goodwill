@@ -148,16 +148,9 @@ div#google_language_translator
 	margin-top: 2em;
 }
 /* Dark Mode styling*/
-.is-light-theme #dark-mode-toggler:hover svg path,
-.is-light-theme #dark-mode-toggler:focus svg path,
-.is-dark-theme #dark-mode-toggler svg path {
-    fill: #fff;
-}
-.is-dark-theme #dark-mode-toggler:hover svg path,
-.is-dark-theme #dark-mode-toggler:focus svg path{
-	fill:#222;
-}
-body #dark-mode-toggler.fixed-bottom {
+
+body #dark-mode-toggler.fixed-bottom
+{
 		background: none;
 		border: 0;
 		bottom:unset;
@@ -171,4 +164,18 @@ body #dark-mode-toggler:hover,
 body #dark-mode-toggler:focus{
 	background:#222;
 	outline:none;
+}
+#dark-mode-toggler:hover svg path,
+#dark-mode-toggler:focus svg path
+{
+    fill: #fff;
+}
+#dark-mode-toggler > span::before
+{
+	color:#000
+}
+#dark-mode-toggler:hover > span::before,
+#dark-mode-toggler:focus > span::before
+{
+	color:#fff;
 }
