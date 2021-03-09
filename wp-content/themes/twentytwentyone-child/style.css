@@ -144,3 +144,7 @@ div#google_language_translator
 {
 	margin-top: 2em;
 }
+/* Dark Mode styling*/
+#dark-mode-toggler:hover svg path, #dark-mode-toggler:focus svg path {
+    fill: #fff;
+}
