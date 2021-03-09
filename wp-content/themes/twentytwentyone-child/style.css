@@ -278,9 +278,10 @@ body #dark-mode-toggler > span::before
 }
 /*Identity -- branding and nav */
 .identity {
+	background: var(--global--color-background);
 	display: flex;
   justify-content: space-between;
-	padding:1em 0;
+	padding:1em;
   margin: 65px auto 0;
   max-width: var(--responsive--alignwide-width);
   width: 100%;
