@@ -80,7 +80,7 @@ Toggle High Contrast	</title>
 			</div>
 <header id="masthead" class="<?php echo esc_attr( $wrapper_classes ); ?>" role="banner">
 
-	<div class="quicklinks">
+	<!--<div class="quicklinks">
 		<ul>
 	<?php
 
@@ -91,7 +91,7 @@ Toggle High Contrast	</title>
 						'theme_location' => 'tertiary',
 					)
 				); ?>
-			</ul>
+			</ul>-->
 			</div>
 			<div class="identity">
 	<?php get_template_part( 'template-parts/header/site-branding' ); ?>

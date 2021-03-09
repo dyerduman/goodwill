@@ -11,6 +11,19 @@
 
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
 	<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'twentytwentyone' ); ?>">
+		<div class="quicklinks">
+			<ul>
+		<?php
+
+					wp_nav_menu(
+						array(
+							'container'  => '',
+							'items_wrap' => '%3$s',
+							'theme_location' => 'tertiary',
+						)
+					); ?>
+				</ul>
+				</div>
 		<div class="menu-button-container">
 			<button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
 				<span class="dropdown-icon open"><?php esc_html_e( 'Menu', 'twentytwentyone' ); ?>
@@ -32,19 +45,5 @@
 			)
 		);
 		?>
-
-		<div class="quicklinks">
-			<ul>
-		<?php
-
-					wp_nav_menu(
-						array(
-							'container'  => '',
-							'items_wrap' => '%3$s',
-							'theme_location' => 'tertiary',
-						)
-					); ?>
-				</ul>
-				</div>
 	</nav><!-- #site-navigation -->
 <?php endif; ?>
