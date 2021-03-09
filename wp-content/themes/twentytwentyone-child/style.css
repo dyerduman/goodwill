@@ -29,7 +29,7 @@ body a.skip-link.screen-reader-text
 	box-shadow:none;
 }
 /*still show dark mode toggler in super-header*/
-.page.primary-navigation-open .super-header #dark-mode-toggler{
+.primary-navigation-open .super-header #dark-mode-toggler{
 	display:block;
 }
 /****************************************
@@ -242,7 +242,6 @@ body #dark-mode-toggler > span::before
 	left: 0;
 	position: absolute;
 	right: 0;
-  top: 0;
 	width: 100%;
 }
 .quicklinks ul
@@ -257,39 +256,50 @@ body #dark-mode-toggler > span::before
     width: 100%;
     text-align: center;
 }
-.quicklinks a
+.primary-navigation .quicklinks a
 {
 	background: #333;
-	border: 2px solid #fff;
 	color:#fff;
 	display: block;
+	margin:2px;
 	padding: 1em;
 }
 .is-dark-theme .quicklinks a
 {
-	background:#333;
+	filter:invert(100%);
 }
 .quicklinks li:first-child a
 {
-    border-left:0;
+    margin-left:0;
 }
 .quicklinks li:last-child a
 {
-    border-right:0;
+    margin-right:0;
 }
 /*Identity -- branding and nav */
 .identity {
 	display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+	padding:1em 0;
+  margin: 65px auto 0;
   max-width: var(--responsive--alignwide-width);
   width: 100%;
 }
 /****************************************
  * GLOBAL NAVIGATION *
 ****************************************/
-.primary-navigation{
+.primary-navigation
+{
 	position:inherit;
+}
+/*mobile navigation styles*/
+#primary-mobile-menu
+{
+	margin-right:8px;
+}
+#primary-mobile-menu:focus
+{
+	background:yellow;
 }
 /****************************************
  * QUERIES *
@@ -297,8 +307,11 @@ body #dark-mode-toggler > span::before
 /*min-widths*/
 @media only screen and (min-width: 482px)
 {
+	.quicklinks
+	{
+		top:0;
+	}
 }
-
 /*max-widthds*/
 @media (max-width:767px){
 	.super-header
@@ -337,11 +350,14 @@ body #dark-mode-toggler > span::before
 	{
 		top:75px;
 	}
-	.primary-navigation-open .menu-button-container
-	{
-		top:40px;
-	}
+
 	/*navigation styles*/
+	.primary-navigation-open .menu-button-container,
+	.primary-navigation-open .primary-navigation > .primary-menu-container
+	{
+		top:20px;
+		padding-top: calc(var(--button--line-height) * var(--primary-nav--font-size-button) + 175px + 5px);
+	}
 	.quicklinks
 	{
 		display:none;
@@ -349,7 +365,19 @@ body #dark-mode-toggler > span::before
 	.primary-navigation-open .quicklinks
 	{
 		display:block;
+		margin:0 auto;
+		max-width:96%;
+		top:25px;
 		z-index: 99999;
+		background:var(--global--color-background);
+	}
+	.quicklinks ul
+	{
+		flex-wrap:wrap;
+	}
+	.quicklinks a{
+		border:none;
+		margin-bottom:10px;
 	}
 }
 @media (max-width:390px){
