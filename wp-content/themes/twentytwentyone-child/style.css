@@ -248,3 +248,17 @@ body #dark-mode-toggler > span::before
 	max-width:var(--responsive--alignwide-width);
 	width:100%;
 }
+/****************************************
+ * QUERIES *
+****************************************/
+/*header styles*/
+@media (max-width:481px){
+	.primary-navigation
+	{
+		top:75px;
+	}
+	.primary-navigation-open .menu-button-container
+	{
+		top:40px;
+	}
+}
