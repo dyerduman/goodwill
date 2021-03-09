@@ -23,7 +23,7 @@
 a.skip-link.screen-reader-text,
 body a.skip-link.screen-reader-text
 {
-	margin: -1.5em 1em 0;
+	margin: -75px 1em 0;
 	background:#222 !important;
 	color:#fff !important;
 	box-shadow:none;
@@ -95,7 +95,7 @@ a.wp-block-button__link:hover
 	outline: none;
 	text-decoration: none;
 }
-#largerFont{
+.font-sizer button:last-child{
 	margin:0 20px 0 0;
 }
 .is-dark-theme .font-sizer span{
@@ -280,8 +280,38 @@ body #dark-mode-toggler > span::before
 /****************************************
  * QUERIES *
 ****************************************/
-/*header styles*/
+@media (max-width:767px){
+	.super-header
+	{
+		justify-content: space-around;
+	}
+}
+@media (max-width:659px){
+	.super-header p
+	{
+		display:none;
+	}
+	.font-sizer button:last-child,
+	body #dark-mode-toggler.fixed-bottom,
+	.language
+	{
+		margin:0;
+	}
+	.font-sizer button
+	{
+		padding: 0 10px;
+		width: auto;
+	}
+	#dark-mode-toggler svg
+	{
+		width:auto;
+	}
 @media (max-width:481px){
+	/*header styles*/
+	.super-header
+	{
+		justify-content: center;
+	}
 	.primary-navigation
 	{
 		top:75px;
@@ -289,5 +319,33 @@ body #dark-mode-toggler > span::before
 	.primary-navigation-open .menu-button-container
 	{
 		top:40px;
+	}
+}
+@media (max-width:390px){
+	.super-header
+	{
+    flex-wrap: nowrap;
+		justify-content: flex-start;
+		padding-left:0;
+		padding-right:0;
+	}
+	.font-sizer, #dark-mode-toggler {
+    flex: 0 0 10%;
+	}
+	.language
+	{
+		flex:0 0 55%;
+	}
+	div#google_language_translator,
+	.super-header #google_language_translator select.goog-te-combo
+	{
+		width:100%;
+	}
+	.super-header #google_language_translator select.goog-te-combo{
+		padding-right:40px !important;
+	}
+	.skiptranslate.goog-te-gadget div:after
+	{
+		right:25px;
 	}
 }
