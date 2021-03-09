@@ -91,7 +91,7 @@ Toggle High Contrast	</title>
 						'theme_location' => 'tertiary',
 					)
 				); ?>
-				<ul>
+			</ul>
 			</div>
 			<div class="identity">
 	<?php get_template_part( 'template-parts/header/site-branding' ); ?>

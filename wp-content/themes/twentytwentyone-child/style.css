@@ -45,6 +45,10 @@ body a.skip-link.screen-reader-text
 	top: 0;
 	z-index: 9999;
 }
+.is-dark-theme .super-header
+{
+	filter:invert(100%)  /* Completely inverted */
+}
 .super-header p
 {
 	font-size: 18px;
@@ -174,9 +178,10 @@ div#google_language_translator
 ****************************************/
 .site-header
 {
-	margin-top: 2em;
-	max-width:unset;
-	width:100%;
+	margin-top: 95px;
+	max-width: unset;
+	padding-top: unset;
+	width: 100%;
 }
 /* Dark Mode styling*/
 body #dark-mode-toggler.fixed-bottom
@@ -239,14 +244,38 @@ body #dark-mode-toggler > span::before
   list-style-type: none;
 	padding:unset;
 }
-.quicklinks li {
+.quicklinks li
+{
     width: 100%;
     text-align: center;
 }
+.quicklinks a
+{
+	background: #333;
+	border: 2px solid #fff;
+	color:#fff;
+	display: block;
+	padding: 1em;
+}
+.is-dark-theme .quicklinks a
+{
+	background:#333;
+}
+.quicklinks li:first-child a
+{
+    border-left:0;
+}
+.quicklinks li:last-child a
+{
+    border-right:0;
+}
 /*Identity -- branding and nav */
-.identity{
-	max-width:var(--responsive--alignwide-width);
-	width:100%;
+.identity {
+	display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--responsive--alignwide-width);
+  width: 100%;
 }
 /****************************************
  * QUERIES *
