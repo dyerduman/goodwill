@@ -54,7 +54,7 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 </div>
 <!-- Dark Mode aka contrast toggle  -->
 
-	<p>Contrast:</p>
+	<p>Dark Mode:</p>
 	<button id="dark-mode-toggler" class="fixed-bottom" aria-pressed="false" onclick="toggleDarkMode()"><span aria-hidden="true">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.7 28.7" role="img" aria-labelledby="high-contrast-svg-title">
 <title id="high-contrast-svg-title">

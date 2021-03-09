@@ -184,7 +184,7 @@ div#google_language_translator
 {
 	margin-top: 95px;
 	max-width: unset;
-	padding-top: unset;
+	padding: unset;
 	width: 100%;
 }
 /* Dark Mode styling*/
@@ -300,6 +300,37 @@ body #dark-mode-toggler > span::before
 #primary-mobile-menu:focus
 {
 	background:yellow;
+}
+
+/****************************************
+ * GLOBAL PAGES *
+****************************************/
+/*entry header*/
+.entry-header .post-thumbnail .wp-post-image
+{
+	max-width:unset;
+}
+
+body .entry-header.alignwide,
+body .entry-header .post-thumbnail, body .singular .post-thumbnail
+{
+    max-width: unset;
+    width: 100%;
+}
+.entry-header .post-thumbnail .wp-post-image
+{
+		height:auto !important;
+    max-width: unset !important;
+		position:absolute;
+		top:0;
+		z-index:-1;
+}
+.entry-content h2:first-child
+{
+	background: var(--global--color-background);
+	display: inline-block;
+	margin-left: 10%;
+	padding: 0 20px;
 }
 /****************************************
  * QUERIES *
