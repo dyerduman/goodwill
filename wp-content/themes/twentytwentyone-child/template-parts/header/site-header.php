@@ -52,6 +52,12 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
     <button id="smallerFont" class="notranslate" title="Decrease Font Size"><sup>&#65;</sup></button>
     <button id="largerFont" class="notranslate" title="Increase Font Size"><sup>&#65;</sup></button>
 </div>
+<!-- Dark Mode aka contrast toggle  -->
+<button id="dark-mode-toggler" class="fixed-bottom" aria-pressed="false" onclick="toggleDarkMode()"><span aria-hidden="true" tabindex="1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.7 28.7" role="img" aria-labelledby="high-contrast-svg-title">
+<title id="high-contrast-svg-title">
+Toggle High Contrast	</title>
+<path d="M14.3 0C6.5 0 0 6.5 0 14.3c0 7.9 6.5 14.3 14.3 14.3 7.9 0 14.3-6.5 14.3-14.3C28.7 6.5 22.2 0 14.3 0zm0 3.6c6 0 10.8 4.8 10.8 10.8 0 6-4.8 10.8-10.8 10.8V3.6z"></path>
+</svg></span></button>
 <!-- for adding French and English as default languages from Appearnce > Menus > Languages  -->
 				<div class="language">
 					<!--<ul>
