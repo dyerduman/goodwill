@@ -350,6 +350,7 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 	.primary-navigation > div > .menu-wrapper li{
 		align-items:center;
 		background: var(--global--color-background);
+		border:2px solid;
 		display:flex;
 		flex:0 0 40%;
 		margin:5px;
