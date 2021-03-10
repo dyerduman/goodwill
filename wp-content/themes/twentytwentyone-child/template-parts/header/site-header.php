@@ -79,20 +79,6 @@ Toggle High Contrast	</title>
 				</div>
 			</div>
 <header id="masthead" class="<?php echo esc_attr( $wrapper_classes ); ?>" role="banner">
-
-	<!--<div class="quicklinks">
-		<ul>
-	<?php
-
-				wp_nav_menu(
-					array(
-						'container'  => '',
-						'items_wrap' => '%3$s',
-						'theme_location' => 'tertiary',
-					)
-				); ?>
-			</ul>
-			</div>-->
 			<div class="identity">
 	<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 	<?php get_template_part( 'template-parts/header/site-nav' ); ?>
