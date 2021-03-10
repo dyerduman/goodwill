@@ -187,6 +187,17 @@ div#google_language_translator
 	padding: unset;
 	width: 100%;
 }
+.site-logo
+{
+	background: #fff;
+	margin:unset;
+	padding:10px 0;
+	border: 2px solid #00539f; /*reflex blue*/
+}
+.site-logo .custom-logo
+{
+	width:250px;
+}
 /* Dark Mode styling*/
 body #dark-mode-toggler.fixed-bottom
 {
@@ -292,9 +303,14 @@ body #dark-mode-toggler > span::before
 }
 .site-description
 {
-	background:var(--global--color-background);
+	background:#f2f2f2;
+	color:#222;
 	display:inline-block;
 	padding:5px 10px;
+}
+.is-dark-theme .site-description
+{
+	filter:invert(100%);
 }
 /****************************************
  * GLOBAL NAVIGATION *
