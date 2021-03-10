@@ -187,17 +187,6 @@ div#google_language_translator
 	padding: unset;
 	width: 100%;
 }
-.site-logo
-{
-	background: #fff;
-	margin:unset;
-	padding:10px 0;
-	border: 2px solid /*#00539f; reflex blue*/
-}
-.site-logo .custom-logo
-{
-	width:250px;
-}
 /* Dark Mode styling*/
 body #dark-mode-toggler.fixed-bottom
 {
@@ -301,13 +290,6 @@ body #dark-mode-toggler > span::before
 {
 	margin-left:25px;
 }
-.site-description
-{
-	background:#f2f2f2;
-	color:#222;
-	display:inline-block;
-	padding:5px 10px;
-}
 .is-dark-theme .site-description
 {
 	filter:invert(100%);
@@ -324,6 +306,34 @@ body #dark-mode-toggler > span::before
     content: "\2606"; /*temporary icon for wireframes*/
     margin-right: 10px;
     margin-left: -10px;
+}
+.site-logo
+{
+	margin: 0 0 0 25px;
+	padding: 10px 0;
+	/*border: 2px solid #00539f; reflex blue*/
+}
+.site-logo .custom-logo {
+	max-height: unset;
+	max-width: unset;
+  width: 75px;
+}
+.site-branding {
+  margin-left: 25px;
+  display: flex;
+  align-items: flex-end;
+  max-height: 110px;
+}
+.site-title {
+  font-size: var(--branding--title--font-size);
+  width: 50%;
+  margin: 1px 0 0;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.site-description
+{
+	display:none;
 }
 /****************************************
  * GLOBAL PAGES *
