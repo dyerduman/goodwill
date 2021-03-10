@@ -339,6 +339,10 @@ body #dark-mode-toggler > span::before
  * GLOBAL PAGES *
 ****************************************/
 /*entry header*/
+.entry-header
+{
+	display:none;
+}/*
 .entry-header .post-thumbnail .wp-post-image
 {
 	max-width:unset;
@@ -358,6 +362,7 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 		top:0;
 		z-index:-1;
 }
+
 .entry-content h2:first-child
 {
 	background: var(--global--color-background);
