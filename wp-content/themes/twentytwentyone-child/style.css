@@ -286,6 +286,16 @@ body #dark-mode-toggler > span::before
   /*max-width: var(--responsive--alignwide-width);*/
   width: 100%;
 }
+.site-branding
+{
+	margin-left:25px;
+}
+.site-description
+{
+	background:var(--global--color-background);
+	display:inline-block;
+	padding:5px 10px;
+}
 /****************************************
  * GLOBAL NAVIGATION *
 ****************************************/
