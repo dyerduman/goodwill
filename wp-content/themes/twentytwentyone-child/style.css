@@ -192,7 +192,7 @@ div#google_language_translator
 	background: #fff;
 	margin:unset;
 	padding:10px 0;
-	border: 2px solid #00539f; /*reflex blue*/
+	border: 2px solid /*#00539f; reflex blue*/
 }
 .site-logo .custom-logo
 {
