@@ -392,6 +392,10 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 		background:##000;
 		filter:invert(100%);
 	}
+	.primary-navigation .primary-menu-container > ul > .menu-item > a + .sub-menu-toggle:focus {
+    background: lightgrey;
+    outline: none;
+	}
 }
 /*max-widthds*/
 @media (max-width:767px){
