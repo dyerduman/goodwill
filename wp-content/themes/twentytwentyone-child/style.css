@@ -293,10 +293,11 @@ body #dark-mode-toggler > span::before
 {
 	position:inherit;
 }
-/*mobile navigation styles*/
-#primary-mobile-menu
+.primary-navigation .quicklinks a:before
 {
-	margin-right:8px;
+    content: "\2606"; /*temporary icon for wireframes*/
+    margin-right: 10px;
+    margin-left: -10px;
 }
 /****************************************
  * GLOBAL PAGES *
@@ -348,7 +349,7 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 	}
 	.primary-navigation > div > .menu-wrapper li{
 		align-items:center;
-		background:
+		background: var(--global--color-background);
 		display:flex;
 		flex:0 0 40%;
 		margin:5px;
@@ -393,7 +394,8 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 		filter:invert(100%);
 	}
 	.primary-navigation .primary-menu-container > ul > .menu-item > a + .sub-menu-toggle:focus {
-    background: lightgrey;
+    background: #000;
+		color:#fff;
     outline: none;
 	}
 }
