@@ -283,7 +283,6 @@ body #dark-mode-toggler > span::before
   justify-content: space-between;
 	padding:1em 0;
   margin: 65px auto 0;
-  /*max-width: var(--responsive--alignwide-width);*/
   width: 100%;
 }
 .site-branding
@@ -344,7 +343,12 @@ body #dark-mode-toggler > span::before
 .entry-header
 {
 	display:none;
-}/*
+}
+.yellow a
+{
+	background:yellow;
+}
+/*
 .entry-header .post-thumbnail .wp-post-image
 {
 	max-width:unset;
