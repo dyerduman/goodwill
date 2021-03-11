@@ -15,10 +15,10 @@
 :root
 {
 	--global--font-size-xl: 2.5em;
-	--global--font-size-xxl: 4em;
+	--global--font-size-xxl: 3.25em;
 	--global--font-size-xxxl: 9em;
 	--heading--font-size-h2: 3em;
-	--heading--font-size-h3: 2em;
+	--heading--font-size-h3: 1.75em;
 }
 a.skip-link.screen-reader-text,
 body a.skip-link.screen-reader-text
@@ -313,12 +313,14 @@ body #dark-mode-toggler > span::before
 	padding: 10px 0;
 	/*border: 2px solid #00539f; reflex blue*/
 }
-.site-logo .custom-logo {
+.site-logo .custom-logo
+{
 	max-height: unset;
 	max-width: unset;
   width: 75px;
 }
-.site-branding {
+.site-branding
+{
   margin-left: 25px;
   display: flex;
   align-items: flex-end;
