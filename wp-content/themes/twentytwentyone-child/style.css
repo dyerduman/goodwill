@@ -651,6 +651,15 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 	.font-sizer, #dark-mode-toggler {
     flex: 0 0 10%;
 	}
+	.font-sizer sup {
+    font-size: 20px;
+	}
+	.font-sizer button:nth-child(3) sup {
+    font-size: 40px;
+}
+	#dark-mode-toggler svg {
+    width: auto;
+	}
 	.language
 	{
 		flex:0 0 55%;
@@ -660,8 +669,14 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 	{
 		width:100%;
 	}
+	div#google_language_translator
+	{
+		margin-right:0;
+	}
 	.super-header #google_language_translator select.goog-te-combo{
-		padding-right:40px !important;
+		padding-right:30px !important;
+		padding:5px 0 !important;
+		font-size:15px !important;
 	}
 	.skiptranslate.goog-te-gadget div:after
 	{
