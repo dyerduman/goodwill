@@ -18,8 +18,8 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 		<script>
 	$(document).ready(function() {
   var size = parseInt($('body, .entry-content, .primary-navigation').css('font-size').replace("px", ""), 10);
-  var incrementAmount = 4;
-  var increments = 4;
+  var incrementAmount = 2;
+  var increments = 2;
   $("#largerFont").click(function(){
     var curSize = parseInt($('body, .entry-content, .primary-navigation').css('font-size').replace("px", ""), 10);
 
