@@ -266,16 +266,25 @@ body #dark-mode-toggler > span::before
 }
 .quicklinks li
 {
-    width: 100%;
-    text-align: center;
+  text-align: center;
+	width: 100%;
 }
 .primary-navigation .quicklinks a
 {
 	background: #333;
 	color:#fff;
 	display: block;
-	margin:2px;
+	font-size:1em;
+	line-height:1em;
 	padding: 1em;
+}
+.quicklinks, .quicklinks li
+{
+	height:3em;
+}
+.primary-navigation .quicklinks a
+{
+	height:1em;
 }
 .quicklinks li:first-child a
 {
@@ -290,7 +299,7 @@ body #dark-mode-toggler > span::before
 	display: flex;
   justify-content: space-between;
 	padding:20px 0;
-  margin: 65px auto 0;
+  margin: 3em auto 0;
   width: 100%;
 }
 .site-branding

@@ -17,13 +17,13 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 <!-- script for font sizer controls and size settings -->
 		<script>
 	$(document).ready(function() {
-  var size = parseInt($('body, .entry-content').css('font-size').replace("px", ""), 10);
+  var size = parseInt($('body, .entry-content, .primary-navigation').css('font-size').replace("px", ""), 10);
   var incrementAmount = 4;
   var increments = 4;
   $("#largerFont").click(function(){
-    var curSize = parseInt($('body, .entry-content').css('font-size').replace("px", ""), 10);
+    var curSize = parseInt($('body, .entry-content, .primary-navigation').css('font-size').replace("px", ""), 10);
 
-    $('body, .entry-content').css('font-size', curSize + incrementAmount);
+    $('body, .entry-content, .primary-navigation').css('font-size', curSize + incrementAmount);
     if ((curSize + incrementAmount) >= (size + (incrementAmount * increments))) {
         $("#largerFont").prop("disabled", true);
     }
@@ -32,9 +32,9 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
     return false;
   });
   $("#smallerFont").click(function(){
-    var curSize = parseInt($('body, .entry-content').css('font-size').replace("px", ""), 10);
+    var curSize = parseInt($('body, .entry-content, .primary-navigation').css('font-size').replace("px", ""), 10);
 
-    $('body, .entry-content').css('font-size', curSize - incrementAmount);
+    $('body, .entry-content, .primary-navigation').css('font-size', curSize - incrementAmount);
     if ((curSize - incrementAmount) <= (size - (incrementAmount * increments))) {
         $("#smallerFont").prop("disabled", true);
     }
