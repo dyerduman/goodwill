@@ -471,8 +471,52 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 	{
 		max-width:unset;
 	}
+	.quicklinks ul
+	{
+		max-width:unset;
+	}
+	/*tablet and easing into mobile page styles*/
+	.alignwide
+	{
+		max-width:unset;
+		width:93%;
+	}
+	.wp-block-column,
+	.wp-block-column:not(:only-child)
+	{
+		flex-basis:100% !important;
+	}
+	/*blocks with background colour adjustment*/
+	.wp-block-columns.has-background
+	{
+		padding:1em 0;
+	}
+	.wp-block-column:nth-child(2n)
+	{
+		margin-left:unset;
+	}
+	.wp-block-columns.has-background p, .wp-block-columns.has-background h1, .wp-block-columns.has-background h2, .wp-block-columns.has-background h3, .wp-block-columns.has-background h4, .wp-block-columns.has-background h5
+	{
+    padding: 0 2.75rem;
+	}
+	.wp-block-columns.has-background .wp-block-buttons
+	{
+		display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+	}
+	.wp-block-buttons>.wp-block-button:last-child
+	{
+    margin-right: 0;
+	}
+
+	/*.wp-block-columns.is-style-twentytwentyone-columns-overlap
+	{
+		flex-direction:column;
+	}*/
 }
-@media (max-width:767px)
+@media (max-width:782px)
 {
 	/*mobile header styles*/
 	.super-header
