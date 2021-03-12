@@ -37,7 +37,6 @@ body a.skip-link.screen-reader-text
 ****************************************/
 .super-header
 {
-	align-items: center;
 	background: #f2f2f2;
 	left: 0;
 	padding: 1em;
@@ -48,6 +47,7 @@ body a.skip-link.screen-reader-text
 }
 .header-inner
 {
+	align-items: center;
 	display: flex;
 	justify-content: flex-end;
 	text-align: right;
@@ -250,6 +250,10 @@ body #dark-mode-toggler > span::before
 	right: 0;
 	width: 100%;
 }
+.is-dark-theme .quicklinks
+{
+	filter:invert(100%);
+}
 .quicklinks ul
 {
 	display: flex;
@@ -271,10 +275,6 @@ body #dark-mode-toggler > span::before
 	display: block;
 	margin:2px;
 	padding: 1em;
-}
-.is-dark-theme .quicklinks a
-{
-	filter:invert(100%);
 }
 .quicklinks li:first-child a
 {
