@@ -604,11 +604,11 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 	}
 	.identity
 	{
-		align-items:center;
-		justify-content: space-evenly;
+		align-items: center;
+		justify-content: flex-start;
 		margin-top:0;
 		overflow:hidden;
-		padding:.5em 0;
+		padding:.5em;
 	}
 	.site-logo .custom-logo
 	{
@@ -616,7 +616,7 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 	}
 	.site-branding
 	{
-		margin-left:0;
+		margin-left:10px;
 		margin-top:45px;
 		width:40%;
 	}
@@ -631,7 +631,7 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 	}
 	.primary-navigation
 	{
-		height:1em;
+		height:0px;
 	}
 	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .primary-navigation
 	{
