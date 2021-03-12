@@ -39,15 +39,21 @@ body a.skip-link.screen-reader-text
 {
 	align-items: center;
 	background: #f2f2f2;
-	display: flex;
-	justify-content: flex-end;
 	left: 0;
 	padding: 1em;
 	position: fixed;
 	right: 0;
-	text-align: right;
 	top: 0;
 	z-index: 9999;
+}
+.header-inner
+{
+	display: flex;
+	justify-content: flex-end;
+	text-align: right;
+	margin:0 auto;
+	max-width: var(--responsive--alignwide-width);
+	width:100%;
 }
 .is-dark-theme .super-header
 {
@@ -183,7 +189,6 @@ div#google_language_translator
 .site-header
 {
 	margin-top: 95px;
-	max-width: unset;
 	padding: unset;
 	width: 100%;
 }

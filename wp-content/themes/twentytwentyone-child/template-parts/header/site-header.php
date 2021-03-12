@@ -45,7 +45,8 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 });
 	</script>
 <!-- fixed superheader for accessibility controls -->
-<div class="header-inner super-header">
+<div class="super-header">
+	<div class="header-inner">
 <!-- font sizer -->
 <div class="font-sizer">
     <p>Font Size:</p>
@@ -77,6 +78,7 @@ Toggle High Contrast	</title>
 				<!-- Google Translator plugin shortcode -->
 				<?php echo do_shortcode('[google-translator]'); ?>
 				</div>
+			</div>
 			</div>
 <header id="masthead" class="<?php echo esc_attr( $wrapper_classes ); ?>" role="banner">
 			<div class="identity">
