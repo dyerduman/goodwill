@@ -38,8 +38,9 @@ body a.skip-link.screen-reader-text
 .super-header
 {
 	background: #f2f2f2;
+	height:95px;
 	left: 0;
-	padding: 1em;
+	padding: 20px;
 	position: fixed;
 	right: 0;
 	top: 0;
@@ -78,21 +79,21 @@ body a.skip-link.screen-reader-text
 }
 .font-sizer sup
 {
-	font-size: 65%;
+	font-size: 30px;
 	top: -5px;
 }
 .font-sizer button:nth-child(3) sup
 {
-	font-size: 100%;
+	font-size: 50px;
 	top: -1px;
 }
 .font-sizer button
 {
 	background: unset;
 	border: 2px solid transparent;
-	font-size: 2.25em;
-	padding: 0;
-	width: 1.5em;
+	font-size: 45px;
+  padding: 0;
+  width: 64px;
 }
 .font-sizer button:focus,
 .font-sizer button:hover,
@@ -115,7 +116,7 @@ a.wp-block-button__link:hover
 .language
 {
 	display: inline-flex;
-	margin: 0 0 0 1em;
+	margin: 0 0 0 20px;
 	width: auto;
 }
 .language ul
@@ -217,8 +218,8 @@ body #dark-mode-toggler:focus{
 }
 #dark-mode-toggler svg
 {
-	height:2em;
-	width:2.5em;
+	height: 30px;
+	width: 45px;
 }
 #dark-mode-toggler:hover svg path,
 #dark-mode-toggler:focus svg path
