@@ -605,6 +605,8 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 		align-items:center;
 		justify-content: space-evenly;
 		margin-top:0;
+		overflow:hidden;
+		padding:.5em 0;
 	}
 	.site-logo .custom-logo
 	{
@@ -620,18 +622,52 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 	{
 		display:none;
 	}
-	/*mobile navigation styles*/
+	.primary-navigation-open .primary-navigation,
+	.primary-navigation-open .quicklinks
+	{
+		position:unset;
+	}
 	.primary-navigation
 	{
-		top:75px;
+		height:1em;
 	}
-
-	/*navigation styles*/
+	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .primary-navigation
+	{
+		position:unset;
+	}
+	.primary-navigation-open .primary-navigation
+	{
+		display:flex;
+		flex-wrap:wrap;
+		height:100vh;
+		margin-top:-75px;
+		overflow:auto;
+	}
+	.primary-navigation-open .quicklinks
+	{
+		background:var(--global--color-background);
+	}
+	.menu-button-container,
+	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container{
+		position:absolute;
+		top:0;
+	}
+	.primary-navigation-open .menu-button-container
+	{
+		padding-top:80px;
+	}
 	.primary-navigation-open .menu-button-container,
 	.primary-navigation-open .primary-navigation > .primary-menu-container
 	{
 		top:20px;
-		padding-top: calc(var(--button--line-height) * var(--primary-nav--font-size-button) + 175px + 5px);
+	}
+	.primary-navigation > .primary-menu-container,
+	.has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container
+	{
+		height:unset;
+		padding-top: unset;
+    padding-bottom: 3em;
+		position:unset;
 	}
 	.primary-navigation > div > .menu-wrapper
 	{
@@ -641,9 +677,10 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 	}
 	.primary-navigation > div > .menu-wrapper li {
 		background: var(--global--color-background);
-	   flex: 0 0 45%;
-	   margin: 5px;
+		flex:unset;
+		height:auto;
 	}
+	/*mobile quicklinks styles*/
 	.quicklinks
 	{
 		display:none;
@@ -655,7 +692,6 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 		max-width:96%;
 		top:25px;
 		z-index: 99999;
-		background:var(--global--color-background);
 	}
 	.quicklinks ul
 	{
