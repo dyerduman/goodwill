@@ -309,6 +309,10 @@ body #dark-mode-toggler > span::before
 {
 	position:inherit;
 }
+.primary-navigation a
+{
+	font-size:1.2em;
+}
 .primary-navigation .quicklinks a:before
 {
     content: "\2606"; /*temporary icon for wireframes*/
