@@ -244,7 +244,7 @@ body #dark-mode-toggler > span::before
 /* Quick links */
 .quicklinks
 {
-	background: var(--global--color-background);
+	background: #333; /*var(--global--color-background);*/
 	left: 0;
 	position: absolute;
 	right: 0;
@@ -255,7 +255,9 @@ body #dark-mode-toggler > span::before
 	display: flex;
   justify-content: space-between;
   list-style-type: none;
+	margin:0 auto;
 	padding:unset;
+	max-width: var(--responsive--alignwide-width);
 }
 .quicklinks li
 {
