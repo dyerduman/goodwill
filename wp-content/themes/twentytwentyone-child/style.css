@@ -274,17 +274,9 @@ body #dark-mode-toggler > span::before
 	background: #333;
 	color:#fff;
 	display: block;
-	font-size:1em;
+	font-size:1.2em;
 	line-height:1em;
 	padding: 1em;
-}
-.quicklinks, .quicklinks li
-{
-	height:3em;
-}
-.primary-navigation .quicklinks a
-{
-	height:1em;
 }
 .quicklinks li:first-child a
 {
@@ -299,7 +291,7 @@ body #dark-mode-toggler > span::before
 	display: flex;
   justify-content: space-between;
 	padding:20px 0;
-  margin: 3em auto 0;
+  margin: 3.5em auto 0;
   width: 100%;
 }
 .site-branding
