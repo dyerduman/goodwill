@@ -274,7 +274,7 @@ body #dark-mode-toggler > span::before
 	background: #333;
 	color:#fff;
 	display: block;
-	font-size:1.2em;
+	font-size:1em;
 	line-height:1em;
 	padding: 1em;
 }
@@ -290,6 +290,7 @@ body #dark-mode-toggler > span::before
 .identity {
 	display: flex;
   justify-content: space-between;
+	overflow-x: hidden;
 	padding:20px 0;
   margin: 3.5em auto 0;
   width: 100%;
@@ -311,7 +312,7 @@ body #dark-mode-toggler > span::before
 }
 .primary-navigation a
 {
-	font-size:1.2em;
+	font-size:1em;
 }
 .primary-navigation .quicklinks a:before
 {
@@ -464,6 +465,13 @@ body .entry-header .post-thumbnail, body .singular .post-thumbnail
 	}
 }
 /*max-widths*/
+@media (max-width:1024px)
+{
+	.site-header
+	{
+		max-width:unset;
+	}
+}
 @media (max-width:767px)
 {
 	/*mobile header styles*/
