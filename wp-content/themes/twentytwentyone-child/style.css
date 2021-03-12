@@ -348,6 +348,10 @@ body #dark-mode-toggler > span::before
 {
 	background:yellow;
 }
+.is-dark-theme .yellow a
+{
+	background:black;
+}
 /*
 .entry-header .post-thumbnail .wp-post-image
 {
