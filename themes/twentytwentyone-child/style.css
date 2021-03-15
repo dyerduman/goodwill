@@ -405,7 +405,8 @@ body .metaslider .flexslider ul.slides {
   width: unset !important;
 }
 body .metaslider .flexslider ul.slides li {
-  flex: 0 0 25em;
+  flex: 0 0 22em;
+	overflow:hidden;
 }
 body .metaslider.ms-theme-disjoint .flexslider ul.slides li .caption-wrap {
   background: #00539f; /*reflex blue*/
@@ -511,6 +512,15 @@ body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav li a.flex-act
 body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav li a.flex-active:hover
 {
 	background:blue !important;
+}
+
+body .metaslider .slides img
+{
+    display: block;
+    height: 753px !important;
+    margin-top: 0 !important;
+    max-width: unset !important;
+    width: auto !important;
 }
 /****************************************
  * QUERIES *
