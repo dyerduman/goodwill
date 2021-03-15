@@ -369,7 +369,7 @@ body #dark-mode-toggler > span::before
 /*global metaslider*/
 .flexslider .flex-viewport
 {
-	overflow:scroll; /*test 10*/
+	overflow:scroll !important;
 }
 
 /****************************************
