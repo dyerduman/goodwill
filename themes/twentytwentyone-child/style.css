@@ -371,7 +371,113 @@ body #dark-mode-toggler > span::before
 {
 	overflow:scroll !important;
 }
-
+body .metaslider .flexslider ul.slides {
+	display: flex;
+  width: unset !important;
+}
+body .metaslider .flexslider ul.slides li {
+  flex: 0 0 25em;
+}
+body .metaslider.ms-theme-disjoint .flexslider ul.slides li .caption-wrap {
+  background: #00539f; /*reflex blue*/
+	opacity:1;
+}
+body .metaslider.ms-theme-disjoint .flexslider ul.slides li:nth-child(2) .caption-wrap
+{
+  background: #02806f; /*aqua blue*/
+	opacity:1;
+}
+body .metaslider.ms-theme-disjoint .flexslider ul.slides li:nth-child(3) .caption-wrapper
+{
+  background: #06a269; /*green*/
+	opacity:1;
+}
+body .metaslider.ms-theme-disjoint .flexslider ul.slides li:nth-child(3) .caption-wrap
+{
+  background: #fbff63; /*cold yellow*/
+	opacity:1;
+}
+body .metaslider.ms-theme-disjoint .flexslider ul.slides li:nth-child(4) .caption-wrap
+{
+  background: #6aefdd; /*cold aqua*/
+	opacity:1;
+}
+body .metaslider.ms-theme-disjoint .flexslider ul.slides li:nth-child(3) .caption-wrap .caption,
+body .metaslider.ms-theme-disjoint .flexslider ul.slides li:nth-child(4) .caption-wrap .caption
+{
+	color:#000;
+}
+body .metaslider.ms-theme-disjoint .flexslider ul.slides .caption-wrap .caption
+{
+  height: 13em;
+	text-align:left;
+}
+.flexslider .caption h3
+{
+  font-weight: 900;
+}
+body .metaslider.ms-theme-disjoint .flexslider:not(.filmstrip) ul.flex-direction-nav
+{
+	right:unset;
+	top:50%;
+	width:calc(100% + 50px);
+	right:-20px;
+}
+body .metaslider.ms-theme-disjoint .flexslider ul.flex-direction-nav li a {
+  background: #222;
+  border-radius: 50%;
+  padding: 30px;
+}
+body .metaslider.ms-theme-disjoint .flexslider ul.flex-direction-nav li a::before
+{
+	background-image: none !important;
+  border-bottom: 2px solid white;
+  border-right: 2px solid #fff;transform: rotate(-45deg);
+  left: 10px;
+  position: absolute;
+  top: 15px;
+  width: 26px;
+}
+.metaslider.ms-theme-disjoint .flexslider ul.flex-direction-nav li a.flex-prev:before
+{
+	border:unset;
+	border-left:2px solid #fff;
+	border-bottom:2px solid #fff;
+  left: 20px;
+  transform: rotate(45deg);
+}
+body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) {
+	margin-top:20px;
+	position: unset;
+}
+body .metaslider .flex-control-nav li {
+  margin: 0;
+  flex: 0 0 50%;
+}
+body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) li a,
+body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) li a:hover
+{
+	border:0;
+  max-width: unset;
+  width: 100%;
+}
+body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) li a:hover
+{
+	background:grey !important;
+}
+body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) li a
+{
+	background:grey;
+}
+body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav li a.flex-active, .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) li a:hover
+{
+	background:blue;
+	border:0;
+}
+body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav li a.flex-active:hover
+{
+	background:blue !important;
+}
 /****************************************
  * QUERIES *
 ****************************************/
