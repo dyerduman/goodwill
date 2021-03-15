@@ -501,7 +501,7 @@ body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav li a.flex-act
 /****************************************
  * QUERIES *
 ****************************************/
-/*min-widths*/
+/*min widths*/
 @media only screen and (min-width: 482px)
 {
 	/*desktop header styles*/
@@ -568,7 +568,7 @@ body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav li a.flex-act
     outline: none;
 	}
 }
-/*max-widths*/
+/*max widths*/
 @media (max-width:1024px)
 {
 	.site-header
@@ -613,6 +613,14 @@ body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav li a.flex-act
 	.wp-block-buttons>.wp-block-button:last-child
 	{
     margin-right: 0;
+	}
+	/*tablet and mobile slider*/
+	body .metaslider .flexslider ul.slides li
+	{
+	   flex: 0 0 16em;
+	}
+	body .metaslider.ms-theme-disjoint .flexslider ul.slides .caption-wrap .caption {
+    height: 11em;
 	}
 }
 @media (max-width:782px)
@@ -780,8 +788,10 @@ body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav li a.flex-act
 	{
 		bottom:unset;
 		padding:unset;
+		position: fixed;
 		top:68px;
 		right:10px;
+		z-index: 999999;
 	}
 	.primary-navigation-open .menu-button-container #primary-mobile-menu
 	{
