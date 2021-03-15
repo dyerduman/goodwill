@@ -290,7 +290,6 @@ body #dark-mode-toggler > span::before
 .identity {
 	display: flex;
   justify-content: space-between;
-	overflow-x: hidden;
 	padding:20px 0;
   margin: 3.5em auto 0;
   width: 100%;
@@ -366,10 +365,31 @@ body #dark-mode-toggler > span::before
 {
 	background:black;
 }
-/*global metaslider*/
+/*global slider*/
 .flexslider .flex-viewport
 {
-	overflow:scroll !important;
+	overflow:auto !important;
+	padding-bottom:35px;
+	margin-bottom:5em;
+}
+/* width */
+.flexslider .flex-viewport::-webkit-scrollbar {
+  height:5px;
+}
+
+/* Track */
+.flexslider .flex-viewport::-webkit-scrollbar-track {
+  background: lightgrey;
+}
+
+/* Handle */
+.flexslider .flex-viewport::-webkit-scrollbar-thumb {
+  background: #00539f;
+}
+
+/* Handle on hover */
+.flexslider .flex-viewport::-webkit-scrollbar-thumb:hover {
+  background: #222;
 }
 body .metaslider .flexslider ul.slides {
 	display: flex;
