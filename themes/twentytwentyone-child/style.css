@@ -47,6 +47,7 @@ body a.skip-link.screen-reader-text
 .super-header
 {
 	background: #f2f2f2;
+	box-shadow: 0 0 10px -4px #000;
 	height:95px;
 	left: 0;
 	padding: 20px;
@@ -591,10 +592,24 @@ body .metaslider .slides img
 		color:#fff;
     outline: none;
 	}
+	/*desktop pages*/
+	.gridbreak
+	{
+		position: absolute;
+		top: -3em;
+		right: -90px;
+		width: 500px;
+		z-index: 0;
+	}
+	.gridbreak_parent
+	{
+		position:relative;
+	}
 }
 /*max widths*/
 @media (max-width:1024px)
 {
+	/*tablet and mobile header*/
 	.site-header
 	{
 		max-width:unset;
@@ -603,7 +618,7 @@ body .metaslider .slides img
 	{
 		max-width:unset;
 	}
-	/*tablet and easing into mobile page styles*/
+	/*tablet and mobile pages*/
 	.alignwide
 	{
 		max-width:unset;
@@ -613,6 +628,16 @@ body .metaslider .slides img
 	.wp-block-column:not(:only-child)
 	{
 		flex-basis:100% !important;
+	}
+
+	.wp-block-columns.overlap_twocol .wp-block-column:first-child
+	{
+		display:none;
+	}
+	.wp-block-columns.overlap_twocol .wp-block-column:last-child
+	{
+    margin-left: 5em;
+    margin-top: 8em;
 	}
 	/*blocks with background colour adjustment*/
 	.wp-block-columns.has-background
@@ -641,7 +666,11 @@ body .metaslider .slides img
 	/*tablet and mobile slider*/
 	body .metaslider .flexslider ul.slides li
 	{
-	   flex: 0 0 16em;
+	   flex: 0 0 14em;
+	}
+	body .metaslider .slides img
+	{
+		height:520px !important;
 	}
 	body .metaslider.ms-theme-disjoint .flexslider ul.slides .caption-wrap .caption {
     height: 11em;
@@ -718,6 +747,11 @@ body .metaslider .slides img
 	#dark-mode-toggler svg
 	{
 		width:auto;
+	}
+	/*small mobile pages*/
+	.entry-content p
+	{
+		font-size:.85em;
 	}
 }
 @media (max-width:481px){
@@ -881,7 +915,7 @@ body .metaslider .slides img
 	}
 	.font-sizer button:nth-child(3) sup {
     font-size: 40px;
-}
+	}
 	#dark-mode-toggler svg {
     width: auto;
 	}
@@ -906,5 +940,20 @@ body .metaslider .slides img
 	.skiptranslate.goog-te-gadget div:after
 	{
 		right:25px;
+	}
+	/*extreme mobile slider*/
+	/*tablet and mobile slider*/
+	.flexslider .flex-viewport
+	{
+		margin-bottom:2em;
+		padding-bottom:1em;
+	}
+	body .metaslider .flexslider ul.slides li
+	{
+	   flex: 0 0 12em;
+	}
+	body .metaslider .slides img
+	{
+		height:450px !important;
 	}
 }
