@@ -14,11 +14,12 @@
 ****************************************/
 :root
 {
-	--global--font-size-xl: 2.5em;
-	--global--font-size-xxl: 3.25em;
+	--global--font-size-lg: 1.2em;
+	--global--font-size-xl: 1.6em;
+	--global--font-size-xxl: 2.8em;
 	--global--font-size-xxxl: 9em;
 	--heading--font-size-h2: 3em;
-	--heading--font-size-h3: 1.75em;
+/*	--heading--font-size-h3: 1.75em;*/
 }
 a.skip-link.screen-reader-text,
 body a.skip-link.screen-reader-text
@@ -366,8 +367,12 @@ body #dark-mode-toggler > span::before
 /****************************************
  * GLOBAL PAGES *
 ****************************************/
-/*entry header*/
+/*entry header
 .entry-header
+{
+	display:none;
+}*/
+.entry-header figure
 {
 	display:none;
 }
@@ -444,6 +449,7 @@ body .metaslider.ms-theme-disjoint .flexslider ul.slides li:nth-child(4) .captio
 }
 body .metaslider.ms-theme-disjoint .flexslider ul.slides .caption-wrap .caption
 {
+	font-size: var(--global--font-size-base);
   height: 13em;
 	text-align:left;
 }
@@ -451,10 +457,6 @@ body.is-dark-theme .metaslider.ms-theme-disjoint .flexslider ul.slides li .capti
 {
 	background:#222 !important;
 	color:#fff !important;
-}
-.flexslider .caption h3
-{
-  font-weight: 900;
 }
 body .metaslider.ms-theme-disjoint .flexslider:not(.filmstrip) ul.flex-direction-nav
 {
@@ -641,7 +643,12 @@ body .metaslider .slides img
 	.wp-block-columns.overlap_twocol .wp-block-column:last-child
 	{
     margin-left: 5em;
-    margin-top: 8em;
+    margin-top: 12em;
+	}
+	.gridbreak
+	{
+    position: absolute;
+    right: -5%;
 	}
 	/*blocks with background colour adjustment*/
 	.wp-block-columns.has-background
@@ -654,7 +661,7 @@ body .metaslider .slides img
 	}
 	.wp-block-columns.has-background p, .wp-block-columns.has-background h1, .wp-block-columns.has-background h2, .wp-block-columns.has-background h3, .wp-block-columns.has-background h4, .wp-block-columns.has-background h5
 	{
-    padding: 0 2.75rem;
+    padding: 0 2rem;
 	}
 	.wp-block-columns.has-background .wp-block-buttons
 	{
@@ -680,7 +687,7 @@ body .metaslider .slides img
     height: 11em;
 	}
 }
-@media (max-width:782px)
+@media (max-width:781px)
 {
 	/*mobile header styles*/
 	.super-header
@@ -711,6 +718,10 @@ body .metaslider .slides img
     margin-left: 25px;
     width: 70%;
 	}
+	.site-branding *
+	{
+    flex: 0 0 100%;
+	}
 	.site-title
 	{
 			width: unset;
@@ -730,6 +741,29 @@ body .metaslider .slides img
 	{
 		flex:0 0 45%;
 		height:70px;
+	}
+	/*mobile pages*/
+	.hide_mobile
+	{
+		display:none;
+	}
+	.gridbreak
+	{
+    position: unset;
+		width:100%;
+	}
+	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n)
+	{
+		margin-left:unset;
+	}
+	.wp-block-columns.overlap_twocol .wp-block-column:last-child
+	{
+    margin-left: unset;
+    margin-top: unset;
+	}
+	.wp-block-cover.gridbreak.has-background-dim:not(.has-background-gradient):before
+	{
+		position:unset;
 	}
 }
 @media (max-width:659px){
@@ -841,7 +875,7 @@ body .metaslider .slides img
 	.menu-button-container,
 	body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .menu-button-container{
 		position:absolute;
-		top:-10px;
+		top:100px;
 		right:20px;
 		width:100px;
 	}
