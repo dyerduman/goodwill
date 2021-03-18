@@ -413,6 +413,7 @@ body #dark-mode-toggler > span::before
   background: #fff;
   color: #000;
 	font-size:1.2em;
+	font-weight:500;
   padding: 10px;
 }
 .dropdown button:focus,
@@ -425,8 +426,16 @@ body #dark-mode-toggler > span::before
 .dropdown a
 {
 	border-bottom:2px solid lightgrey;
+	font-size:1.2em;
+	font-weight:500;
 	display:block;
 	padding:10px;
+}
+.dropdown a:focus,
+.dropdown a:hover
+{
+  background: yellow;
+  color: #FFF;
 }
 .dropdown p:last-child a
 {
@@ -437,22 +446,24 @@ body #dark-mode-toggler > span::before
 {
 		border: 2px solid #fff;
 		border-left:0;
-    flex: 0 0 75%;
 		margin:0 !important;
+    width:100%;
 }
-.alignwide.helpmodule .wp-block-group__inner-container h3
+.helpmodule .wp-block-group__inner-container .options
 {
 	align-items: center;
   border: 2px solid;
   display: flex;
-  flex: 0 0 25%;
+	font-size:1.2em;
   justify-content: center;
-  margin: 0;
+	margin:0 !important;
+	padding:0 2em;
 }
 .helpmodule .wp-block-group__inner-container
 {
 		align-items: stretch;
     display: flex;
+		justify-content: center;
 }
 /*global slider*/
 .flexslider .flex-viewport
@@ -604,6 +615,11 @@ body .metaslider .slides img
     margin-top: 0 !important;
     max-width: unset !important;
     width: auto !important;
+}
+/*globl footer*/
+.widget-area
+{
+	margin-top:0;
 }
 /****************************************
  * QUERIES *
