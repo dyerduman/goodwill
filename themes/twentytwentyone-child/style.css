@@ -386,15 +386,73 @@ body #dark-mode-toggler > span::before
 }
 /*global accordion*/
 /*accordion imitating dropdown*/
-.c-accordion__item.dropdown {
+.dropdown
+{
     position: relative;
 }
-.c-accordion__item.dropdown .c-accordion__content {
-    position: absolute;
-    z-index: 0;
-    background: grey;
-    left: 0;
-    right: 0;
+.dropdown .c-accordion__content
+{
+	background: #fff;
+	border:2px solid #000;
+	color:#000;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 0;
+}
+.dropdown .c-accordion__title:after
+{
+	color:#000;
+	font-size:1.5em;
+	font-weight:700;
+	right:20px;
+	top:45%;
+}
+.dropdown button
+{
+  background: #fff;
+  color: #000;
+	font-size:1.2em;
+  padding: 10px;
+}
+.dropdown button:focus,
+.dropdown button:hover,
+.dropdown.is-open button
+{
+  background: yellow;
+  color: #000;
+}
+.dropdown a
+{
+	border-bottom:2px solid lightgrey;
+	display:block;
+	padding:10px;
+}
+.dropdown p:last-child a
+{
+	border:0;
+}
+/*need help module (which makes use of .dropdown)*/
+.helpmodule .wp-block-group__inner-container .dropdown
+{
+		border: 2px solid #fff;
+		border-left:0;
+    flex: 0 0 75%;
+		margin:0 !important;
+}
+.alignwide.helpmodule .wp-block-group__inner-container h3
+{
+	align-items: center;
+  border: 2px solid;
+  display: flex;
+  flex: 0 0 25%;
+  justify-content: center;
+  margin: 0;
+}
+.helpmodule .wp-block-group__inner-container
+{
+		align-items: stretch;
+    display: flex;
 }
 /*global slider*/
 .flexslider .flex-viewport
