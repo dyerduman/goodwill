@@ -384,6 +384,18 @@ body #dark-mode-toggler > span::before
 {
 	background:black;
 }
+/*global accordion*/
+/*accordion imitating dropdown*/
+.c-accordion__item.dropdown {
+    position: relative;
+}
+.c-accordion__item.dropdown .c-accordion__content {
+    position: absolute;
+    z-index: 0;
+    background: grey;
+    left: 0;
+    right: 0;
+}
 /*global slider*/
 .flexslider .flex-viewport
 {
