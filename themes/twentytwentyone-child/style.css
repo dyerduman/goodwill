@@ -42,6 +42,10 @@ body a.skip-link.screen-reader-text
 {
 	color:#fff;
 }
+.entry-footer > span
+{
+	display:none;
+}
 /****************************************
  * GLOBAL SUPER-HEADER *
 ****************************************/
@@ -367,11 +371,15 @@ body #dark-mode-toggler > span::before
 /****************************************
  * GLOBAL PAGES *
 ****************************************/
-/*entry header
-.entry-header
+.wp-block-button .wp-block-button__link
 {
-	display:none;
-}*/
+	border:2px solid transparent;
+}
+.site-main > article > .entry-footer
+{
+	margin:unset;
+	padding:unset;
+}
 .entry-header figure
 {
 	display:none;
@@ -616,7 +624,9 @@ body .metaslider .slides img
     max-width: unset !important;
     width: auto !important;
 }
-/*globl footer*/
+/****************************************
+ * GLOBAL FOOTER *
+****************************************/
 .widget-area
 {
 	margin-top:0;
