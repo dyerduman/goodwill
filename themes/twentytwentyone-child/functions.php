@@ -17,7 +17,7 @@ register_nav_menus( array(
 /*add function to make shortcode of registered menus*/
 function print_menu_shortcode($atts, $content = null) {
 extract(shortcode_atts(array( 'name' => null, 'class' => null ), $atts));
-return wp_nav_menu( array( 'actions' => $name, 'menu_class' => 'myclass', 'echo' => false ) );
+return wp_nav_menu( array( 'menu' => $name, 'menu_class' => 'myclass', 'echo' => false ) );
 }
 
 add_shortcode('menu', 'print_menu_shortcode');
