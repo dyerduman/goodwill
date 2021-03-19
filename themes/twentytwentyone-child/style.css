@@ -72,7 +72,7 @@ body a.skip-link.screen-reader-text
 	background: #f2f2f2;
 	box-shadow: 0 0 10px -4px #000;
 	display:flex;
-	height:95px;
+	height:70px; /*super header height*/
 	left: 0;
 	padding: 20px;
 	position: fixed;
@@ -225,7 +225,7 @@ div#google_language_translator
 ****************************************/
 .site-header
 {
-	margin-top: 95px;
+	margin-top: 70px; /*super header height offset*/
 	padding: unset;
 	width: 100%;
 }
@@ -503,7 +503,11 @@ body #dark-mode-toggler > span::before
 {
 	border:0;
 }
-/*need help module (which makes use of .dropdown)*/
+/*global help module (which makes use of .dropdown)*/
+.help .wp-block-cover__inner-container
+{
+	width:100%;
+}
 .helpmodule .wp-block-group__inner-container .dropdown
 {
 		border: 2px solid #fff;
@@ -519,7 +523,7 @@ body #dark-mode-toggler > span::before
 	font-size:1.2em;
   justify-content: center;
 	margin:0 !important;
-	padding:0 2em;
+	padding:10px;
 }
 .helpmodule .wp-block-group__inner-container
 {
@@ -694,7 +698,7 @@ body .metaslider .slides img
 	/*desktop header styles*/
 	.quicklinks
 	{
-		top:95px;
+		top:70px; /*super header height offset*/
 	}
 	/*desktop navigation styles*/
 	.primary-navigation > div > .menu-wrapper
@@ -861,6 +865,10 @@ body .metaslider .slides img
 	{
 		justify-content: space-around;
 	}
+	.super-header p
+		{
+			display:none;
+		}
 	/*mobile navigation and identity styles*/
 	.identity
 	{
@@ -910,6 +918,10 @@ body .metaslider .slides img
 		height:70px;
 	}
 	/*mobile pages*/
+	.home .has-post-thumbnail .entry-header {
+    padding: 0;
+    margin: 0;
+	}
 	.hide_mobile
 	{
 		display:none;
@@ -932,12 +944,20 @@ body .metaslider .slides img
 	{
 		position:unset;
 	}
+	.intro.two .wp-block-column:last-child {
+    margin-top: 1em !important;
 }
-@media (max-width:659px){
-	.super-header p
-	{
-		display:none;
+	.intro.two .wp-block-column:first-child {
+	    order: 2;
 	}
+	/*tablet and mobile help module styles*/
+	.helpmodule .wp-block-group__inner-container .options
+	{
+		flex:0 0 20%;
+		justify-content: flex-start;
+	}
+}
+@media (max-width:671px){
 	.font-sizer button:last-child,
 	body #dark-mode-toggler.fixed-bottom,
 	.language
@@ -957,6 +977,11 @@ body .metaslider .slides img
 	.entry-content p
 	{
 		font-size:.85em;
+	}
+	/*small mobile help module*/
+	.helpmodule .wp-block-group__inner-container
+	{
+		flex-direction:column;
 	}
 }
 @media (max-width:481px){
@@ -981,7 +1006,7 @@ body .metaslider .slides img
 	{
 		align-items: center;
 		justify-content: flex-start;
-		margin-top:-25px;
+		margin-top:10px;
 		overflow:hidden;
 		padding:.5em;
 	}
