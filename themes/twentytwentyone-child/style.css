@@ -43,7 +43,7 @@ body a.skip-link.screen-reader-text
 {
 	color:#fff;
 }
-.has-background:not(.has-text-color).has-green-background-color[class] > [class*=__inner-container] .wp-block-button
+.is-dark-theme .has-background:not(.has-text-color).has-green-background-color[class] > [class*=__inner-container] .wp-block-button
 {
 	border:2px solid;
 }
@@ -121,6 +121,7 @@ body a.skip-link.screen-reader-text
 	font-size: 50px;
 	top: -1px;
 }
+.font-sizer button,
 .font-sizer button:not(:hover):not(:active):not(.has-text-color)
 {
 	background: unset;
@@ -427,6 +428,10 @@ body #dark-mode-toggler > span::before
 .is-dark-theme .gridbreak.announcement
 {
 	box-shadow:none;
+}
+.gridbreak.announcement
+{
+	z-index:9;
 }
 .gridbreak.announcement figure
 {
