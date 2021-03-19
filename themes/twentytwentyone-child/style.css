@@ -657,6 +657,10 @@ body .metaslider .slides img
 		flex:0 0 40%;
 		margin:5px;
 	}
+	.primary-navigation > div > .menu-wrapper li:nth-child(2)
+	{
+		margin-right:0;
+	}
 	.primary-navigation > div > .menu-wrapper li ul li
 	{
 		margin:unset;
