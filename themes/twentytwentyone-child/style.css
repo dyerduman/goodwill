@@ -46,6 +46,14 @@ body a.skip-link.screen-reader-text
 {
 	display:none;
 }
+.nomargin
+{
+	margin:0 auto !important;
+}
+.nomargin_top
+{
+	margin-top:0!important;
+}
 /****************************************
  * GLOBAL SUPER-HEADER *
 ****************************************/
@@ -55,8 +63,10 @@ body a.skip-link.screen-reader-text
 }
 .super-header
 {
+	align-items:center;
 	background: #f2f2f2;
 	box-shadow: 0 0 10px -4px #000;
+	display:flex;
 	height:95px;
 	left: 0;
 	padding: 20px;
@@ -393,6 +403,17 @@ body #dark-mode-toggler > span::before
 {
 	background:black;
 }
+/*global gridbreak announcements*/
+.gridbreak.announcement figure
+{
+	max-height:120px;
+	overflow:hidden;
+}
+
+.gridbreak.announcement figure img
+{
+	margin-top:-40%;
+}
 /*global accordion*/
 /*accordion imitating dropdown*/
 .dropdown
@@ -417,7 +438,7 @@ body #dark-mode-toggler > span::before
 	right:20px;
 	top:45%;
 }
-.dropdown button
+.dropdown button:not(:hover):not(:active):not(.has-text-color)
 {
   background: #fff;
   color: #000;
@@ -431,6 +452,9 @@ body #dark-mode-toggler > span::before
 {
   background: yellow;
   color: #000;
+	font-size:1.2em;
+	font-weight:500;
+  padding: 10px;
 }
 .dropdown a
 {
@@ -709,7 +733,8 @@ body .metaslider .slides img
 	.gridbreak
 	{
 		position: absolute;
-    top: -3em;
+		box-shadow: 0 0 5px 2px #bbb;
+    top: -6em;
     right: -10%;
     width: 50%;
     z-index: 0;
@@ -717,6 +742,11 @@ body .metaslider .slides img
 	.gridbreak_parent
 	{
 		position:relative;
+	}
+	.gridbreak .wp-block-group.has-background
+	{
+		padding:unset;
+		padding:10px 5px;
 	}
 }
 /*max widths*/
@@ -750,7 +780,6 @@ body .metaslider .slides img
 	.wp-block-columns.overlap_twocol .wp-block-column:last-child
 	{
     margin-left: 5em;
-    margin-top: 12em;
 	}
 	.gridbreak
 	{
