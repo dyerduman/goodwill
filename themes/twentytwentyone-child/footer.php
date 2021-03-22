@@ -57,8 +57,8 @@
 				<?php
 				printf(
 					/* translators: %s: WordPress. */
-					esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ),
-					'<a href="' . esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ) . '">WordPress</a>'
+					esc_html__( 'Proudly developed to WCAG 2.0 STANDARS by %s.', 'twentytwentyone' ),
+					'<a href="' . esc_url( __( 'https://dyerduman.design/', 'twentytwentyone' ) ) . '">Dyer &amp; Duman Design</a>'
 				);
 				?>
 			</div><!-- .powered-by -->
@@ -69,6 +69,10 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
