@@ -57,7 +57,7 @@
 				<?php
 				printf(
 					/* translators: %s: WordPress. */
-					esc_html__( 'Proudly developed to WCAG 2.0 STANDARS by %s.', 'twentytwentyone' ),
+					esc_html__( 'Proudly developed to WCAG 2.0 standards by %s.', 'twentytwentyone' ),
 					'<a href="' . esc_url( __( 'https://dyerduman.design/', 'twentytwentyone' ) ) . '">Dyer &amp; Duman Design</a>'
 				);
 				?>
