@@ -59,6 +59,91 @@ body a.skip-link.screen-reader-text
 {
 	margin-top:0!important;
 }
+
+/****************************************
+ * GLOBAL ANIMATION *
+****************************************/
+
+@keyframes fadeInUp
+{
+	from
+	{
+		transform: translate3d(0,-60px,0);
+	}
+
+	to
+	{
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+}
+
+@-webkit-keyframes fadeInUp
+{
+	from
+	{
+		transform: translate3d(0,-60px,0);
+	}
+
+	to
+	{
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+}
+@keyframes fadeInDown
+{
+	from
+	{
+		transform: translate3d(0,0,0);
+	}
+
+	to
+	{
+		opacity: 1;
+		transform: translate3d(0,-20px,0);
+	}
+}
+
+@-webkit-keyframes fadeInDown
+{
+	from
+	{
+		transform: translate3d(0,0px,0);
+	}
+
+	to
+	{
+		opacity: 1;
+		transform: translate3d(0,-20px,0);
+	}
+}
+.animated
+{
+	animation-delay: 1s;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp
+{
+	opacity: 0;
+}
+
+.fadeInUp
+{
+	animation-name: fadeInUp;
+	opacity: 0;
+	-webkit-animation-name: fadeInUp;
+}
+.fadeInDown
+{
+	animation-name: fadeInDown;
+	opacity: 0;
+	-webkit-animation-name: fadeInDown;
+}
 /****************************************
  * GLOBAL SUPER-HEADER *
 ****************************************/
