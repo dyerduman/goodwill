@@ -424,6 +424,13 @@ body #dark-mode-toggler > span::before
 {
 	background:black;
 }
+/*global intro cta*/
+.wp-block-buttons.intro_cta {
+	bottom: 15%;
+	position: absolute;
+	right: 1.5em;
+	width: 40%;
+}
 /*global gridbreak announcements*/
 .is-dark-theme .gridbreak.announcement
 {
@@ -544,7 +551,7 @@ body #dark-mode-toggler > span::before
 	-webkit-overflow-scrolling: auto;
 }
 .flexslider .flex-viewport::-webkit-scrollbar {
-	height:5px;
+	height:4px;
 	-webkit-appearance: none; /*you need to tweak this to make it available*/
 	-webkit-overflow-scrolling: auto;
 }
@@ -556,12 +563,12 @@ body #dark-mode-toggler > span::before
 
 /* Handle */
 .flexslider .flex-viewport::-webkit-scrollbar-thumb {
-  background: #00539f;
+  background: #222;
 }
 
 /* Handle on hover */
 .flexslider .flex-viewport::-webkit-scrollbar-thumb:hover {
-  background: #222;
+  background: #00539f;
 }
 body .metaslider .flexslider ul.slides {
 	display: flex;
@@ -775,6 +782,7 @@ body .metaslider .slides img
 	.gridbreak_parent
 	{
 		position:relative;
+		top:-65px;
 	}
 	.gridbreak .wp-block-group.has-background
 	{
@@ -937,6 +945,11 @@ body .metaslider .slides img
 		color:#222;
 	}
 	/*mobile pages*/
+	/*mobile intro cta*/
+	.wp-block-buttons.intro_cta{
+		position: unset;
+		width:100%;
+	}
 	.home .has-post-thumbnail .entry-header {
     padding: 0;
     margin: 0;
