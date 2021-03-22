@@ -570,6 +570,18 @@ body #dark-mode-toggler > span::before
 .flexslider .flex-viewport::-webkit-scrollbar-thumb:hover {
   background: #00539f;
 }
+a.caption_link {
+	background: #fff;
+	border-radius: 50%;
+	display: block;
+  font-size: 1.5em;
+  height: 50px;
+  line-height: 1.65em;
+  margin-top: 10px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
 body .metaslider .flexslider ul.slides {
 	display: flex;
   width: unset !important;
