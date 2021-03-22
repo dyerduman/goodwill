@@ -21,3 +21,23 @@ return wp_nav_menu( array( 'menu' => $name, 'menu_class' => 'myclass', 'echo' =>
 }
 
 add_shortcode('menu', 'print_menu_shortcode');
+
+/*attempting to extend blocks with AOS data attribute
+
+const { addFilter } = wp.hooks;
+
+ffunction addAttributes( extraProps, blockType, attributes ) {
+if(blockType.name !== 'core/group') {
+return extraProps;
+}
+extraProps['data-aos'] = 'fade-up';
+extraProps['data-aos-duration'] = '1500';
+
+return extraProps;
+}
+
+addFilter(
+'blocks.getSaveContent.extraProps',
+'test/applyAOSClasses',
+addAttributes
+);

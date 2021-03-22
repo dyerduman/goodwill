@@ -71,7 +71,20 @@
 <?php wp_footer(); ?>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script>
+$('.aos-fade-up').each(function(i) {
+    $(this).attr('data-aos', 'fade-up');
+});
+$('.aos-duration').each(function(i) {
+    $(this).attr('data-aos-duration', '900');
+});
+$('.aos-delay').each(function(i) {
+    $(this).attr('data-aos-delay', '300');
+});
+$('.aos-delay-max').each(function(i) {
+    $(this).attr('data-aos-delay', '1000');
+});
   AOS.init();
 </script>
 </body>
