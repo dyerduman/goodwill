@@ -573,16 +573,28 @@ body #dark-mode-toggler > span::before
 a.caption_link {
 	background: #fff;
 	border-radius: 50%;
+	border:2px solid transparent;
 	display: block;
   font-size: 1.5em;
   height: 50px;
-  line-height: 1.65em;
+  line-height: 1.5em;
   margin-top: 10px;
   width: 50px;
   text-align: center;
   text-decoration: none;
 }
-body .metaslider .flexslider ul.slides {
+a.caption_link:focus
+{
+	text-decoration:none !important;
+	outline:none;
+}
+a.caption_link:hover
+{
+	background:#000;
+	color:#fff;
+}
+body .metaslider .flexslider ul.slides
+{
 	display: flex;
   width: unset !important;
 }
@@ -619,6 +631,13 @@ body .metaslider.ms-theme-disjoint .flexslider ul.slides li:nth-child(4) .captio
 {
 	color:#000;
 }
+body .metaslider.ms-theme-disjoint .flexslider ul.slides li:nth-child(3) .caption-wrap .caption a.caption_link,
+body .metaslider.ms-theme-disjoint .flexslider ul.slides li:nth-child(4) .caption-wrap .caption a.caption_link
+{
+	border:2px solid;
+}
+
+
 body .metaslider.ms-theme-disjoint .flexslider ul.slides .caption-wrap .caption
 {
 	font-size: var(--global--font-size-base);
@@ -647,17 +666,18 @@ body .metaslider.ms-theme-disjoint .flexslider ul.flex-direction-nav li a::befor
 	background-image: none !important;
   border-bottom: 2px solid white;
   border-right: 2px solid #fff;transform: rotate(-45deg);
-  left: 10px;
+	height:16px;
+  left: 18px;
   position: absolute;
-  top: 15px;
-  width: 26px;
+  top: 20px;
+  width: 16px;
 }
 .metaslider.ms-theme-disjoint .flexslider ul.flex-direction-nav li a.flex-prev:before
 {
 	border:unset;
 	border-left:2px solid #fff;
 	border-bottom:2px solid #fff;
-  left: 20px;
+  left: 23px;
   transform: rotate(45deg);
 }
 body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) {
@@ -864,6 +884,9 @@ body .metaslider .slides img
     margin-right: 0;
 	}
 	/*tablet and mobile slider*/
+	.metaslider h4.has-extra-large-font-size {
+    font-size: 1em;
+	}
 	body .metaslider .flexslider ul.slides li
 	{
 	   flex: 0 0 14em;
