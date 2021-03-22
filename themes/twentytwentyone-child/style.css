@@ -155,7 +155,7 @@ body a.skip-link.screen-reader-text
 {
 	align-items:center;
 	background: #f2f2f2;
-	box-shadow: 0 0 10px -4px #000;
+	box-shadow: 0 0 11px -6px #000;
 	display:flex;
 	height:70px; /*super header height*/
 	left: 0;
@@ -368,7 +368,6 @@ body #dark-mode-toggler > span::before
 {
 	background: #d7f5e9; /*var(--global--color-background);*/
 	left: 0;
-	padding-top:5px;
 	position: absolute;
 	right: 0;
 	width: 100%;
@@ -415,9 +414,11 @@ body #dark-mode-toggler > span::before
 	background: transparent;
 	color:#000;
 	display: block;
-	font-size:1em;
+	font-size:1.1em;
+	font-weight:700;
+	letter-spacing:.5px;
 	line-height:1em;
-	padding: 1em;
+	padding: 25px 20px;
 }
 .quicklinks li:first-child a
 {
@@ -432,7 +433,7 @@ body #dark-mode-toggler > span::before
 	display: flex;
   justify-content: space-between;
 	padding:20px 0;
-  margin: 3.5em auto 0;
+  margin: 5em auto 0;
   width: 100%;
 }
 .site-branding
@@ -452,13 +453,7 @@ body #dark-mode-toggler > span::before
 }
 .primary-navigation a
 {
-	font-size:1em;
-}
-.primary-navigation .quicklinks a:before
-{
-    content: "\2606"; /*temporary icon for wireframes*/
-    margin-right: 10px;
-    margin-left: -10px;
+	font-size:1.1em;
 }
 .site-logo
 {
@@ -857,20 +852,23 @@ body .metaslider .slides img
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu
 	{
 		background:#000;
-		width:100%;
+    margin-left: -2px;
+		width: calc(100% + 4.75px) !important;
 	}
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu li
 	{
 			background:unset;
+			border:unset;
 	}
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu li:first-child{
 		margin-top:-3px;
 	}
 	body .primary-navigation > div > .menu-wrapper > li > .sub-menu li a
 	{
+		border:1px solid transparent;
 		color:#fff;
-		width:95%;
-		margin:10px auto;
+		width:100%;
+		margin:0 5px 0 0;
 		text-decoration:none;
 	}
 	.is-light-theme .primary-navigation > div > .menu-wrapper > li > .sub-menu li a:focus,
@@ -878,6 +876,7 @@ body .metaslider .slides img
 	body .primary-navigation > div > .menu-wrapper > li > .sub-menu li a:hover
 	{
 		background:#fff !important;
+		border:1px solid;
 		color:#000 !important;
 		text-decoration:none;
 	}
@@ -1050,17 +1049,6 @@ body .metaslider .slides img
 	{
     display: block;
 	}
-	.primary-navigation > div > .menu-wrapper
-	{
-		border-left:2px solid;
-		flex-wrap:wrap;
-    justify-content: center;
-		margin-left:.25em;
-    margin-right: unset;
-		margin-top:1em;
-		max-width:none;
-		padding-left:1em;
-	}
 	.primary-navigation > div > .menu-wrapper li
 	{
 		flex:0 0 45%;
@@ -1079,6 +1067,11 @@ body .metaslider .slides img
 	{
 		background:transparent;
 		color:#222;
+	}
+	.primary-navigation > div > .menu-wrapper
+	{
+		justify-content:center;
+		margin-right:5px;
 	}
 	/*mobile pages*/
 	/*mobile intro cta*/
@@ -1273,6 +1266,17 @@ body .metaslider .slides img
 	.has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
     position: relative;
     top: 28px;
+	}
+	.primary-navigation > div > .menu-wrapper
+	{
+		border-left:2px solid;
+		flex-wrap:wrap;
+    justify-content: center;
+		margin-left:.25em;
+    margin-right: unset;
+		margin-top:1em;
+		max-width:none;
+		padding-left:1em;
 	}
 	/*mobile quicklinks styles*/
 	.quicklinks
