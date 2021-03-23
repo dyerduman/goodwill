@@ -882,7 +882,7 @@ body .metaslider .slides img
 	.primary-navigation > div > .menu-wrapper li a{
 		width:100%;
 	}
-	/*current page and parent page nav styles*/
+	/*global current page and parent page nav styles*/
 	.primary-navigation .current-menu-item > a:first-child, .primary-navigation .current_page_item > a:first-child,
 	.page-child.parent-pageid-6 .primary-navigation .menu-wrapper li:nth-child(1) a
 	{
@@ -894,11 +894,16 @@ body .metaslider .slides img
 	{
 		border-left:none;
 	}
+	.primary-navigation > div > .menu-wrapper > li > .sub-menu li.current_page_item a
+	{
+    background: #ffcd02;
+    color: #000;
+	}
+	/*global sub menu styles*/
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu
 	{
 		background:#000;
     margin-left: -2px;
-		margin-top:10px;
 		width: calc(100% + 4.25px) !important;
 	}
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu li
@@ -930,6 +935,7 @@ body .metaslider .slides img
 	{
 		background:##000;
 		filter:invert(100%);
+		left:92%;
 	}
 	.primary-navigation .primary-menu-container > ul > .menu-item > a + .sub-menu-toggle:focus {
     background: #000;
