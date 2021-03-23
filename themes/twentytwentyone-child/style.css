@@ -315,11 +315,16 @@ div#google_language_translator
 	width: 100%;
 }
 /* Dark Mode styling*/
-body #dark-mode-toggler.fixed-bottom
+#dark-mode-toggler.fixed-bottom
+{
+	display:none;
+}
+.super-header #dark-mode-toggler.fixed-bottom
 {
 		background: none;
 		border: 0;
 		bottom:unset;
+		display:block;
 		margin:0 10px;
     position: initial;
     right: 1em;
@@ -332,8 +337,8 @@ body #dark-mode-toggler.fixed-bottom
 	align-items:center;
 	display:flex;
 }
-body #dark-mode-toggler:hover,
-body #dark-mode-toggler:focus{
+.super-header #dark-mode-toggler:hover,
+.super-header #dark-mode-toggler:focus{
 	background:#222;
 	outline:none;
 }
@@ -356,8 +361,8 @@ body #dark-mode-toggler:focus{
 {
 	color:#fff;
 }
-body #dark-mode-toggler[aria-pressed="true"] > span::before,
-body #dark-mode-toggler > span::before
+.super-header #dark-mode-toggler[aria-pressed="true"] > span::before,
+.super-header #dark-mode-toggler > span::before
 {
 	font-size:0;
 	visibility: hidden;
@@ -366,7 +371,7 @@ body #dark-mode-toggler > span::before
 /* global quicklinks */
 .quicklinks
 {
-	background: #d7f5e9; /*var(--global--color-background);*/
+	background: #d1e3dc; /*var(--global--color-background);*/
 	left: 0;
 	position: absolute;
 	right: 0;
@@ -846,6 +851,13 @@ body .metaslider .slides img
 {
 	margin-top:0;
 }
+.widget-area, .site-footer
+{
+  background: rgb(0 65 125 / 10%);
+  max-width: unset;
+  padding: 2em 5em 0;
+  width: 100%;
+}
 /****************************************
  * QUERIES *
 ****************************************/
@@ -1016,6 +1028,14 @@ body .metaslider .slides img
 	{
 		font-size:1.5em;
 	}
+	/*page note with a logo. Logo comes first on desktop, second on mobile*/
+	.pagenote_logo {
+	  display: flex;
+	}
+	.pagenote_logo .wp-block-column:first-child {
+    order: 2;
+		margin-top:2em;
+	}
 	/*blocks with background colour adjustment*/
 	.wp-block-columns.has-background
 	{
@@ -1138,6 +1158,10 @@ body .metaslider .slides img
 	.home .has-post-thumbnail .entry-header {
     padding: 0;
     margin: 0;
+	}
+	.singular .entry-header
+	{
+		margin-bottom:2em;
 	}
 	.hide_mobile
 	{
