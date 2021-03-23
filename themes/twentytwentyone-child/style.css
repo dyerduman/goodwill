@@ -415,7 +415,7 @@ body #dark-mode-toggler > span::before
 	color:#000;
 	display: block;
 	font-size:1.1em;
-	font-weight:700;
+	font-weight:600;
 	letter-spacing:.5px;
 	line-height:1em;
 	padding: 25px 20px;
@@ -508,6 +508,39 @@ body #dark-mode-toggler > span::before
 .is-dark-theme .yellow a
 {
 	background:black;
+}
+.text_image_overlay .caption
+{
+	bottom: .75em;
+	left: 1em;
+  position: absolute;
+}
+.text_image_overlay a.editorskit-block-link:after {
+	background: #fff;
+	border:2px solid transparent;
+	border-radius: 50%;
+	bottom: 20px;
+	color: #000;
+  content: "→";
+  font-size: 1.5em;
+  height: 50px;
+	line-height: 1.5em;
+  position: absolute;
+  right: 20px;
+  text-align: center;
+  width: 50px;
+}
+.text_image_overlay a.editorskit-block-link:focus,
+.text_image_overlay a.editorskit-block-link:hover
+{
+	background:rgb(255 255 255 / 7.5%) !important;
+}
+.text_image_overlay a.editorskit-block-link:focus:after,
+.text_image_overlay a.editorskit-block-link:hover:after
+{
+	background:#000;
+	border:2px solid;
+	color:#fff;
 }
 /*global intro cta*/
 .wp-block-buttons.intro_cta {
@@ -849,11 +882,24 @@ body .metaslider .slides img
 	.primary-navigation > div > .menu-wrapper li a{
 		width:100%;
 	}
+	/*current page and parent page nav styles*/
+	.primary-navigation .current-menu-item > a:first-child, .primary-navigation .current_page_item > a:first-child,
+	.page-child.parent-pageid-6 .primary-navigation .menu-wrapper li:nth-child(1) a
+	{
+		border-left: 20px solid #ffcd02;
+		font-weight:600;
+    text-decoration: none;
+	}
+	.page-child.parent-pageid-6 .primary-navigation .menu-wrapper .sub-menu li a
+	{
+		border-left:none;
+	}
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu
 	{
 		background:#000;
     margin-left: -2px;
-		width: calc(100% + 4.75px) !important;
+		margin-top:10px;
+		width: calc(100% + 4.25px) !important;
 	}
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu li
 	{
@@ -894,7 +940,7 @@ body .metaslider .slides img
 	.gridbreak
 	{
 		position: absolute;
-		box-shadow: 0 0 5px 2px #bbb;
+		box-shadow: -1px 1px 8px -3px #000;
     top: -3em;
     right: -10%;
     width: 50%;
@@ -959,6 +1005,10 @@ body .metaslider .slides img
 	.resources
 	{
 		margin-top:150px;
+	}
+	.text_image_overlay h2.has-extra-large-font-size
+	{
+		font-size:1.5em;
 	}
 	/*blocks with background colour adjustment*/
 	.wp-block-columns.has-background
@@ -1133,6 +1183,15 @@ body .metaslider .slides img
 	#dark-mode-toggler svg
 	{
 		width:auto;
+	}
+	/*small mobile navigation*/
+	.primary-navigation a
+	{
+		font-size:1em;
+	}
+	.primary-navigation .quicklinks a
+	{
+		font-size:.85em;
 	}
 	/*small mobile pages*/
 	.entry-content p
