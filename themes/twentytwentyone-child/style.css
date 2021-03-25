@@ -173,8 +173,8 @@ body a.skip-link.screen-reader-text
 	justify-content: flex-end;
 	text-align: right;
 	margin:0 auto;
-	max-width: var(--responsive--alignwide-width);
-	width:100%;
+	/*max-width: var(--responsive--alignwide-width);
+	width:100%;*/
 }
 .is-dark-theme .super-header
 {
@@ -1110,7 +1110,7 @@ body .metaslider .slides img
 }
 @media (max-width:781px)
 {
-	/*mobile header styles*/
+	/*smaller mobile header styles*/
 	.super-header
 	{
 		justify-content: space-around;
@@ -1275,12 +1275,27 @@ body .metaslider .slides img
 		--heading--font-size-h2: 3em;
 		--heading--font-size-h3: 1.25em;
 	}
-	/*mobile header styles*/
+	/*smallest mobile header styles*/
 	.super-header
 	{
 		justify-content: center;
 		height:auto;
 		padding:5px 0;
+	}
+	.super-header #dark-mode-toggler.fixed-bottom
+	{
+		margin:0 10px 0 0;
+		padding:0;
+	}
+	.super-header .font-resizer button,
+	.font-sizer button, .font-sizer button:not(:hover):not(:active):not(.has-text-color)
+	{
+		margin-right:5px;
+		width:45px;
+	}
+	div#google_language_translator
+	{
+		width:90%;
 	}
 	.identity
 	{
@@ -1456,7 +1471,6 @@ body .metaslider .slides img
 	{
 		flex:0 0 55%;
 	}
-	div#google_language_translator,
 	.super-header #google_language_translator select.goog-te-combo
 	{
 		width:100%;
