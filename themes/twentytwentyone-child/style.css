@@ -850,10 +850,15 @@ body .metaslider .slides img
 ****************************************/
 .widget-area, .site-footer
 {
-  background: rgb(0 65 125 / 10%);
+  background: #deedf9;
   max-width: unset;
-  padding: 2em 2em 0;
+  padding: 2em 10% 0;
   width: 100%;
+}
+.widget-area
+{
+	    grid-template-columns: repeat(4, 1fr);
+			margin-top:0;
 }
 .widget-area section:first-child {
     grid-column-start: 1;
@@ -868,6 +873,12 @@ body .metaslider .slides img
 .widget-area .search-form label
 {
 	display:none;
+}
+.footer-navigation-wrapper li .svg-icon
+{
+	height:40px;
+	margin:0 10px;
+	width:auto;
 }
 /****************************************
  * QUERIES *
