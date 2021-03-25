@@ -20,6 +20,7 @@
 	--global--font-size-xxxl: 9em;
 	--heading--font-size-h2: 3em;
 /*	--heading--font-size-h3: 1.75em;*/
+    --responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1440px);
 }
 a.skip-link.screen-reader-text,
 body a.skip-link.screen-reader-text
@@ -419,7 +420,7 @@ div#google_language_translator
 	background: transparent;
 	color:#000;
 	display: block;
-	font-size:1.1em;
+	font-size:1em;
 	font-weight:600;
 	letter-spacing:.5px;
 	line-height:1em;
@@ -458,7 +459,7 @@ div#google_language_translator
 }
 .primary-navigation a
 {
-	font-size:1.1em;
+	font-size:1em;
 }
 .site-logo
 {
@@ -868,6 +869,14 @@ body .metaslider .slides img
   max-width: unset;
   padding: 2em 2em 0;
   width: 100%;
+}
+.widget-area section:first-child h2
+{
+    text-align: center;
+}
+.widget-area .search-form label
+{
+	display:none;
 }
 /****************************************
  * QUERIES *
