@@ -503,6 +503,14 @@ div#google_language_translator
 	margin:unset;
 	padding:unset;
 }
+.site-margin
+{
+	margin-top:40px;
+}
+.singular .entry-header
+{
+	padding-bottom:20px;
+}
 .entry-header figure
 {
 	display:none;
