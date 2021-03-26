@@ -12,6 +12,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<header class="entry-header">
 		<?php if ( is_singular() ) : ?>
 			<?php the_title( '<h1 class="entry-title default-max-width">', '</h1>' ); ?>
