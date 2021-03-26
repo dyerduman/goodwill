@@ -508,11 +508,12 @@ div#google_language_translator
 {
 	border:2px solid transparent;
 }
+/*
 .site-main > article > .entry-footer
 {
 	margin:unset;
 	padding:unset;
-}
+}*/
 .site-main
 {
 	margin-top:40px;
@@ -525,6 +526,10 @@ div#google_language_translator
 .entry-header figure
 {
 	display:none;
+}
+.single .entry-header figure
+{
+	display:block;
 }
 .yellow a
 {
