@@ -11,7 +11,7 @@ register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'twentytwentyone-child'),
     'languages' => __( 'Languages', 'twentytwentyone-child' ),
     'tertiary' => __( 'Tertiary', 'twentytwentyone-child' ),
-		'actions' => __( 'Actions', 'twentytwentyone-child' ),
+		'blog' => __( 'Blog', 'twentytwentyone-child' ),
  ) );
 
 /*add function to make shortcode of registered menus*/

@@ -931,7 +931,27 @@ body .metaslider .slides img
 {
 	margin-top:0;
 }
-/****************************************
+.blog-filter ul
+{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding-left: 0;
+}
+.blog-filter ul li a {
+    background: #d0bac3;
+    border-radius: 100px;
+    display: block;
+    font-weight: 600;
+		margin:1em 1em -1em 0;
+		padding: 10px 20px;
+    text-decoration: none;
+}
+.blog-filter .current-menu-item a {
+    background: #222;
+    color: #fff;
+}
+/*************************************
  * GLOBAL FOOTER *
 ****************************************/
 .widget-area, .site-footer

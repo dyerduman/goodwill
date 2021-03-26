@@ -21,6 +21,17 @@ $description = get_the_archive_description();
 		<?php if ( $description ) : ?>
 			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
 		<?php endif; ?>
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'blog',
+				'menu_class'      => 'menu-wrapper',
+				'container_class' => 'blog-filter',
+				'items_wrap'      => '<ul>%3$s</ul>',
+				'fallback_cb'     => false,
+			)
+		);
+		?>
 	</header><!-- .page-header -->
 <section class="posts">
 	<?php while ( have_posts() ) : ?>
