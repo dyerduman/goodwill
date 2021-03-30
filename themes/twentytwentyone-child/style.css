@@ -64,7 +64,14 @@ body a.skip-link.screen-reader-text
 {
 	margin-top:0!important;
 }
-
+.hasmargin_top
+{
+	margin-top:1em !important;
+}
+.nopadding_top
+{
+	padding-top:0 !important;
+}
 /****************************************
  * GLOBAL ANIMATION *
 ****************************************/
@@ -572,6 +579,16 @@ div#google_language_translator
 	border:2px solid;
 	color:#fff;
 }
+/*global featured block images*/
+figure.featuredblock
+{
+    max-height: 300px;
+    overflow: hidden;
+}
+figure.featuredblock img
+{
+    margin-top: -24%;
+}
 /*global intro cta*/
 .wp-block-buttons.intro_cta {
 	bottom: 15%;
@@ -598,8 +615,41 @@ div#google_language_translator
 {
 	margin-top:-40%;
 }
+/*global borders extra styles*/
+.borders_top-bottom
+{
+	border:none;
+	border-top:2px solid;
+	border-bottom:2px solid;
+}
 /*global accordion*/
 /*accordion imitating dropdown*/
+.c-accordion__title
+{
+    border-bottom: 2px solid;
+		font-size: var(--global--font-size-lg);
+    margin-bottom: 1em;
+		padding: 0.5em;
+}
+.c-accordion__content h4
+{
+	margin-top:1em;
+}
+.c-accordion__content ul
+{
+	margin:.5em 0 0 .5em;
+	padding-left:0;
+}
+.c-accordion__content ul li,
+.metaslider .flexslider .slides p
+{
+	line-height:1.4;
+	margin-bottom:.5em;
+}
+.c-accordion__title:after {
+		color:#000;
+		font-weight: 600;
+}
 .dropdown
 {
     position: relative;
@@ -625,9 +675,11 @@ div#google_language_translator
 .dropdown button:not(:hover):not(:active):not(.has-text-color)
 {
   background: #fff;
+	border-bottom:0;
   color: #000;
 	font-size:1.2em;
 	font-weight:500;
+	margin-bottom:0;
   padding: 10px;
 }
 .dropdown button:focus,
@@ -635,9 +687,11 @@ div#google_language_translator
 .dropdown.is-open button
 {
   background: yellow;
+	border-bottom:0;
   color: #000;
 	font-size:1.2em;
 	font-weight:500;
+	margin-bottom:0;
   padding: 10px;
 }
 .dropdown a
@@ -723,9 +777,9 @@ a.caption_link {
 	border-radius: 50%;
 	border:2px solid transparent;
 	display: block;
-  font-size: 1.5em;
+  font-size: 30px;
   height: 50px;
-  line-height: 1.5em;
+  line-height: 45px;
   margin-top: 10px;
   width: 50px;
   text-align: center;
@@ -746,9 +800,14 @@ body .metaslider .flexslider ul.slides
 	display: flex;
   width: unset !important;
 }
-body .metaslider .flexslider ul.slides li {
-  flex: 0 0 22em;
+body .metaslider .flexslider ul.slides li
+{
+  flex: 0 0 31%;
 	overflow:hidden;
+}
+body .metaslider.thirds .flexslider ul.slides li
+{
+  flex: 0 0 32.87%;
 }
 body .metaslider.ms-theme-disjoint .flexslider ul.slides li .caption-wrap {
   background: #00539f; /*reflex blue*/
@@ -1132,10 +1191,12 @@ body .metaslider .slides img
 	}
 	.primary-navigation .menu-wrapper li .sub-menu li.current_page_item a,
 	.primary-navigation .menu-wrapper .sub-menu li.current-menu-item a,
-	.archive.category .primary-navigation .menu-wrapper .sub-menu li.blog a
+	.archive.category .primary-navigation .menu-wrapper .sub-menu li.blog a,
+	.single-post .primary-navigation .menu-wrapper .sub-menu li.blog a
 	{
     background: #ffcd02;
     color: #000;
+		font-weight:700;
 	}
 	/*global sub menu styles*/
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu
@@ -1305,7 +1366,11 @@ body .metaslider .slides img
 	}
 	body .metaslider .flexslider ul.slides li
 	{
-	   flex: 0 0 14em;
+		flex: 0 0 14em;
+	}
+	body .metaslider.thirds .flexslider ul.slides li
+	{
+	   flex: 0 0 15em;
 	}
 	body .metaslider .slides img
 	{
@@ -1713,7 +1778,8 @@ body .metaslider .slides img
 		margin-bottom:2em;
 		padding-bottom:1em;
 	}
-	body .metaslider .flexslider ul.slides li
+	body .metaslider .flexslider ul.slides li,
+	body .metaslider.thirds .flexslider ul.slides li
 	{
 	   flex: 0 0 12em;
 	}
