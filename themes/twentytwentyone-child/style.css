@@ -616,7 +616,7 @@ div#google_language_translator
 }
 .gridbreak.announcement figure
 {
-	max-height:120px;
+	max-height:150px;
 	overflow:hidden;
 }
 
@@ -625,7 +625,8 @@ div#google_language_translator
 	margin-top:-40%;
 }
 /*global borders extra styles*/
-.borders_top-bottom
+.borders_top-bottom,
+.borders_bottom-top
 {
 	border:none;
 	border-top:2px solid;
@@ -791,6 +792,16 @@ div#google_language_translator
 .flexslider .flex-viewport::-webkit-scrollbar-thumb:hover {
   background: #00539f;
 }
+.metaslider .caption .has-extra-large-font-size,
+.metaslider .caption .has-large-font-size
+{
+	font-weight:600;
+	margin-bottom:.25em;
+}
+.metaslider .caption .has-large-font-size
+{
+	margin-bottom:.5em;
+}
 a.caption_link
 {
 	background: #fff;
@@ -955,7 +966,12 @@ body .metaslider .slides img
     max-width: unset !important;
     width: auto !important;
 }
-
+/*global pages footer*/
+body:not(.single) .site-main > article:last-of-type .entry-footer
+{
+	margin:0;
+	padding:0;
+}
 /****************************************
  * GLOBAL POSTS *
 ****************************************/
@@ -1124,7 +1140,7 @@ body .metaslider .slides img
 {
   background: #deedf9;
   max-width: unset;
-  padding: 2em 10% 0;
+  padding: 2em 6% 0;
   width: 100%;
 }
 .is-dark-theme .widget-area,
@@ -1156,6 +1172,16 @@ body .metaslider .slides img
 	height:40px;
 	margin:0 10px;
 	width:auto;
+}
+.widget-area #menu-quick-links-1 a {
+    display: block;
+    width: 100%;
+    padding: .5em;
+    border: 2px solid;
+    margin: .5em 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
 }
 /****************************************
  * QUERIES *
@@ -1276,6 +1302,7 @@ body .metaslider .slides img
 	{
 		position: absolute;
 		box-shadow: -1px 1px 8px -3px #000;
+		max-width: 550px;
     top: -3em;
     right: -10%;
     width: 50%;
@@ -1398,8 +1425,9 @@ body .metaslider .slides img
     display:block;
 	}
 	/*tablet and mobile slider*/
-	.metaslider h4.has-extra-large-font-size {
-    font-size: 1em;
+	.metaslider .caption .has-extra-large-font-size,
+	.metaslider .caption .has-large-font-size {
+	    font-size: 1em;
 	}
 	body .metaslider .flexslider ul.slides li
 	{
@@ -1531,6 +1559,11 @@ body .metaslider .slides img
 	{
 		margin:1em auto;
 	}
+	.locations .wp-block-columns.alignwide
+	{
+		max-width:unset;
+		width:100%;
+	}
 	/*mobile intro cta*/
 	.wp-block-buttons.intro_cta{
 		position: unset;
@@ -1572,11 +1605,16 @@ body .metaslider .slides img
 	.intro.two .wp-block-column:first-child {
 	    order: 2;
 	}
-	/*tablet and mobile help module styles*/
+	/*mobile help module*/
 	.helpmodule .wp-block-group__inner-container .options
 	{
 		flex:0 0 20%;
 		justify-content: flex-start;
+	}
+	/*mobile footer*/
+	.widget_search > .search-form input.search-field, .widget_search > .search-form input.search-submit {
+    margin: 0;
+    width: 100%;
 	}
 }
 @media (max-width:671px){
@@ -1610,9 +1648,10 @@ body .metaslider .slides img
 		padding:25px 0;
 	}
 	/*small mobile pages*/
-	.entry-content p
+	.entry-content p,
+	.entry-content li
 	{
-		font-size:.85em;
+		font-size:.9em;
 	}
 	/*small mobile help module*/
 	.helpmodule .wp-block-group__inner-container
