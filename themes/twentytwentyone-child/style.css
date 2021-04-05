@@ -12,6 +12,9 @@
 /****************************************
  * OVERWRITES *
 ****************************************/
+span.edit-link {
+    display: none;
+}
 :root
 {
 	--global--font-size-lg: 1.2em;
@@ -71,6 +74,10 @@ body a.skip-link.screen-reader-text
 .nopadding_top
 {
 	padding-top:0 !important;
+}
+.haspadding_top
+{
+	padding-top:1em !important;
 }
 /****************************************
  * GLOBAL ANIMATION *
@@ -167,7 +174,7 @@ body a.skip-link.screen-reader-text
 {
 	align-items:center;
 	background: #f2f2f2;
-	box-shadow: 0 0 11px -6px #000;
+	box-shadow: 0 0 5px -2px #000;
 	display:flex;
 	height:70px; /*super header height*/
 	left: 0;
@@ -511,6 +518,19 @@ div#google_language_translator
 /****************************************
  * GLOBAL PAGES *
 ****************************************/
+.wp-block-quote.is-large p, .wp-block-quote.is-style-large p
+{
+	font-size:1.5em;
+	font-weight: 400;
+}
+.wp-block-quote.separator
+{
+	margin-bottom:4em;
+}
+.wp-block-quote.separator::after
+{
+	width:100%;
+}
 .wp-block-button .wp-block-button__link
 {
 	border:2px solid transparent;
@@ -522,7 +542,7 @@ div#google_language_translator
 .singular .entry-header
 {
 	padding-bottom:20px;
-	margin-bottom:40px;
+	margin-bottom:30px;
 }
 .entry-header figure
 {
@@ -637,6 +657,11 @@ div#google_language_translator
 	border:none;
 	border-bottom:2px solid;
 }
+.borders_top
+{
+	border:none;
+	border-top:2px solid;
+}
 .c-accordion__title
 {
     border-bottom: 2px solid;
@@ -653,6 +678,12 @@ div#google_language_translator
 .c-accordion__content h4
 {
 	margin-top:1em;
+}
+.c-accordion__content p {
+    margin-bottom: 1em;
+}
+.c-accordion__content p:last-child {
+    margin-bottom: unset;
 }
 .c-accordion__content ul
 {
@@ -1063,7 +1094,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
     padding-left: 0;
 }
 .blog-filter ul li a {
-    background: #d0bac3;
+    background: #e4d1d1; /*dusty rose*/
     border-radius: 100px;
     display: block;
     font-weight: 600;
@@ -1076,13 +1107,14 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
     color: #fff;
 }
 /*single posts*/
-.single-post article {
+.single-post article
+{
+		column-gap: 10px;
 		display: grid;
 		grid-template-columns: repeat(4, 25%);
-		column-gap: 10px;
-		grid-template-rows: 35% auto auto;
-		width: 85%;
+		grid-template-rows: 400px auto auto;
 		margin: 0 auto;
+		width: 85%;
 }
 .single-post article .entry-header {
     grid-column: 1 / span 3;
@@ -1122,6 +1154,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	height: auto !important;
   width: 75% !important;
   margin: 0;
+}
+.single .site-main > article > .entry-footer
+{
+	border-top:0;
 }
 .post-navigation .nav-links {
     justify-content: space-between;
@@ -1187,6 +1223,14 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
  * QUERIES *
 ****************************************/
 /*min widths*/
+@media only screen and (min-width:1025px)
+{
+/*desktop navigation, excluding tablets*/
+	.primary-navigation > div > .menu-wrapper .sub-menu-toggle
+	{
+	  border-left: 2px solid black;
+	}
+}
 @media only screen and (min-width: 482px)
 {
 	/*desktop header styles*/
@@ -1200,13 +1244,18 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 		justify-content: flex-end;
 		margin-right:20px;
 	}
-	.primary-navigation > div > .menu-wrapper li{
+	.primary-navigation > div > .menu-wrapper li
+	{
 		align-items:center;
 		background: var(--global--color-background);
 		border:2px solid;
 		display:flex;
-		flex:0 0 40%;
+	  flex: 0 0 calc(40% - 10px);
 		margin:5px;
+	}
+	.home .primary-navigation .menu-wrapper li
+	{
+		flex:0 0 40%;
 	}
 	.primary-navigation > div > .menu-wrapper li:nth-child(2)
 	{
@@ -1540,7 +1589,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	.featuredblock .wp-block-buttons .wp-block-button
 	{
 		margin: .5em 0;
-    width: 90%;
+    width: 85%;
+	}
+	.featuredblock .wp-block-buttons .wp-block-button__width-100
+	{
+		width:100%;
 	}
 	.featuredblock .wp-block-buttons .wp-block-button a
 	{
@@ -1850,6 +1903,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 		height: 300px;
     max-width: unset;
     width: auto;
+	}
+	.featuredblock.align_flexend figure.wide img
+	{
+		height:375px;
 	}
 	.onpage_nav .wp-block-columns.alignwide, .onpage_nav .wp-block-cover__inner-container, .onpage_nav .wp-block-group, .onpage_nav .wp-block-group__inner-container, .onpage_nav ul
 	{
