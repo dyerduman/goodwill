@@ -995,7 +995,7 @@ body .metaslider .slides img
     height: 753px !important;
     margin-top: 0 !important;
     max-width: unset !important;
-    width: auto !important;
+    width: auto; /*come back to address this important*/
 }
 /*global pages footer*/
 body:not(.single) .site-main > article:last-of-type .entry-footer
@@ -1301,6 +1301,34 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	{
 		max-width:80%:
 	}
+	/*desktop slider as on page navigation*/
+	body .metaslider.thirds.onpage_nav .flexslider .flex-viewport
+	{
+		border-bottom:1px solid lightgrey;
+		margin-bottom:55px;
+		padding-bottom:unset;
+	}
+	body .metaslider.thirds.onpage_nav .flexslider ul.slides li
+	{
+		flex:0 0 300px;
+		height:250px;
+	}
+	body .metaslider.thirds.onpage_nav .flexslider ul.slides li img
+	{
+		height: 200px !important;
+		width: auto !important;
+	}
+	body .metaslider.thirds.onpage_nav .flexslider ul.slides li .caption-wrap
+	{
+		background:#fff;
+		height:60px;
+	}
+	body .metaslider.thirds.onpage_nav .flexslider ul.slides li .caption-wrap .caption
+	{
+		color:#222;
+		height:auto;
+		padding:5px 0;
+	}
 }
 @media only screen and (min-width: 482px)
 {
@@ -1466,7 +1494,46 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 		line-height:35px;
 		width:40px;
 	}
+	/*tablet and mobile slider for on page nav*/
+	.onpage_nav .flex-viewport
+	{
+		margin-bottom: 55px;
+    padding-bottom: 10px;
+	}
+	body .metaslider.onpage_nav .flexslider .slides li,
+	body .metaslider.onpage_nav.thirds .flexslider .slides li
+	{
+		flex: 0 0 150px;
+		height:150px;
+		position:relative;
+	}
+	body .metaslider.onpage_nav .flexslider .slides li img,
+	body .metaslider.onpage_nav.thirds .flexslider .slides li img
+	{
+		height:auto !Important;
+		width:50%;
+	}
+
+	body .metaslider.onpage_nav .flexslider .slides li .caption-wrap,
+	body .metaslider.onpage_nav.thirds .flexslider .slides li  .caption-wrap
+	{
+		background:#fff !important;
+		height:45px;
+	}
+	body .metaslider.onpage_nav .flexslider .slides li .caption-wrap .caption,
+	body .metaslider.onpage_nav.thirds .flexslider .slides li  .caption-wrap .caption
+	{
+		color:#222;
+		font-size:14px;
+		height:unset;
+		line-height:1.2;
+		padding:unset;
+	}
 	/*tablet and mobile pages*/
+	#breadcrumbs a
+	{
+    font-weight: 400;
+	}
 	.separator:after
 	{
 		width:100%;
@@ -1656,6 +1723,50 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 		margin-right:5px;
 	}
 	/*mobile pages*/
+	#breadcrumbs
+	{
+		border-bottom: 1px solid lightgrey;
+    font-size: .8em;
+    padding-bottom: 1em;
+	}
+	.singular .entry-title
+	{
+    font-size: var(--global--font-size-xl);
+		font-weight:600;
+	}
+	.singular .entry-header
+	{
+		border:none;
+		margin-bottom:15px;
+	}
+	body .entry-content{
+		margin-top:-2em;
+	}
+	.wp-block-quote.is-large p, .wp-block-quote.is-style-large p
+	{
+		font-size:var(--global--font-size-lg);
+		font-weight:600;
+	}
+	.wp-block-quote.separator,
+	.wp-block-columns .wp-block-column .wp-block-quote.separator
+	{
+		margin-bottom:35px;
+	}
+	.wp-block-quote.separator::after
+	{
+		bottom: -22px;
+		height: 8px;
+		width: 87%;
+		margin: 0 auto;
+	}
+	.wp-block-quote.is-large:before, .wp-block-quote.is-style-large:before {
+    font-size: 50px;
+    line-height: 1;
+	}
+	.entry-content p
+	{
+		line-height:1.45;
+	}
 	/*mobile buttons*/
 	.featuredblock .wp-block-buttons .wp-block-button
 	{
@@ -1697,11 +1808,9 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
     padding: 0;
     margin: 0;
 	}
-	.singular .entry-header
-	{
-		margin-bottom:2em;
-	}
-	.hide_mobile
+	.hide_mobile,
+	.mobile_hidden,
+	.hidden_mobile
 	{
 		display:none;
 	}
@@ -1795,6 +1904,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 		--heading--font-size-h3: 1.25em;
 	}
 	/*smallest mobile header styles*/
+	.site-main{
+		margin-top: 10px;
+		padding-top: 0;
+	}
 	.super-header .font-resizer button, .font-sizer button, .font-sizer button:not(:hover):not(:active):not(.has-text-color)
 	{
 		margin:0;
@@ -1807,19 +1920,19 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	{
 		align-items: center;
 		justify-content: flex-start;
-		margin-top:10px;
+		margin-top:0;
 		overflow:hidden;
 		padding:.5em;
 	}
 	.site-logo .custom-logo
 	{
-    width: 70px;
+    width: 55px;
 	}
 	.site-branding
 	{
-		margin-left:10px;
-		margin-top:45px;
-		width:40%;
+		margin-left:15px;
+		margin-top:20px;
+		width:25%;
 	}
 	.site-description
 	{
@@ -1955,8 +2068,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	.breadcrumb_last,
 	#breadcrumbs strong
 	{
-		display: block;
-		margin-bottom: 2em;
 		padding-bottom: .5em;
 	}
 	.featuredblock figure
