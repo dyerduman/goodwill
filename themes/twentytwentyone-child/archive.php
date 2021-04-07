@@ -27,6 +27,7 @@ $description = get_the_archive_description();
 			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
 		<?php endif; ?>
 		<?php
+		if (is_category('blog')) :
 		wp_nav_menu(
 			array(
 				'theme_location'  => 'blog',
@@ -36,6 +37,16 @@ $description = get_the_archive_description();
 				'fallback_cb'     => false,
 			)
 		);
+	elseif (is_category('job-board')) :
+	wp_nav_menu(
+		array(
+			'theme_location'  => 'job-board',
+			'menu_class'      => 'menu-wrapper',
+			'container_class' => 'blog-filter',
+			'items_wrap'      => '<ul>%3$s</ul>',
+			'fallback_cb'     => false,
+		)
+	); endif;
 		?>
 	</header><!-- .page-header -->
 <section class="posts">

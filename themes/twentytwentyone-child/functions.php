@@ -12,6 +12,7 @@ register_nav_menus( array(
     'languages' => __( 'Languages', 'twentytwentyone-child' ),
     'tertiary' => __( 'Tertiary', 'twentytwentyone-child' ),
 		'blog' => __( 'Blog', 'twentytwentyone-child' ),
+		'job-board' => __( 'Job Board', 'twentytwentyone-child' ),
  ) );
 
 /*add function to make shortcode of registered menus*/
