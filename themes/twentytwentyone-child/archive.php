@@ -27,7 +27,7 @@ $description = get_the_archive_description();
 			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
 		<?php endif; ?>
 		<?php
-		if (is_category('blog')) :
+		if (is_category('blog') || is_category('resources') || is_category('news') || is_category('workshops') || is_category('job-fairs')) :
 		wp_nav_menu(
 			array(
 				'theme_location'  => 'blog',
