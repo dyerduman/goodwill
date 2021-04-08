@@ -37,7 +37,7 @@ $description = get_the_archive_description();
 				'fallback_cb'     => false,
 			)
 		);
-	elseif (is_category('job-board')) :
+	elseif (is_category('job-board') || is_category('hamilton')) :
 	wp_nav_menu(
 		array(
 			'theme_location'  => 'job-board',

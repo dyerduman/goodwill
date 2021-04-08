@@ -13,7 +13,7 @@
  * OVERWRITES *
 ****************************************/
 span.edit-link {
-    display: none;
+    display:none;
 }
 :root
 {
@@ -50,10 +50,6 @@ body a.skip-link.screen-reader-text
 .is-dark-theme .has-background:not(.has-text-color).has-green-background-color[class] > [class*=__inner-container] .wp-block-button
 {
 	border:2px solid;
-}
-.entry-footer > span
-{
-	display:none;
 }
 .nomargin
 {
@@ -283,7 +279,7 @@ a.wp-block-button__link:hover
 /*styling Google Translator select dropdown*/
 .goog-te-banner-frame
 {
-	display: none;
+	display:none;
 }
 .super-header #google_language_translator select.goog-te-combo option,
 .skiptranslate.goog-te-gadget
@@ -556,7 +552,9 @@ div#google_language_translator
 {
 	display:block;
 }
-.yellow a
+.yellow a,
+.tags-links a,
+.archive.category-job-board .posts .entry-footer .cat-links a, .archive.category-hamilton .posts .entry-footer .cat-links a
 {
 	background:#fff9a7;
 }
@@ -1132,6 +1130,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 }
 .cat-links a
 {
+    background:#fff;
     border: 2px solid;
     border-radius: 100px;
     margin-left: 5px;
@@ -1170,17 +1169,13 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 		padding: 10px 20px;
     text-decoration: none;
 }
-.blog-filter ul li a::first-letter
+.blog-filter ul li.icon a::first-letter
 {
 	font-weight:400;
 	line-height:0;
 	margin-right:6px;
 }
-.blog-filter ul li:first-child a::first-letter
-{
-	margin:unset;
-}
-.blog-filter ul li:nth-child(2) a::first-letter
+.blog-filter ul li.icon:nth-child(2) a::first-letter
 {
 	font-size:28px;
 }
@@ -1188,40 +1183,183 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
     background: #222;
     color: #fff;
 }
+
+/*global job board*/
+.category-job-board .page-header
+{
+    margin-bottom: 0;
+}
+.archive.category-job-board .posts,
+.archive.category-hamilton .posts
+{
+  max-width:var(--responsive--alignwide-width);
+}
+.archive.category-job-board .posts article,
+.archive.category-hamilton .posts article
+{
+    border-bottom: 2px solid;
+    display: flex;
+    align-items: stretch;
+}
+.archive.category-job-board article .entry-header, .archive.category-job-board article .entry-content, .archive.category-job-board article .entry-footer,
+.archive.category-hamilton article .entry-header, .archive.category-hamilton article .entry-content, .archive.category-hamilton article .entry-footer
+{
+    background: #e9f2ef;
+    flex: 0 0 33.3%;
+}
+.archive.category-job-board .posts .entry-header,
+.archive.category-hamilton .posts .entry-header
+{
+  align-items: center;
+  background:#fff;
+  box-shadow: 3px 0 6px -4px hsl(0deg 0% 0% / 44%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+  position:relative;
+	text-align:left;
+}
+.archive.category-job-board .posts .entry-title,
+.archive.category-hamilton .posts .entry-title
+{
+  font-size:1.2em;
+  margin:0;
+}
+.archive.category-job-board .posts .entry-title a,
+.archive.category-hamilton .posts .entry-title a
+{
+    bottom: 0;
+    font-weight: 700;
+    left: 0;
+    padding: 42px 20px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+.archive.category-job-board .posts .entry-title a:active, .archive.category-hamilton .posts .entry-title a:active,
+.archive.category-job-board .posts .entry-title a:focus, .archive.category-hamilton .posts .entry-title a:focus,
+.archive.category-job-board .posts .entry-title a:hover, .archive.category-hamilton .posts .entry-title a:hover {
+    border: 2px dotted;
+}
+.archive.category-job-board .posts .entry-title a:active, .archive.category-hamilton .posts .entry-title a:active,
+.archive.category-job-board .posts .entry-title a:visited, .archive.category-hamilton .posts .entry-title a:visited
+{
+  background:#fff;
+  color:#222;
+}
+.archive.category-job-board .posts .entry-content:before,
+.archive.category-hamilton .posts .entry-content:before {
+    font-weight: 600;
+}
+.archive.category-job-board .posts,
+.archive.category-hamilton .posts
+{
+    grid-template-columns: repeat(1, 1fr);
+}
+.archive.category-job-board .posts .entry-content,
+.archive.category-hamilton .posts .entry-content
+{
+    margin:0;
+    padding: 2em;
+}
+.archive.category-job-board .posts .post-thumbnail,
+.archive.category-hamilton .posts .post-thumbnail
+{
+    padding-top: 80px;
+}
+.archive.category-job-board .posts .post-thumbnail img,
+.archive.category-hamilton .posts .post-thumbnail img
+{
+	margin:0 auto;
+	max-width:180px !important;
+}
+
+.archive.category-job-board .posts .entry-footer,
+.archive.category-hamilton .posts .entry-footer
+{
+  padding: 2.75em;
+  margin: 0;
+}
+.archive.category-job-board .posts .entry-footer span,
+.archive.category-hamilton .posts .entry-footer span
+{
+  font-size:18px;
+  font-weight: 700;
+}
+.archive.category-job-board .posts .entry-footer time, .archive.category-hamilton .posts .entry-footer time {
+  font-weight: 400;
+}
+.archive.category-job-board .posts .entry-footer time:before, .archive.category-hamilton .posts .entry-footer time:before {
+    content: ":";
+    font-weight: 700;
+    margin-left: -4px;
+    margin-right: 5px;
+}
+.archive.category-job-board .posts .entry-footer .cat-links a, .archive.category-hamilton .posts .entry-footer .cat-links a
+{
+    border-radius: 0;
+    display: inline;
+    text-align: unset;
+    font-size: 18px;
+    padding: 0;
+    border: none;
+    text-decoration: underline;
+}
+.archive.category-job-board .posts .entry-footer .cat-links a:first-child, .archive.category-hamilton .posts .entry-footer .cat-links a:first-child
+{
+    margin: 0;
+}
 /*single posts*/
+.single-post .breadcrumb_last
+{
+  display:block;
+}
 .single-post article
 {
 		column-gap: 10px;
 		display: grid;
-		grid-template-columns: repeat(4, 25%);
-		grid-template-rows: 400px auto auto;
+		grid-template-columns: repeat(5, 20%);
+		grid-template-rows:auto;
 		margin: 0 auto;
-		width: 85%;
+		max-width: var(--responsive--alignwide-width);
 }
-.single-post article .entry-header {
-    grid-column: 1 / span 3;
+.single-post article .entry-header
+{
+    grid-column: 1 / span 4;
+    width:100%;
 }
-.single-post .has-post-thumbnail .entry-content {
-		grid-column: 2 / span 3;
+.single-post article .entry-header .entry-title
+{
+    width:75%;
+}
+.single-post .has-post-thumbnail .entry-content
+{
 		background: white;
-		margin: 0;
-		grid-row-start: 2;
-		position: relative;
-		padding-top: 2em;
 		border-left: 3px solid;
+    grid-column: 1 / span 4;
+		grid-row-start: 2;
+		margin: 0;
+    padding:2em;
+		position: relative;
 }
 .single-post .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
 .single-post .has-post-thumbnail .entry-content *
 {
-	max-width:90%;
+  max-width:unset;
+}
+.single-post .wp-block-cover{
+  width: calc(100% - calc(2 * var(--global--spacing-vertical)))
 }
 .single-post .has-post-thumbnail .entry-footer,
-.single-post .site-main > article > .entry-footer {
+.single-post .site-main > article > .entry-footer
+{
+    align-self: end;
+    display:block;
 		grid-row-start: 3;
-		margin: 0;
-		align-self: end;
+		margin: 2em 0 0;
 		margin-bottom: 0;
-		display:block;
 }
 .single-post .site-main > article > .entry-footer span
 {
@@ -1234,7 +1372,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 .single-post .entry-header figure img
 {
 	height: auto !important;
-  width: 75% !important;
   margin: 0;
 }
 .single .site-main > article > .entry-footer
@@ -1242,14 +1379,34 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	border-top:0;
 }
 .post-navigation .nav-links {
-    justify-content: space-between;
-    border-top: 3px solid;
-    margin-top: 2em;
-    padding-top: 2em;
+  justify-content: space-between;
+  border-top: 2px dotted;
+  margin-top: 2em;
+  padding-top: 2em;
 }
 .post-navigation .nav-next:last-child
 {
 	margin-top:0;
+}
+/*single posts job board, format "quote"*/
+.single-post.single-format-quote article .entry-header
+{
+    grid-column: 1 / span 1;
+    grid-row-start: 1;
+}
+.single-post.single-format-quote article .entry-content
+{
+    grid-column: 2 / span 1;
+    grid-row-start: 1;
+}
+.single-post.single-format-quote article
+{
+  column-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 30% 65%);
+  grid-template-rows: auto;
+  margin: 0 auto;
+  grid-column-gap: 5%;
 }
 /*************************************
  * GLOBAL FOOTER *
@@ -1407,6 +1564,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 		border-left: 20px solid #ffcd02;
 		font-weight:600;
     text-decoration: none;
+	}
+
+	.archive.category-job-board .primary-navigation .menu-wrapper li:nth-child(4) a
+	{
+		border-left:unset;
+		font-weight:unset;
 	}
 	.archive.category .primary-navigation .menu-wrapper .sub-menu li a,
 	.single-post .primary-navigation .menu-wrapper .sub-menu li a
@@ -1582,7 +1745,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	{
 		width:100%;
 	}
-	.alignwide
+	.alignwide,
+  .archive.category-job-board .posts, .archive.category-hamilton .posts
 	{
 		max-width:unset;
 		width:93%;
@@ -1655,9 +1819,17 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	{
     display:block;
 	}
+  /*tablet and mobile job board*/
+  .archive.category-job-board .posts .post-thumbnail,
+  .archive.category-hamilton .posts .post-thumbnail
+  {
+      padding-top: 50px;
+  }
+
 	/*tablet and mobile slider*/
 	.metaslider .caption .has-extra-large-font-size,
-	.metaslider .caption .has-large-font-size {
+	.metaslider .caption .has-large-font-size
+  {
 	    font-size: 1em;
 	}
 	body .metaslider .flexslider ul.slides li
@@ -1882,12 +2054,48 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	.intro.two .wp-block-column:first-child {
 	    order: 2;
 	}
+  /*mobile job board*/
+  .archive.category-job-board .posts, .archive.category-hamilton .posts
+  {
+    max-width: 93%;
+  }
+  .archive.category-job-board .posts article, .archive.category-hamilton .posts article
+  {
+    flex-direction: column;
+    border: 2px dotted;
+    margin: 1em auto;
+  }
+  .archive.category-job-board .posts .entry-header, .archive.category-hamilton .posts .entry-header
+  {
+    box-shadow:0px 4px 4px -4px hsl(0deg 0% 0% / 44%);
+    flex:unset;
+    height:250px;
+  }
+  .archive.category-job-board .posts .entry-title,
+  .archive.category-hamilton .posts .entry-title
+  {
+    font-size:1.2em;
+  }
+  .archive.category-job-board .posts .entry-footer, .archive.category-hamilton .posts .entry-footer
+  {
+    margin: 0;
+    margin-top: -40px;
+    max-width:unset;
+    padding: 2.5em;
+    padding-top: 0;
+  }
+  .archive.category-job-board .posts .entry-footer .post-taxonomies, .archive.category-hamilton .posts .entry-footer .post-taxonomies
+  {
+    min-height:unset;
+  }
+
 	/*mobile help module*/
 	.helpmodule .wp-block-group__inner-container .options
 	{
 		flex:0 0 20%;
 		justify-content: flex-start;
 	}
+
 	/*mobile footer*/
 	.widget_search > .search-form input.search-field, .widget_search > .search-form input.search-submit {
     margin: 0;

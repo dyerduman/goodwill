@@ -133,5 +133,21 @@ add_action( 'pre_get_posts', function ( $q )
         }
     }
 });
-
-/*remove author metadata from post entry footer metadata*/
+/**
+ * Register footer widget area.
+ *
+ *
+ * @link https://codex.wordpress.org/Function_Reference/register_sidebar
+ */
+function twentytwentyone_child_widgets_init() {
+  register_sidebar( array(
+    'name'          => __( 'Footer Widgets', 'twentytwentyone-child' ),
+    'id'            => 'sidebar-2',
+    'description'   => __( 'Post a Job (JotForm script)', 'twentytwentyone-child' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
+}
+add_action( 'widgets_init', 'twentytwentyone_child_widgets_init' );
