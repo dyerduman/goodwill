@@ -25,6 +25,14 @@ span.edit-link {
 /*	--heading--font-size-h3: 1.75em;*/
     --responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1640px);
 }
+.has-huge-font-size
+{
+font-size:var(--global--font-size-xxl) !Important;
+}
+.has-extra-large-font-size
+{
+  font-size:var(--heading--font-size-h3) !Important;
+}
 a.skip-link.screen-reader-text,
 body a.skip-link.screen-reader-text
 {
@@ -670,9 +678,15 @@ div#google_language_translator
 	border:none;
 	border-top:2px solid;
 }
-.c-accordion__title
+.wp-block-hotblocks-accordion
+{
+  border:unset;
+}
+.c-accordion__title,
+.wp-block-hotblocks-accordion .accordion-heading
 {
     border-bottom: 2px solid;
+    border-top:0;
 		font-size: var(--global--font-size-lg);
     margin-bottom: 1em;
 		padding: 0.5em;
@@ -704,7 +718,8 @@ div#google_language_translator
 	line-height:1.4;
 	margin-bottom:.5em;
 }
-.c-accordion__title:after {
+.c-accordion__title:after,
+.wp-block-hotblocks-accordion .accordion-heading::after {
 		color:#000;
 		font-weight: 600;
 }
@@ -1428,6 +1443,13 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	    grid-template-columns: repeat(4, 1fr);
 			margin-top:0;
 }
+#post-a-job
+{
+  background:none;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top:0;
+  padding:0;
+}
 .widget-area section:first-child {
     grid-column-start: 1;
     grid-column-end: 5;
@@ -1472,7 +1494,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	/*desktop pages*/
 	.wp-block-columns.alignwide.maxwidth_80
 	{
-		max-width:80%:
+		max-width:80%;
 	}
 	/*desktop slider as on page navigation*/
 	body .metaslider.thirds.onpage_nav .flexslider .flex-viewport,
@@ -1588,7 +1610,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	/*desktop sub menu styles*/
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu
 	{
-		background:#000;
+		background: #000;
     margin-left: -2px;
 		width: calc(100% + 4.25px) !important;
 	}
@@ -1621,7 +1643,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	{
 		background:##000;
 		filter:invert(100%);
-		left:92%;
+		left: 92%;
 	}
 	.primary-navigation .primary-menu-container > ul > .menu-item > a + .sub-menu-toggle:focus {
     background: #000;
