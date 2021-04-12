@@ -141,13 +141,25 @@ add_action( 'pre_get_posts', function ( $q )
  */
 function twentytwentyone_child_widgets_init() {
   register_sidebar( array(
-    'name'          => __( 'Footer Widgets', 'twentytwentyone-child' ),
+    'name'          => __( 'Additional Tools', 'twentytwentyone-child' ),
     'id'            => 'sidebar-2',
     'description'   => __( 'Post a Job (JotForm script)', 'twentytwentyone-child' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget'  => '</aside>',
-    'before_title'  => '<h2 class="widget-title">',
+    'before_title'  => '<h2>',
     'after_title'   => '</h2>',
   ) );
 }
 add_action( 'widgets_init', 'twentytwentyone_child_widgets_init' );
+/*search only in posts*/
+function template_chooser($template)
+{
+  global $wp_query;
+  $post_type = get_query_var('post_type');
+  if( $wp_query->is_search && $post_type == 'products' )
+  {
+    return locate_template('archive-search.php');  //  redirect to archive-search.php
+  }
+  return $template;
+}
+add_filter('template_include', 'template_chooser');

@@ -29,7 +29,7 @@ span.edit-link {
 {
 font-size:var(--global--font-size-xxl) !Important;
 }
-.has-extra-large-font-size
+.home .has-extra-large-font-size
 {
   font-size:var(--heading--font-size-h3) !Important;
 }
@@ -620,6 +620,7 @@ div#google_language_translator
 	margin-left:25px;
 	padding-left:0;
 }
+
 /*global featured block images*/
 .featuredblock
 {
@@ -634,6 +635,7 @@ div#google_language_translator
 {
     margin-top: -24%;
 }
+
 /*global intro cta*/
 .wp-block-buttons.intro_cta {
 	bottom: 15%;
@@ -641,6 +643,7 @@ div#google_language_translator
 	right: 1.5em;
 	width: 40%;
 }
+
 /*global gridbreak announcements*/
 .is-dark-theme .gridbreak.announcement
 {
@@ -660,6 +663,7 @@ div#google_language_translator
 {
 	margin-top:-40%;
 }
+
 /*global borders extra styles*/
 .borders_top-bottom,
 .borders_bottom-top
@@ -678,12 +682,7 @@ div#google_language_translator
 	border:none;
 	border-top:2px solid;
 }
-.wp-block-hotblocks-accordion
-{
-  border:unset;
-}
-.c-accordion__title,
-.wp-block-hotblocks-accordion .accordion-heading
+.c-accordion__title
 {
     border-bottom: 2px solid;
     border-top:0;
@@ -718,10 +717,119 @@ div#google_language_translator
 	line-height:1.4;
 	margin-bottom:.5em;
 }
-.c-accordion__title:after,
-.wp-block-hotblocks-accordion .accordion-heading::after {
+.c-accordion__title:after {
 		color:#000;
 		font-weight: 600;
+}
+
+/*global forms*/
+.nf-form-cont
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--responsive--alignwide-width);
+  max-width: var(--responsive--alignfull-width) !important;
+}
+.nf-response-msg
+{
+  background:#fff;
+  margin:0 auto;
+  max-width:80%;
+  padding:2em;
+  text-align:center;
+}
+.nf-form-fields-required,
+.nf-form-title
+{
+    font-style:italic;
+    margin:0 auto;
+    max-width: var(--responsive--aligndefault-width);
+    text-align:center;
+}
+.nf-form-title
+{
+  font-style:normal;
+}
+.nf-breadcrumbs {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.nf-breadcrumbs li
+{
+    flex: 0 0 33.3%;
+    margin: 0;
+}
+.widget-area .nf-breadcrumbs li a
+{
+    background:transparent;
+    border-bottom:2px solid;
+    color: #000;
+    font-weight:600;
+    width: 100%;
+}
+.widget-area .nf-breadcrumbs li a:focus,
+.widget-area .nf-breadcrumbs li a:hover
+{
+    background:#222;
+    border-bottom:2px solid #000;
+    color: #fff;
+}
+
+.widget-area .nf-breadcrumbs li.active a
+{
+    background: #2262a5;
+    color: #fff;
+    font-weight: 700;
+    border-bottom: 2px solid #000;
+}
+body .nf-field-description p,
+body .nf-field-description p:last-child
+{
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin: 0 0 1em;
+}
+.nf-form-content .list-checkbox-wrap span,
+.nf-error-msg, .ninja-forms-req-symbol
+{
+    color: #2263a5 !important; /*reflex blue*/
+}
+.nf-form-content .ninja-forms-field.nf-fu-fileinput-button
+{
+  margin:1em 0;
+}
+.nf-form-content input[type=button].nf-next,
+.nf-form-content [type=button].nf-prev,
+.nf-form-content [type=button].nf-previous
+{
+  background:transparent;
+  border:2px solid;
+  color:#000;
+  font-weight:700;
+}
+.nf-mp-footer {
+  border-bottom: 2px solid;
+  margin: 0 0 2em;
+  padding: 0 0 1em;
+}
+.nf-form-content .submit-wrap input[type=button]
+{
+  background:#000;
+  border:2px solid #000;
+  cursor:pointer;
+  font-size:1em;
+  font-weight:700;
+  height:unset;
+  line-height:2;
+  width:100%;
+}
+.nf-form-content .submit-wrap input[type=button]:focus,
+.nf-form-content .submit-wrap input[type=button]:hover
+{
+    background:transparent;
+    color:#000;
+    border:2px solid;
 }
 /*accordion imitating dropdown*/
 .dropdown
@@ -1038,6 +1146,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 #breadcrumbs a, #breadcrumbs strong {
     margin: 0 5px;
 		font-weight:600;
+}
+.category article + nav.navigation.pagination {
+    width: 100%;
+    border: unset;
+    border-bottom: 3px solid;
+    padding-bottom: 1em;
 }
 .archive .page-title
 {
@@ -1408,6 +1522,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 {
     grid-column: 1 / span 1;
     grid-row-start: 1;
+}
+.single-post.single-format-quote .entry-header .entry-title
+{
+  width:100%;
 }
 .single-post.single-format-quote article .entry-content
 {
