@@ -40,6 +40,10 @@ if ( have_posts() ) {
 			(int) $wp_query->found_posts
 		);
 		?>
+		<?php
+$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+query_posts( "s=$s&paged=$paged&cat=22,36,37,26" );
+?>
 	</div><!-- .search-result-count -->
 	<?php
 	// Start the Loop.

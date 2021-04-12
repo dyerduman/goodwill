@@ -26,6 +26,7 @@ $description = get_the_archive_description();
 		<?php if ( $description ) : ?>
 			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
 		<?php endif; ?>
+			<div class="tools archives">
 		<?php
 		if (is_category('blog') || is_category('resources') || is_category('news') || is_category('workshops') || is_category('job-fairs')) :
 		wp_nav_menu(
@@ -37,7 +38,10 @@ $description = get_the_archive_description();
 				'fallback_cb'     => false,
 			)
 		);
-	elseif (is_category('job-board') || is_category('hamilton')) :
+
+	?>
+		<?php
+	elseif (is_category('job-board') || is_category('greater-hamilton')) :
 	wp_nav_menu(
 		array(
 			'theme_location'  => 'job-board',
@@ -46,23 +50,20 @@ $description = get_the_archive_description();
 			'items_wrap'      => '<ul>%3$s</ul>',
 			'fallback_cb'     => false,
 		)
-	); endif;
-		?>
+	); ?>
+	<form role="search" <?php echo $twentytwentyone_aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above. ?> method="get" class="search-form archives" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<label for="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>"><?php _e( 'Search Job Board', 'twentytwentyone' ); // phpcs:ignore: WordPress.Security.EscapeOutput.UnsafePrintingFunction -- core trusts translations ?></label>
+		<input type="search" id="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>" class="search-field" value="<?php echo get_search_query(); ?>" name="s" />
+		<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search Jobs', 'submit button', 'twentytwentyone' ); ?>" />
+	<input type="hidden" name="cat" id="cat" value="22" />
+	<input type="hidden" name="cat" id="cat" value="36" />
+	<input type="hidden" name="cat" id="cat" value="37" />
+	<input type="hidden" name="cat" id="cat" value="26" />
+</form>
+<?php endif;
+		?></div>
 	</header><!-- .page-header -->
 <section class="posts">
-	<div>Search</div>
-	<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-<input type="text" name="s" id="s" <?php if(is_search()) { ?>value="<?php the_search_query(); ?>" <?php } else { ?>value="Enter keywords &hellip;" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"<?php } ?> /><br />
-
-<?php $query_types = get_query_var('post_type'); ?>
-
-<input type="checkbox" name="post_type[]" value="articles" <?php if (in_array('articles', $query_types)) { echo 'checked="checked"'; } ?> /><label>Articles</label>
-<input type="checkbox" name="post_type[]" value="post" <?php if (in_array('post', $query_types)) { echo 'checked="checked"'; } ?> /><label>Blog</label>
-<input type="checkbox" name="post_type[]" value="books" <?php if (in_array('books', $query_types)) { echo 'checked="checked"'; } ?> /><label>Books</label>
-<input type="checkbox" name="post_type[]" value="videos" <?php if (in_array('videos', $query_types)) { echo 'checked="checked"'; } ?> /><label>Videos</label>
-
-<input type="submit" id="searchsubmit" value="Search" />
-</form>
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
 		<?php get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
@@ -73,7 +74,7 @@ $description = get_the_archive_description();
 <?php else : ?>
 	<?php get_template_part( 'template-parts/content/content-none' ); ?>
 <?php endif; ?>
-<?php if (( is_active_sidebar( 'sidebar-2' )  ) && (is_category("job-board"))) : ?>
+<?php /*if (( is_active_sidebar( 'sidebar-2' )  ) && (is_category("job-board"))) : ?>
 
  <div id="post-a-job" class="widget-area" role="complementary">
 
@@ -81,6 +82,6 @@ $description = get_the_archive_description();
 
  </div>
 
-<?php endif; ?>
+<?php endif;*/ ?>
 </section>
 <?php get_footer(); ?>
