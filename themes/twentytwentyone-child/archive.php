@@ -40,8 +40,14 @@ $description = get_the_archive_description();
 		);
 
 	?>
+	<form role="search" <?php echo $twentytwentyone_aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above. ?> method="get" class="search-form archives" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<label for="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>"><?php _e( 'Search Community Board', 'twentytwentyone' ); // phpcs:ignore: WordPress.Security.EscapeOutput.UnsafePrintingFunction -- core trusts translations ?></label>
+		<input type="search" id="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>" class="search-field" value="<?php echo get_search_query(); ?>" name="s" />
+		<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search Board', 'submit button', 'twentytwentyone' ); ?>" />
+	<input type="hidden" name="cat" id="cat" value="40" />
+</form>
 		<?php
-	elseif (is_category('job-board') || is_category('greater-hamilton')) :
+	elseif (is_category('job-board') || is_category('hamilton')) :
 	wp_nav_menu(
 		array(
 			'theme_location'  => 'job-board',
@@ -56,14 +62,13 @@ $description = get_the_archive_description();
 		<input type="search" id="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>" class="search-field" value="<?php echo get_search_query(); ?>" name="s" />
 		<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search Jobs', 'submit button', 'twentytwentyone' ); ?>" />
 	<input type="hidden" name="cat" id="cat" value="22" />
-	<input type="hidden" name="cat" id="cat" value="36" />
-	<input type="hidden" name="cat" id="cat" value="37" />
-	<input type="hidden" name="cat" id="cat" value="26" />
 </form>
 <?php endif;
 		?></div>
 	</header><!-- .page-header -->
+<?php if (!is_category('job-board')) : ?>
 <section class="posts">
+<?php endif; ?>
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
 		<?php get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
@@ -74,7 +79,7 @@ $description = get_the_archive_description();
 <?php else : ?>
 	<?php get_template_part( 'template-parts/content/content-none' ); ?>
 <?php endif; ?>
-<?php /*if (( is_active_sidebar( 'sidebar-2' )  ) && (is_category("job-board"))) : ?>
+<?php if (( is_active_sidebar( 'sidebar-2' )  ) && (is_category("job-board"))) : ?>
 
  <div id="post-a-job" class="widget-area" role="complementary">
 
@@ -82,6 +87,8 @@ $description = get_the_archive_description();
 
  </div>
 
-<?php endif;*/ ?>
+<?php endif; ?>
+<?php if (!is_category('job-board')) : ?>
 </section>
+<?php endif; ?>
 <?php get_footer(); ?>
