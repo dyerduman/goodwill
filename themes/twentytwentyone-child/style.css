@@ -1761,6 +1761,38 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
     text-decoration: none;
     font-weight: 600;
 }
+
+/*global to the top module*/
+#to-the-top
+{
+  background:#004187;
+	border:2px solid;
+  border-radius: 100px;
+  bottom: 1em;
+  color: #fff;
+	display:none;
+  font-size:25px;
+  font-weight: 900;
+  height:70px;
+  line-height:70px;
+  margin-right: 1em;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  width:70px;
+  z-index: 99;
+}
+#to-the-top:focus,
+#to-the-top:hover{
+	background:#000;
+}
+#to-the-top:focus{
+  background:#000;
+  color: #fff;
+  outline: none;
+	text-decoration:none;
+}
 /****************************************
  * QUERIES *
 ****************************************/
@@ -1850,6 +1882,17 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 		font-size:.85em;
 		height:auto;
 		padding:5px 0;
+	}
+  /*desktop footer*/
+	.contact .wp-block-button {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.contact a.wp-block-button__link {
+		margin: 1em;
+		width: 33.3%;
 	}
 }
 @media only screen and (min-width: 482px)
@@ -2509,6 +2552,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	{
 		flex-direction:column;
 	}
+  /*small mobile footer*/
+
 }
 @media (max-width:481px){
 	/*mobile overrides*/

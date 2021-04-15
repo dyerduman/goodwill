@@ -62,7 +62,25 @@
 				);
 				?>
 			</div><!-- .powered-by -->
-
+			<a id="to-the-top" href="javascript:">
+				<!-- to the top -->
+									<!--<span class="to-the-top-long">
+										<?php
+										/* translators: %s: HTML character for up arrow. */
+										printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">⌃</span>' );
+										?>
+									</span> .to-the-top-long -->
+									<!--<span class="to-the-top-short">
+										<?php
+										/* translators: %s: HTML character for up arrow. */
+										printf( __( 'Top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">⌃</span>' );
+										?>
+									</span> .to-the-top-short -->
+										<?php
+										/* translators: %s: HTML character for up arrow. */
+										printf( __( '%s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">⌃</span>' );
+										?>
+								</a><!-- .to-the-top -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
@@ -86,6 +104,28 @@ $('.aos-delay-max').each(function(i) {
     $(this).attr('data-aos-delay', '1000');
 });
   AOS.init();
+</script>
+<!-- to the top script -->
+<script>
+		$(document).scroll(function() {
+
+  if ($(this).scrollTop() >= 200) {
+
+
+    $('#to-the-top').fadeIn(200);
+  } else {
+
+
+    $('#to-the-top').fadeOut(200);
+  }
+
+});
+
+$('#to-the-top').click(function() {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 500, 'swing');
+});
 </script>
 </body>
 </html>
