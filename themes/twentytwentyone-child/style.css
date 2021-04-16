@@ -607,12 +607,6 @@ div#google_language_translator
 	border:2px solid;
 	color:#fff;
 }
-.locations.donate h2:before {
-    content: "\2661";
-    display: block;
-    font-size: 45px;
-    margin-bottom: 10px;
-}
 /*global on page nav*/
 .onpage_nav .wp-block-column,
 .onpage_nav .wp-block-column:not(:only-child)
@@ -635,11 +629,19 @@ div#google_language_translator
     height: 350px;
     overflow: hidden;
 }
+.featuredblock .wp-block-gallery
+{
+  height:auto;
+}
 .featuredblock figure img
 {
     margin-top: -24%;
 }
 
+.featuredblock .wp-block-gallery img
+{
+  margin:unset;
+}
 /*global intro cta*/
 .wp-block-columns.intro {
     max-width: 1440px;
