@@ -26,7 +26,10 @@ $description = get_the_archive_description();
 		<?php if ( $description ) : ?>
 			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
 		<?php endif; ?>
-			<div class="tools archives">
+		<div class="tab">
+			<input type="checkbox" id="chck1">
+			 <label class="tab-label" for="chck1">Filter and Search</label>
+			<div class="tools archives tab-content">
 		<?php
 		if (is_category('blog') || is_category('resources') || is_category('news') || is_category('workshops') || is_category('job-fairs')) :
 		wp_nav_menu(
@@ -65,6 +68,7 @@ $description = get_the_archive_description();
 </form>
 <?php endif;
 		?></div>
+	</div>
 	</header><!-- .page-header -->
 <?php if (!is_category('job-board')) : ?>
 <section class="posts">
