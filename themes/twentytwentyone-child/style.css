@@ -45,8 +45,7 @@ body a.skip-link.screen-reader-text
 .primary-navigation-open .super-header #dark-mode-toggler{
 	display:block;
 }
-.is-dark-theme .has-green-background-color[class],
-.is-dark-theme .has-green-background-color[class] .wp-block-button__link,
+
 .is-dark-theme .wp-block-pullquote.is-style-solid-color,
 .is-dark-theme .has-background:not(.has-text-color).has-green-background-color[class] > [class*=__inner-container]{
     background-color: #222 !important;
@@ -528,7 +527,9 @@ div#google_language_translator
 /****************************************
  * GLOBAL PAGES *
 ****************************************/
-.alignwide
+.wp-block-columns.alignwide,
+.wp-block-group.alignwide,
+.wp-block-cover.alignwide
 {
   max-width:1440px;
   width:calc(var(--responsive--alignwide-width) + 150px);
