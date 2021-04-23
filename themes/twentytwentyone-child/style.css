@@ -1208,7 +1208,7 @@ input[type=checkbox] + label, input[type=radio] + label {
 .search-results:not(.category-job-board) .site-main
 {
 		align-items: end;
-		column-gap: calc(2 * var(--global--spacing-horizontal));
+		column-gap: calc(2 * var(--global--spacing-horizontal) - 20px);
     display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		margin:0 auto;
@@ -1401,12 +1401,14 @@ input[type=checkbox] + label, input[type=radio] + label {
 }
 .cat-links a
 {
-    background:#fff;
-    border: 2px solid;
-    border-radius: 100px;
-    margin-left: 5px;
-    padding: 10px 15px;
-    text-decoration: none;
+  background: #fff;
+  border: 2px solid;
+  border-radius: 100px;
+  display: inline-flex;
+  flex-flow: wrap;
+  margin: 5px;
+  padding: 0 1em;
+  text-decoration: none;
 }
 .post-taxonomies {
     min-height: 65px;
@@ -1455,7 +1457,7 @@ input[type=checkbox] + label, input[type=radio] + label {
 }
 .blog-filter ul li.icon:nth-child(2) a::first-letter
 {
-	font-size:28px;
+	font-size:22px;
 }
 .blog-filter .current-menu-item a {
     background: #222;
@@ -2903,7 +2905,8 @@ input[type=checkbox] + label, input[type=radio] + label {
 		flex-wrap:wrap;
 		justify-content: flex-end;
 	}
-	.primary-navigation > div > .menu-wrapper li {
+	.primary-navigation > div > .menu-wrapper li,
+  .home .primary-navigation .menu-wrapper li {
 		background: var(--global--color-background);
 		flex:unset;
 		height:auto;
