@@ -157,7 +157,7 @@ add class 'category-job-board' into body tag of all children of job-board catego
 add_filter( 'body_class','category_job_board' );
 function category_job_board( $classes ) {
 
-    if ( is_category( 'brantford' ) || (is_category('burlington')) || (is_category('hamilton')) || (is_category('mississauga')) || (is_category('niagara')) || (is_category('oakville')) ) {
+    if ( is_category( 'brantford' ) || (is_category('burlington')) || (is_category('hamilton')) || (is_category('mississauga')) || (is_category('niagara')) || (is_category('oakville')) || (is_category('goodwill')) ) {
         $classes[] = 'category-job-board';
     }
 
