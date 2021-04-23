@@ -10,7 +10,7 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 */
 /****************************************
- * OVERWRITES *
+ * OVERRIDES *
 ****************************************/
 span.edit-link {
     display:none;
@@ -42,6 +42,9 @@ body a.skip-link.screen-reader-text
 	box-shadow:none;
 }
 /*still show dark mode toggler in super-header*/
+.is-dark-theme.is-dark-theme img {
+    filter: brightness(0.75) contrast(1.1);
+}
 .primary-navigation-open .super-header #dark-mode-toggler{
 	display:block;
 }
@@ -57,6 +60,36 @@ body a.skip-link.screen-reader-text
 .is-dark-theme .has-background:not(.has-text-color).has-green-background-color[class] > [class*=__inner-container] .wp-block-button
 {
 	border:2px solid;
+}
+.is-dark-theme .has-background:not(.has-text-color),
+.is-dark-theme .has-background[class] > [class*=__inner-container] {
+    background: #222 !important;
+}
+.is-dark-theme .has-background[class] > [class*=__inner-container] *,
+.is-dark-theme .widget_search > .search-form input[type=submit]:not(:hover):not(:active):not(.has-background)
+{
+  color:#fff;
+}
+.is-dark-theme .widget_search > .search-form input[type=submit]:not(:hover):not(:active):not(.has-background)
+{
+  background:#000;
+  border:2px solid #fff;
+}
+.is-dark-theme .has-background .wp-block-button.is-style-outline .wp-block-button__link:not(:hover):not(:active):not(.has-text-color)
+{
+  color:var(--global--color-primary) !important;
+}
+.is-dark-theme .has-background .wp-block-button.is-style-outline .wp-block-button__link:hover *,
+.is-dark-theme .has-background .wp-block-button.is-style-outline .wp-block-button__link:focus *
+{
+color:#222 !important
+}
+.is-dark-theme .has-background .wp-block-button.is-style-outline .wp-block-button__link:hover,
+.is-dark-theme .has-background .wp-block-button.is-style-outline .wp-block-button__link:focus,
+.is-dark-theme .has-background .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-background)
+{
+  background-color:var(--global--color-primary) !important;
+  color:#222 !important /*var(--local--color-primary, var(--global--color-primary)) ;*/;
 }
 .nomargin
 {
@@ -711,6 +744,10 @@ div#google_language_translator
     margin-top: -1.2em;
     padding: 1em;
 }
+.is-dark-theme .c-accordion__content
+{
+    background: rgb(0 0 0 / 35%);
+}
 .c-accordion__content h4
 {
 	margin-top:1em;
@@ -733,7 +770,7 @@ div#google_language_translator
 	margin-bottom:.5em;
 }
 .c-accordion__title:after {
-		color:#000;
+		color:var(--global--color-primary);
 		font-weight: 600;
 }
 
@@ -1189,20 +1226,19 @@ input[type=checkbox] + label, input[type=radio] + label {
 .category-blog.search-results .search-result-count.alignwide
 {
     align-items:center;
-    display: flex;
-    flex-wrap:wrap;
+    display: grid;
+    grid-template-columns: 100%;
     justify-content: space-between;
 }
-.category-job-board.search-results .search-result-count.alignwide form, .category-job-board.search-results .search-result-count.alignwide .blog-filter,
+/*.category-job-board.search-results .search-result-count.alignwide form, .category-job-board.search-results .search-result-count.alignwide .blog-filter,
 .category-blog.search-results .search-result-count.alignwide form,
 .category-blog.search-results .search-result-count.alignwide .blog-filter {
     flex: 0 0 100%;
-}
+}*/
 .tools.archives form,
 .category-job-board.search-results .search-result-count form,
 .category-blog.search-results .search-result-count.alignwide form{
     margin: 0;
-    /*margin-top:3em;*/
 }
 .tools.archives .search-form .search-field,
 .tools.archives input.search-submit,
@@ -1261,6 +1297,7 @@ input[type=checkbox] + label, input[type=radio] + label {
 .search-results .blog-filter
 {
   margin:1em auto;
+  width:100%;
 }
 .search-results .blog-filter p {
     font-weight: 700;
@@ -1891,6 +1928,7 @@ input[type=checkbox] + label, input[type=radio] + label {
 	body .metaslider.onpage_nav .flexslider ul.slides
 	{
 		flex-wrap:wrap;
+    margin-bottom:1em;
 	}
 	body .metaslider.thirds.onpage_nav .flexslider ul.slides li,
 	body .metaslider.onpage_nav .flexslider ul.slides li
@@ -1898,6 +1936,16 @@ input[type=checkbox] + label, input[type=radio] + label {
 		flex:0 0 250px;
 		height:220px;
 	}
+  body .metaslider.onpage_nav .flexslider ul.slides li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    height: 160px;
+    overflow: hidden;
+}
 	body .metaslider.thirds.onpage_nav .flexslider ul.slides li img,
 	body .metaslider.onpage_nav .flexslider ul.slides li img
 	{
@@ -1907,7 +1955,7 @@ input[type=checkbox] + label, input[type=radio] + label {
 	body .metaslider.thirds.onpage_nav .flexslider ul.slides li .caption-wrap,
 	body .metaslider.onpage_nav .flexslider ul.slides li .caption-wrap
 	{
-		background:#fff !important;
+		background:transparent !important;
 		height:60px;
 	}
 
@@ -1924,6 +1972,12 @@ input[type=checkbox] + label, input[type=radio] + label {
 		height:auto;
 		padding:5px 0;
 	}
+  /*desktop archives*/
+  .tools.archives form,
+  .category-blog.search-results .search-result-count.alignwide form
+  {
+    margin: 1em 0;
+  }
   /*desktop footer*/
 	.contact .wp-block-button
   {
@@ -2153,6 +2207,7 @@ input[type=checkbox] + label, input[type=radio] + label {
   /*tablet archives tools filter accordion styles*/
   input[type=checkbox] + label, input[type=radio] + label
   {
+    background: var(--global--color-red);
     opacity:1;
     position:unset;
     z-index:unset;
@@ -2168,14 +2223,22 @@ input[type=checkbox] + label, input[type=radio] + label {
   }
   .tab-label,
   .tab input[type=checkbox] + label{
-    align-items:baseline;
+    align-items:center;
     cursor: pointer;
     display: flex;
     font-size:var(--global--font-size-l);
     font-weight: bold;
+    height:3em;
     justify-content: space-between;
-
-    /* Icon */
+    line-height:1;
+    margin:0;
+    transition: .5s ease-in-out;
+    border:2px solid transparent;
+  }
+  .tab input[type=checkbox]:checked + label
+  {
+    background:transparent;
+    border-bottom:2px solid #222;
   }
   .tab-label:hover {
   }
@@ -2183,7 +2246,7 @@ input[type=checkbox] + label, input[type=radio] + label {
     content: "+";
     font-size:var(--global--font-size-xl);
     height: 1em;
-    margin:1em 0em 1em 1em;
+    margin:1em 0.35em 1em 1em;
     text-align: center;
     transition: all 0.35s;
     width: 1em;
@@ -2385,7 +2448,7 @@ input[type=checkbox] + label, input[type=radio] + label {
     margin-right: 0;
 	}
 	/*tablet and mobile posts*/
-  .archive.category-blog .posts {
+  .archive.category .posts {
     display: block;
     width: 100%;
     max-width: 95%;
@@ -2607,7 +2670,8 @@ input[type=checkbox] + label, input[type=radio] + label {
 	  width: 100%;
 	}
 	/*mobile locations*/
-	.locations .wp-block-columns .wp-block-column:not(:last-child)
+	.locations .wp-block-columns .wp-block-column:not(:last-child),
+  .locations.wp-block-columns .wp-block-column
 	{
 		margin-bottom:0;
 		text-align:center;
@@ -2751,12 +2815,12 @@ input[type=checkbox] + label, input[type=radio] + label {
     max-width:unset;
     width:100%;
   }
-  .tools.archives form {
+  .tools.archives .search-form {
     margin: 1em 0 1em;
     display: grid;
     grid-template-columns: 100%;
-    row-gap: 0;
     order: 2;
+    row-gap: 0;
     text-align: center;
   }
   .tools.archives form input
@@ -3012,6 +3076,10 @@ input[type=checkbox] + label, input[type=radio] + label {
     width: 100%;
 	}
   /*smallest mobile archives and filter search tools*/
+  .blog-filter ul
+  {
+    margin-bottom:0;
+  }
 }
 @media (max-width:390px)
 {

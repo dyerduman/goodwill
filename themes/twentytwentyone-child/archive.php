@@ -24,7 +24,7 @@ $description = get_the_archive_description();
 	?>
 		<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 		<?php if ( $description ) : ?>
-			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
+			<p class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></p>
 		<?php endif; ?>
 		<div class="tab">
 			<input type="checkbox" id="chck1">
@@ -44,9 +44,9 @@ $description = get_the_archive_description();
 
 	?>
 	<form role="search" <?php echo $twentytwentyone_aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above. ?> method="get" class="search-form archives" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<label for="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>"><?php _e( 'Search Community Board', 'twentytwentyone' ); // phpcs:ignore: WordPress.Security.EscapeOutput.UnsafePrintingFunction -- core trusts translations ?></label>
+		<label for="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>"><?php _e( 'Search <strong>Community Board</strong>', 'twentytwentyone' ); // phpcs:ignore: WordPress.Security.EscapeOutput.UnsafePrintingFunction -- core trusts translations ?></label>
 		<input type="search" id="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>" class="search-field" value="<?php echo get_search_query(); ?>" name="s" />
-		<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search Board', 'submit button', 'twentytwentyone' ); ?>" />
+		<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'twentytwentyone' ); ?>" />
 	<input type="hidden" name="cat" id="cat" value="40" />
 </form>
 		<?php
