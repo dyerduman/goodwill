@@ -1119,70 +1119,16 @@ body.is-dark-theme .metaslider.ms-theme-disjoint.onpage_nav .flexslider ul.slide
 {
   	background:transparent !important;
 }
-body .metaslider.ms-theme-disjoint .flexslider:not(.filmstrip) ul.flex-direction-nav
-{
-	right:unset;
-	top:50%;
-	width:calc(100% + 50px);
-	right:-20px;
-}
-body .metaslider.ms-theme-disjoint .flexslider ul.flex-direction-nav li a {
-  background: #222;
-  border-radius: 50%;
-  padding: 30px;
-}
-body .metaslider.ms-theme-disjoint .flexslider ul.flex-direction-nav li a::before
-{
-	background-image: none !important;
-  border-bottom: 2px solid white;
-  border-right: 2px solid #fff;transform: rotate(-45deg);
-	height:16px;
-  left: 18px;
+body .metaslider.onpage_nav .flexslider ul.slides li a {
   position: absolute;
-  top: 20px;
-  width: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 160px;
+  overflow: hidden;
 }
-.metaslider.ms-theme-disjoint .flexslider ul.flex-direction-nav li a.flex-prev:before
-{
-	border:unset;
-	border-left:2px solid #fff;
-	border-bottom:2px solid #fff;
-  left: 23px;
-  transform: rotate(45deg);
-}
-body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) {
-	margin-top:20px;
-	position: unset;
-}
-body .metaslider .flex-control-nav li {
-  margin: 0;
-  flex: 0 0 50%;
-}
-body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) li a,
-body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) li a:hover
-{
-	border:0;
-  max-width: unset;
-  width: 100%;
-}
-body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) li a:hover
-{
-	background:grey !important;
-}
-body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) li a
-{
-	background:grey;
-}
-body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav li a.flex-active, .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav:not(.flex-control-thumbs) li a:hover
-{
-	background:blue;
-	border:0;
-}
-body .metaslider.ms-theme-disjoint .flexslider ol.flex-control-nav li a.flex-active:hover
-{
-	background:blue !important;
-}
-
 body .metaslider .slides img
 {
     display: block;
@@ -1936,16 +1882,6 @@ input[type=checkbox] + label, input[type=radio] + label {
 		flex:0 0 250px;
 		height:220px;
 	}
-  body .metaslider.onpage_nav .flexslider ul.slides li a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    height: 160px;
-    overflow: hidden;
-}
 	body .metaslider.thirds.onpage_nav .flexslider ul.slides li img,
 	body .metaslider.onpage_nav .flexslider ul.slides li img
 	{
@@ -2298,7 +2234,7 @@ input[type=checkbox] + label, input[type=radio] + label {
 	{
 		width:95%;
 	}
-	/*tablet and mobile slider*/
+	/*tablet slider*/
 	.metaslider .flexslider .slides p
 	{
 		font-size:.85em;
@@ -2309,7 +2245,7 @@ input[type=checkbox] + label, input[type=radio] + label {
 		line-height:35px;
 		width:40px;
 	}
-	/*tablet and mobile slider for on page nav*/
+	/*tablet slider for on page nav*/
 	.onpage_nav .flex-viewport
 	{
 		margin-bottom: 25px;
@@ -2347,6 +2283,9 @@ input[type=checkbox] + label, input[type=radio] + label {
 		padding:unset;
 		padding-top:5px;
 	}
+  body .metaslider.onpage_nav .flexslider ul.slides li a {
+    height:100px;
+  }
   /*tablet and mobile gridbreak announcement */
   .wp-block-columns .wp-block-column > .gridbreak.announcement
   {
