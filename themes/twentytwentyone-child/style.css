@@ -1411,7 +1411,7 @@ input[type=checkbox] + label, input[type=radio] + label {
   text-decoration: none;
 }
 .post-taxonomies {
-    min-height: 65px;
+    min-height: 150px;
 }
 .posted-on {
     margin-bottom: 15px;
@@ -1465,7 +1465,8 @@ input[type=checkbox] + label, input[type=radio] + label {
 }
 
 /*global job board*/
-.category-job-board .page-header
+.category-job-board .page-header,
+.category-hamilton .page-header
 {
   border-bottom:1px solid;
     margin-bottom: 0;

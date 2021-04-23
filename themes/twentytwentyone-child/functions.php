@@ -151,15 +151,16 @@ function twentytwentyone_child_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'twentytwentyone_child_widgets_init' );
-/*search only in posts*/
-function template_chooser($template)
-{
-  global $wp_query;
-  $post_type = get_query_var('post_type');
-  if( $wp_query->is_search && $post_type == 'products' )
-  {
-    return locate_template('archive-search.php');  //  redirect to archive-search.php
-  }
-  return $template;
+
+/* Filter: Category Parent and Child
+add class 'category-job-board' into body tag of all children of job-board category*/
+add_filter( 'body_class','category_job_board' );
+function category_job_board( $classes ) {
+
+    if ( is_category( 'brantford' ) || (is_category('burlington')) || (is_category('hamilton')) || (is_category('mississauga')) || (is_category('niagara')) || (is_category('oakville')) ) {
+        $classes[] = 'category-job-board';
+    }
+
+    return $classes;
+
 }
-add_filter('template_include', 'template_chooser');
