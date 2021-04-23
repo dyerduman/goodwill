@@ -663,16 +663,15 @@ div#google_language_translator
 }
 .featuredblock figure
 {
+    display:flex;
+    align-items:center;
     height: 350px;
+    justify-content: center;
     overflow: hidden;
 }
 .featuredblock .wp-block-gallery
 {
   height:auto;
-}
-.featuredblock figure img
-{
-    margin-top: -24%;
 }
 
 .featuredblock .wp-block-gallery img
