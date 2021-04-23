@@ -1157,7 +1157,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 }
 /*global archives tools -- filters, search*/
 .tab input[type=checkbox],
-input[type=checkbox] + label, input[type=radio] + label {
+.tab input[type=checkbox] + label,
+.tab input[type=radio] + label {
   position: absolute;
   opacity: 0;
   z-index: -1;
@@ -2195,7 +2196,8 @@ input[type=checkbox] + label, input[type=radio] + label {
 @media (max-width:1024px)
 {
   /*tablet archives tools filter accordion styles*/
-  input[type=checkbox] + label, input[type=radio] + label
+  .tab input[type=checkbox] + label,
+  .tab input[type=radio] + label
   {
     background: var(--global--color-red);
     opacity:1;
@@ -2466,7 +2468,16 @@ input[type=checkbox] + label, input[type=radio] + label {
     grid-template-columns: repeat(1, 100%);
     width: 100%;
   }
-
+  .nf-next-previous li.nf-next-item,
+  .nf-next-previous li.nf-previous-item,
+  .nf-form-content input[type=button].nf-next, .nf-form-content [type=button].nf-prev, .nf-form-content [type=button].nf-previous
+  {
+    width:100%
+  }
+  .nf-next-previous li.nf-previous-item input
+  {
+    margin-bottom:10px;
+  }
 	/*tablet and mobile slider*/
 	.metaslider .caption .has-extra-large-font-size,
 	.metaslider .caption .has-large-font-size
