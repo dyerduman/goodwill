@@ -54,12 +54,16 @@
 				<?php endif; ?>
 			</div><!-- .site-name -->
 			<div class="powered-by">
+				<p>Copyright &copy; <?php echo date("Y");?>, <strong><em>Goodwill, the Amity Group</strong></em> </p>
 				<?php
 				printf(
-					/* translators: %s: WordPress. */
+					/* translators: %s: WordPress.
 					esc_html__( 'Proudly developed to WCAG 2.0 standards by %s.', 'twentytwentyone' ),
 					'<a href="' . esc_url( __( 'https://dyerduman.design/', 'twentytwentyone' ) ) . '">Dyer &amp; Duman Design</a>'
-				);
+				);*/
+				esc_html__( 'Proudly developed to WCAG 2.0 standards.', 'twentytwentyone' ),
+				'<a href="' . esc_url( __( 'https://dyerduman.design/', 'twentytwentyone' ) ) . '">Dyer &amp; Duman Design</a>'
+			);
 				?>
 			</div><!-- .powered-by -->
 			<a id="to-the-top" href="javascript:">
