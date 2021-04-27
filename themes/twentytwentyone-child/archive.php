@@ -50,7 +50,7 @@ $description = get_the_archive_description();
 	<input type="hidden" name="cat" id="cat" value="40" />
 </form>
 <?php
-	elseif (get_body_class('category-job-board')) : //see Filter: Category Parent and Child in functions.php for all children of category-job-board
+	elseif (get_body_class('category-job-board')) : //see "Filter: Category Parent and Child" in functions.php for all children of category-job-board
 	wp_nav_menu(
 		array(
 			'theme_location'  => 'job-board',

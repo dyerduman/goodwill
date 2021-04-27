@@ -1557,8 +1557,14 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
     background: #222;
     color: #fff;
 }
-
+.blog-filter ul .current-menu-item.goodwill a
+{
+  background:#222;
+}
 /*global job board*/
+.category-job-board .no-results .page-header {
+    border-bottom: 2px solid;
+}
 .category-job-board .page-header
 {
     border-bottom:0;

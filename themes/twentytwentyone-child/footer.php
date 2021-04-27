@@ -22,7 +22,7 @@
 
 		<?php if ( has_nav_menu( 'footer' ) ) : ?>
 			<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'twentytwentyone' ); ?>" class="footer-navigation">
-				<ul class="footer-navigation-wrapper">
+				<ul id="social" class="footer-navigation-wrapper">
 					<?php
 					wp_nav_menu(
 						array(
