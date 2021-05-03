@@ -164,3 +164,30 @@ function category_job_board( $classes ) {
     return $classes;
 
 }
+
+/*Filter: Post Metadata – remove parent category (Job Board or Community Board)*/
+add_filter('get_the_terms', 'hide_categories_terms', 10, 3);
+function hide_categories_terms($terms, $post_id, $taxonomy){
+
+    // define which category IDs you want to hide
+    $excludeIDs = array(22, 40);
+
+    // get all the terms
+    $exclude = array();
+    foreach ($excludeIDs as $id) {
+        $exclude[] = get_term_by('id', $id, 'category');
+    }
+
+    // filter the categories
+    if (!is_admin()) {
+        foreach($terms as $key => $term){
+            if($term->taxonomy == "category"){
+                foreach ($exclude as $exKey => $exTerm) {
+                    if($term->term_id == $exTerm->term_id) unset($terms[$key]);
+                }
+            }
+        }
+    }
+
+    return $terms;
+}
