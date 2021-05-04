@@ -1726,6 +1726,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 /*global job board*/
 .category-job-board .no-results .page-header {
     border-bottom: 2px solid;
+    margin-bottom:2em;
 }
 .category-job-board .page-header
 {
