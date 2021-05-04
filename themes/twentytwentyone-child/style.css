@@ -1337,30 +1337,31 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
     column-gap: 10%;
     row-gap: 5%;
 }
-.category-job-board.search-results .search-result-count.alignwide,
-.category-blog.search-results .search-result-count.alignwide
+.search .search-result-count.alignwide
 {
     align-items:center;
     display: grid;
     grid-template-columns: 100%;
     justify-content: space-between;
 }
-/*.category-job-board.search-results .search-result-count.alignwide form, .category-job-board.search-results .search-result-count.alignwide .blog-filter,
-.category-blog.search-results .search-result-count.alignwide form,
-.category-blog.search-results .search-result-count.alignwide .blog-filter {
+/*.category-job-board.search .search-result-count.alignwide form, .category-job-board.search .search-result-count.alignwide .blog-filter,
+.category-blog.search .search-result-count.alignwide form,
+.category-blog.search .search-result-count.alignwide .blog-filter {
     flex: 0 0 100%;
 }*/
 .tools.archives form,
-.category-job-board.search-results .search-result-count form,
-.category-blog.search-results .search-result-count.alignwide form{
+.category-job-board.search .search-result-count form,
+.category-blog.search .search-result-count.alignwide form{
     margin: 0;
 }
 .tools.archives .search-form .search-field,
 .tools.archives input.search-submit,
-.category-job-board.search-results .search-result-count .search-form .search-field,
-.category-job-board.search-results .search-result-count .search-submit,
-.category-blog.search-results .search-result-count .search-form .search-field,
-.category-blog.search-results .search-result-count .search-submit{
+.category-job-board.search .search-result-count .search-form .search-field,
+.category-job-board.search .search-result-count .search-submit,
+.category-blog.search .search-result-count .search-form .search-field,
+.category-blog.search .search-result-count .search-submit,
+.search .search-result-count .search-submit,
+.search .search-form .search-field {
     margin-right: 0;
     margin-left: 0;
 }
@@ -1385,16 +1386,22 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
     margin:0 auto;
     max-width: var(--responsive--alignwide-width);
 }
+.search .site-main,
+.search-no-results .site-main
+{
+  margin-top:0;
+}
 .archive.category-blog .posts
 {
     margin: 0 2% 0 6%;
     max-width: calc(var(--responsive--alignwide-width) + 2em);
 }
-.search-results:not(.category-job-board) .site-main
+.search:not(.category-job-board) .site-main
 {
     align-items: flex-start;
     grid-template-columns: repeat(3, 30%);
 }
+
 .search-results:not(.category-job-board) .site-main .page-header.alignwide,
 .search-results:not(.category-job-board) .search-result-count.alignwide,
 .search-results:not(.category-job-board) .navigation.pagination
@@ -1403,11 +1410,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
   /*margin:0 auto;*/
   width:100%;
 }
-.search-results:not(.category-job-board) .page-header
+.search:not(.category-job-board) .page-header
 {
   margin-bottom:0;
 }
-.search-results .search-result-count.alignwide
+.search .search-result-count.alignwide
 {
   margin:2em auto;
 }
@@ -1415,67 +1422,72 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 {
   display:block;
 }
-.search-results .blog-filter
+.search .blog-filter
 {
   margin:1em auto;
   width:100%;
 }
-.search-results .blog-filter p {
+.search-no-results .blog-filter
+{
+  order:unset;
+}
+
+.search .blog-filter p {
     font-weight: 700;
 }
 
-.search-results:not(.category-blog, .category-job-board) .blog-filter li.all a
+.search:not(.category-blog, .category-job-board) .blog-filter li.all a
 {
   background:#222;
   color:#fff;
 }
-.search-results.category-blog .blog-filter li.blog a
+.search.category-blog .blog-filter li.blog a
 {
   background:#222;
   color:#fff;
 }
-.search-results.category-job-board .blog-filter li.jobs a
+.search.category-job-board .blog-filter li.jobs a
 {
   background:#222;
   color:#fff;
 }
-.search-results:not(.category-job-board) article {
+.search:not(.category-job-board) article {
     margin: 0 0 3em;
     background: #f2f2f2;
 }
-.search-results:not(.category-job-board) article .entry-header h2,
-.search-results:not(.category-job-board) article .entry-content,
-.search-results:not(.category-job-board) article .entry-footer
+.search:not(.category-job-board) article .entry-header h2,
+.search:not(.category-job-board) article .entry-content,
+.search:not(.category-job-board) article .entry-footer
 {
   padding:0 1em !important;
 }
-.search-results:not(.category-job-board) article .entry-footer
+.search:not(.category-job-board) article .entry-footer
 {
   padding-bottom:2em !important;
 }
-.search-results:not(.category-job-board) .entry-header figure
+.search:not(.category-job-board) .entry-header figure
 {
   height: 250px;
   margin:0;
   overflow: hidden;
 }
-.search-results:not(.category-job-board) .entry-header figure img
+.search:not(.category-job-board) .entry-header figure img
 {
   height: auto !important;
   margin: 0;
   min-width: 400px !important;
 }
-.search-results:not(.category-job-board) article header
+.search:not(.category-job-board) article header
 {
     display: flex;
     flex-wrap: wrap;
 }
-.search-results:not(.category-job-board) .site-main header h2 {
+.search:not(.category-job-board) .site-main header h2 {
     order: 2;
     margin: 1em 0 0;
     text-align: left;
 }
-.search-results:not(.category-job-board) footer.entry-footer.default-max-width
+.search:not(.category-job-board) footer.entry-footer.default-max-width
 {
     border:0;
 }
@@ -1556,7 +1568,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
   background:var(--global--color-background);
 }
 .archive .posts .post header h2,
-.search-results:not(.category-job-board) article header h2
+.search:not(.category-job-board) article header h2
 {
   align-items: center;
   display: flex;
@@ -1621,7 +1633,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
     min-height: 150px;
 }
 .category-job-board .post-taxonomies,
-.search-results .post-taxonomies
+.search .post-taxonomies
 {
   min-height:unset;
 }
@@ -1656,7 +1668,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
   row-gap: 20px;
   text-align: center;
 }
-.search-results .blog-filter ul
+.search .blog-filter ul
 {
     grid-template-columns: repeat(5, 1fr);
 }
@@ -1735,7 +1747,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
   border-top: 2px solid;
   display: flex;
 }
-.archive.category-job-board.search-results .posts article
+.archive.category-job-board.search .posts article
 {
     border: unset;
     border-top: 2px solid;
@@ -2166,7 +2178,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 	}
   /*desktop job board and archives*/
   .tools.archives form,
-  .category-blog.search-results .search-result-count.alignwide form
+  .category-blog.search .search-result-count.alignwide form,
+  .search .search-result-count.alignwide form
   {
     margin: 1em 0;
   }

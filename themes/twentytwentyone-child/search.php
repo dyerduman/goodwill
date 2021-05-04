@@ -13,11 +13,12 @@ get_header();
 
 if ( have_posts() ) {
 	?>
-	<header class="page-header alignwide"><?php
-if ( function_exists('yoast_breadcrumb') ) {
-	yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-}
-?>
+	<header class="page-header alignwide">
+		<?php
+			if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+			}
+		?>
 		<h1 class="page-title">
 			<?php
 			printf(
@@ -44,13 +45,20 @@ if ( function_exists('yoast_breadcrumb') ) {
 			(int) $wp_query->found_posts
 		);
 		?></p>
-			<?php if (is_category('blog')) : ?>
-				<form role="search" <?php echo $twentytwentyone_aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above. ?> method="get" class="search-form archives" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<?php if (!is_category('blog') && !is_category('job-board')) : ?>
+			<form role="search" <?php echo $twentytwentyone_aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above. ?> method="get" class="search-form archives" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<label for="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>"><?php _e( 'Search <strong>All</strong>', 'twentytwentyone' ); // phpcs:ignore: WordPress.Security.EscapeOutput.UnsafePrintingFunction -- core trusts translations ?></label>
+					<input type="search" id="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>" class="search-field" value="<?php echo get_search_query(); ?>" name="s" />
+					<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'twentytwentyone' ); ?>" />
+			</form>
+		<?php elseif (is_category('blog')) : ?>
+			<form role="search" <?php echo $twentytwentyone_aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped above. ?> method="get" class="search-form archives" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<label for="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>"><?php _e( 'Search <strong>Community Board</strong>', 'twentytwentyone' ); // phpcs:ignore: WordPress.Security.EscapeOutput.UnsafePrintingFunction -- core trusts translations ?></label>
 					<input type="search" id="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>" class="search-field" value="<?php echo get_search_query(); ?>" name="s" />
 					<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'twentytwentyone' ); ?>" />
 				<input type="hidden" name="cat" id="cat" value="40" />
 			</form>
+
 			<?php endif; ?>
 
 				<?php if (is_category('job-board')) : ?>
@@ -91,8 +99,9 @@ if ( function_exists('yoast_breadcrumb') ) {
 	twenty_twenty_one_the_posts_navigation();
 
 	// If no content, include the "No posts found" template.
-} else {
-	get_template_part( 'template-parts/content/content-none' );
+} else { ?>
+	
+<?php	get_template_part( 'template-parts/content/content-none' );
 }
 
 get_footer();
