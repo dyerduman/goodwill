@@ -1724,9 +1724,17 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
   background:#222;
 }
 /*global job board*/
+.none
+{
+  display:block;
+}
+p + .none
+{
+    display: none;
+}
 .category-job-board .no-results .page-header {
     border-bottom: 2px solid;
-    margin-bottom:2em;
+    margin-bottom:3em;
 }
 .category-job-board .page-header
 {
@@ -1811,7 +1819,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
 }
 .archive.category-job-board .posts
 {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 100%);
 }
 .archive.category-job-board .posts .entry-content
 {
@@ -1823,7 +1831,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer
   background: #fff;
   border-radius: 10px;
 	margin:0 auto;
-	max-width:180px !important;
+	max-width: 160px !important;
   padding: 10px;
 }
 .archive.category-job-board .posts .entry-footer

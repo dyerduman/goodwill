@@ -12,7 +12,7 @@
 ?>
 
 <section class="no-results not-found">
-<?php if (is_search() && is_category('job-board')) :
+<?php if (is_search() ) :
 	/********
 	the job board search tool 404 page content
 	********/
