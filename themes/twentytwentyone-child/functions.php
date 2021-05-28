@@ -157,13 +157,55 @@ add class 'category-job-board' into body tag of all children of job-board catego
 add_filter( 'body_class','category_job_board' );
 function category_job_board( $classes ) {
 
-    if ( is_category( 'brantford' ) || (is_category('burlington')) || (is_category('hamilton')) || (is_category('mississauga')) || (is_category('niagara')) || (is_category('oakville')) || (is_category('goodwill')) || (is_tag('ancaster')) || (is_tag('dundas')) || (is_tag('hamilton')) || (is_tag('milton')) || (is_tag('mount-hope')) || (is_tag('smithville')) || (is_tag('stoney-creek')) || (is_tag('remote')) || (is_tag('onsite')) ) {
+    if ( is_category( 'toronto' ) || (is_category('halton')) || (is_category('hamilton-wentworth')) || (is_category('niagara')) || (is_category('peel')) || (is_category('brant')) || (is_category('goodwill')) || (is_category('brantford')) || (is_category('mount-pleasant')) || (is_category('paris')) || (is_category('ancaster')) || (is_category('dundas')) || (is_category('hamilton')) || (is_category('mount-hope')) || (is_category('stoney-creek')) || (is_category('burlington')) || (is_category('milton')) || (is_category('oakville')) || (is_category('fort-erie')) || (is_category('lincoln')) || (is_category('niagara-falls')) || (is_category('niagara-on-the-lake')) || (is_category('pelham')) || (is_category('port-colborne')) || (is_category('smithsville')) || (is_category('st-catharines')) || (is_category('thorold')) || (is_category('wainfleet')) || (is_category('brampton')) || (is_category('caledon'))  || (is_category('mississauga'))  || (is_tag('remote')) || (is_tag('onsite')) ) {
         $classes[] = 'category-job-board';
     }
 
     return $classes;
 
 }
+/* Filter Primary Navigation Employment Services
+add body class "category-employment-services" into body to allow for color coded current page indicatiors*/
+add_filter( 'body_class','category_employment_services' );
+function category_employment_services( $classes ) {
+
+    if ( is_page( 'employment-services' ) || (is_page('job-seekers')) || (is_page('employers')) || (is_category('job-board')) ) {
+        $classes[] = 'category-employment-services';
+    }
+    return $classes;
+}
+
+/* Filter Primary Navigation Employment Services
+add body class "category-shop-goodwill" into body to allow for color coded current page indicatiors*/
+add_filter( 'body_class','category_shop_goodwill' );
+function category_shop_goodwill( $classes ) {
+
+    if ( is_page( 'shop' ) || is_page('donate') ) {
+        $classes[] = 'category-shop-goodwill';
+    }
+    return $classes;
+}
+/* Filter Primary Navigation Employment Services
+add body class "category-shop-goodwill" into body to allow for color coded current page indicatiors*/
+add_filter( 'body_class','category_business_services' );
+function category_business_services( $classes ) {
+
+    if ( is_page( 'businesses' )) {
+        $classes[] = 'category-business-services';
+    }
+    return $classes;
+}
+/* Filter Primary Navigation Employment Services
+add body class "category-employment-services" into body to allow for color coded current page indicatiors*/
+add_filter( 'body_class','category_contact_news' );
+function category_contact_news( $classes ) {
+
+    if (is_page( 'contact' ) || is_page('explore-goodwill') || is_category('blog') || is_category('workshops') || is_category('resources') || is_category('news') || is_category('job-events')) {
+        $classes[] = 'category-contact-news';
+    }
+    return $classes;
+}
+
 
 /*Filter: Post Metadata – remove parent category (Job Board or Community Board)*/
 add_filter('get_the_terms', 'hide_categories_terms', 10, 3);
@@ -191,3 +233,15 @@ function hide_categories_terms($terms, $post_id, $taxonomy){
 
     return $terms;
 }
+/* Show a different number of posts per page depending on the context */
+function custom_posts_per_page($query) {
+    if (is_archive() && is_category('blog')) {
+        $query->set('posts_per_page', 7);
+    }
+		if (is_search() ) {
+        $query->set('posts_per_page', 6);
+    } //endif
+} //function
+
+//this adds the function above to the 'pre_get_posts' action
+add_action('pre_get_posts', 'custom_posts_per_page');
