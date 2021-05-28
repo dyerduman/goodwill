@@ -22,16 +22,31 @@ $description = get_the_archive_description();
 	  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 	}
 	?>
-		<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
-		<?php if ( $description ) : ?>
-			<p class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></p>
-		<?php endif; ?>
+	<div class="page_intro">
+		<?php
+		the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+		<?php if (!is_category('blog') && !is_category('resources') && !is_category('news') && !is_category('workshops') && !is_category('job-events')) : ?>	<h2>	<?php
+				printf(
+					esc_html(
+						/* translators: %d: The number of posts in this category. */
+						_n(
+							'%d Job Position Available',
+							'%d Job Positions Available',
+							(int) $wp_query->found_posts,
+							'twentytwentyone'
+						)
+					),
+					(int) $wp_query->found_posts
+				);
+				?></h2> <?php endif; ?>
+			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
+		</div>
 		<div class="tab">
 			<input type="checkbox" id="chck1">
 			 <label class="tab-label" for="chck1">Filter and Search</label>
 			<div class="tools archives tab-content">
 		<?php
-		if (is_category('blog') || is_category('resources') || is_category('news') || is_category('workshops') || is_category('job-fairs')) :
+		if (is_category('blog') || is_category('resources') || is_category('news') || is_category('workshops') || is_category('job-events') || is_tag('reports') || is_tag('job-fair') || is_tag('networking') || is_tag('virtual')) :
 		wp_nav_menu(
 			array(
 				'theme_location'  => 'blog',
