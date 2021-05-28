@@ -169,10 +169,9 @@ the job board category specific 404 page content
 	 <?php
 			 yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 			?>
-		 <h1 class="page-title">
-			 Job Positions Unavailable
-		 </h1>
-
+		 <?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+		 <h2>No Job Positions Currently Available</h2>
+		 <?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
 		 <div class="tab">
  			<input type="checkbox" id="chck1">
  			 <label class="tab-label" for="chck1">Filter and Search</label>
