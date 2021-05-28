@@ -2494,16 +2494,16 @@ p + .none
 		top:65px;
 	}
 	/*desktop slider as on page navigation*/
-  .category-business-services .flex-viewport,
-  .category-shop-goodwill .flex-viewport,
-  .category-contact-news .flex-viewport
+  body .metaslider .flexslider,
+  body .metaslider.ms-theme-disjoint .flexslider
   {
     border-bottom:2px dotted;
+    margin-bottom:3em;
   }
 	body .metaslider.thirds.onpage_nav .flexslider .flex-viewport,
 	body .metaslider.onpage_nav .flexslider .flex-viewport
 	{
-		margin-bottom:55px;
+		margin-bottom:1em;
     margin-top:-3em;
 		padding-bottom:unset;
     padding-top:2em;
