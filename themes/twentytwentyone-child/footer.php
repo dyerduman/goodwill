@@ -15,7 +15,6 @@
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div><!-- #content -->
-
 	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
@@ -42,7 +41,11 @@
 		<div class="site-info">
 			<div class="site-name">
 				<?php if ( has_custom_logo() ) : ?>
-					<div class="site-logo"><?php the_custom_logo(); ?></div>
+					<div class="site-logo">
+
+<a href="/" class="custom-logo-link" rel="home"><img width="84" height="116" alt="Goodwill Amity" data-src="/wp-content/uploads/2021/03/goodwill_logo-primary_icononly.svg" class="custom-logo lazyload_off" src="/wp-content/uploads/2021/03/goodwill_logo-primary_icononly.svg"><noscript><img width="84" height="116"   alt="Goodwill Amity" data-src="/wp-content/uploads/2021/03/goodwill_logo-primary_icononly.svg" class="custom-logo lazyload_off" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="84" height="116" src="/wp-content/uploads/2021/03/goodwill_logo-primary_icononly.svg" class="custom-logo lazyload_off" alt="Goodwill Amity" /></noscript></a>
+
+					</div>
 				<?php else : ?>
 					<?php if ( get_bloginfo( 'name' ) && get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
 						<?php if ( is_front_page() && ! is_paged() ) : ?>
@@ -93,7 +96,14 @@
 <?php wp_footer(); ?>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+<!-- force zoom
+<script>
+document.body.style.zoom = 1;
+var scale = 'scale(1)';
+document.body.style.webkitTransform =  scale;     // Chrome, Opera, Safari
+ document.body.style.msTransform =   .9;       // IE 9
+ document.body.style.transform = scale;     // General
+ </script>-->
 <!-- smooth scroll animation script -->
 <script>
 // Select all links with hashes
@@ -134,7 +144,7 @@ $('a[href*="#"]')
   });
 </script>
 
-<!--viewport css animation script -->
+<!--viewport css animation script-->
 <script>
 $('.aos-fade-up').each(function(i) {
     $(this).attr('data-aos', 'fade-up');
@@ -173,7 +183,6 @@ $('#to-the-top').click(function() {
   }, 500, 'swing');
 });
 </script>
-
 <!-- JS: debounce and scroll position -->
 <script type="text/javascript">
 // The debounce function receives our function as a parameter

@@ -6,6 +6,11 @@
  * @subpackage Twenty_Twenty_One
  * @since Twenty Twenty-One 1.0
  */
+if (( is_active_sidebar( 'sidebar-3' )  )) : ?>
+	<aside class="footer-cta">
+		<?php dynamic_sidebar( 'sidebar-3' ); ?>
+	</aside><!-- .widget-area -->
+<?php endif;
 
 if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 

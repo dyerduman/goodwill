@@ -149,6 +149,15 @@ function twentytwentyone_child_widgets_init() {
     'before_title'  => '<h2>',
     'after_title'   => '</h2>',
   ) );
+	register_sidebar( array(
+    'name'          => __( 'Footer CTA Banner', 'twentytwentyone-child' ),
+    'id'            => 'sidebar-3',
+    'description'   => __( '', 'twentytwentyone-child' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+  ) );
 }
 add_action( 'widgets_init', 'twentytwentyone_child_widgets_init' );
 
