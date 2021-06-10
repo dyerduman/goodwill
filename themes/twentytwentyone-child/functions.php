@@ -166,7 +166,7 @@ add class 'category-job-board' into body tag of all children of job-board catego
 add_filter( 'body_class','category_job_board' );
 function category_job_board( $classes ) {
 
-    if ( is_category( 'toronto' ) || (is_category('halton')) || (is_category('hamilton-wentworth')) || (is_category('niagara')) || (is_category('peel')) || (is_category('brant')) || (is_category('goodwill')) || (is_category('brantford')) || (is_category('mount-pleasant')) || (is_category('paris')) || (is_category('ancaster')) || (is_category('dundas')) || (is_category('hamilton')) || (is_category('mount-hope')) || (is_category('stoney-creek')) || (is_category('burlington')) || (is_category('milton')) || (is_category('oakville')) || (is_category('fort-erie')) || (is_category('lincoln')) || (is_category('niagara-falls')) || (is_category('niagara-on-the-lake')) || (is_category('pelham')) || (is_category('port-colborne')) || (is_category('smithsville')) || (is_category('st-catharines')) || (is_category('thorold')) || (is_category('wainfleet')) || (is_category('brampton')) || (is_category('caledon'))  || (is_category('mississauga'))  || (is_tag('remote')) || (is_tag('onsite')) ) {
+    if ( is_category( 'toronto' ) || (is_category('halton')) || (is_category('hamilton-wentworth')) || (is_category('niagara')) || (is_category('peel')) || (is_category('brant')) || (is_category('goodwill')) || (is_category('brantford')) || (is_category('brockton')) || (is_category('mount-pleasant')) || (is_category('paris')) || (is_category('ancaster')) || (is_category('dundas')) || (is_category('hamilton')) || (is_category('mount-hope')) || (is_category('stoney-creek')) || (is_category('winona')) || (is_category('burlington')) || (is_category('milton')) || (is_category('oakville')) || (is_category('fort-erie')) || (is_category('lincoln')) || (is_category('niagara-falls')) || (is_category('niagara-on-the-lake')) || (is_category('pelham')) || (is_category('port-colborne')) || (is_category('smithsville')) || (is_category('st-catharines')) || (is_category('thorold')) || (is_category('wainfleet')) || (is_category('brampton')) || (is_category('caledon'))  || (is_category('mississauga'))  || (is_tag('remote')) || (is_tag('onsite')) ) {
         $classes[] = 'category-job-board';
     }
 
@@ -247,7 +247,8 @@ function custom_posts_per_page($query) {
     if (is_archive() && is_category('blog')) {
         $query->set('posts_per_page', 7);
     }
-		if (is_search() ) {
+		$classes = get_body_class();
+		if (in_array('paged',$classes) || is_search()) {
         $query->set('posts_per_page', 6);
     } //endif
 } //function
