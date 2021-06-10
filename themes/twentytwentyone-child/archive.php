@@ -25,7 +25,7 @@ $description = get_the_archive_description();
 	<div class="page_intro">
 		<?php
 		the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
-		<?php if (!is_category('blog') && !is_category('resources') && !is_category('news') && !is_category('workshops') && !is_category('job-events')) : ?>	<h2>	<?php
+		<?php if (!is_category('blog') && !is_category('resources') && !is_category('news') && !is_category('workshops') && !is_category('job-events') && !is_tag()) : ?>	<h2>	<?php
 				printf(
 					esc_html(
 						/* translators: %d: The number of posts in this category. */
